@@ -1,0 +1,12 @@
+@import "vars";
+@import "libs";
+@import "fonts";
+
+
+body{
+    background:color(error,dark-300);
+    color:color(warning, primary);
+}
+
+
+@import "media";

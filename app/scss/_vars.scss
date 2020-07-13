@@ -1,0 +1,69 @@
+// _functions.scss
+// @function color($key) {
+//     @if map-has-key($colors, $key) {
+//       @return map-get($colors, $key);
+//     }
+
+//     @warn "Unknown `#{$key}` in $colors.";
+//     @return null;
+//   }
+
+@function color($base, $shade: base) {
+  $cls: map-get(map-get($colors, $base), $shade);
+  @return $cls;
+}
+
+$colors: (
+  white:(
+    primary:#fff
+  ),
+  dark-grey: (
+    dark-100:#090B0F,
+    primary:#232735,
+    light-100:#363D4E,
+    light-200:#555B6B,
+    light-300:#767B8A,
+    light-400:#8E919F,
+    light-500:#A4A8B4   
+  ),
+  light-grey:(
+    dark-100: #BEC0C7,
+    primary:#D1D2D6,
+    light-100:#DDDEE0,
+    light-200:#F0F1F3, 
+    light-300:#FAFAFC        
+  ),
+  success:(
+    light-500:#F2FDE8,
+    light-400:#E5FAD1,
+    light-300:#D1F0B4,
+    light-200:#B2DE8C, 
+    light-100:#87C95B,
+    primary:#5AB21B,
+    dark-100:#42941C,
+    dark-200:#2E7A15,
+    dark-300:#1E5E10            
+  ),
+  error:(
+    light-500:#FFEAE7,
+    light-400:#FFD5CF,
+    light-300:#FFA5A1,
+    light-200:#F77672,
+    light-100:#E54949,
+    primary:#CC1F24,
+    dark-100:#AD1521,
+    dark-200:#8F0F1C,
+    dark-300:#6B0B15
+  ),
+  warning:(
+    light-400:#FFFBCE,
+    light-300:#FFF79C,
+    light-200:#FCE365,
+    light-100:#F5CB33,
+    primary:#F2B600,
+    dark-100:#E59E02,
+    dark-200:#CF8A0A,
+    dark-300:#B8760D,
+    dark-400:#A36308
+  )
+);
