@@ -1,0 +1,72 @@
+@media (min-width: 1258px) {
+  .container {
+    max-width: 1254px;
+  }
+}
+
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background: color(white,primary);
+  color: color(dark-grey, primary);
+}
+
+.main-screen {
+  background: color(white, primary);
+  h1 {
+    text-align: center;
+    span {
+      color: color(green, primary);
+    }
+  }
+}
+
+.mediclix-app{
+    padding: 50px 0;
+    background: linear-gradient(180deg, rgba(0, 32, 128, 0.4) 0%, rgba(0, 32, 128, 0) 100%),linear-gradient(257.88deg, #78CEFF 0%, #3889D5 47.45%, #1261BD 93.92%);
+}
+
+.advantages{
+    padding: 100px 0;
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap:24px;
+        padding-left: 87px;
+    }
+    &__item{
+       background: color(white,primary); 
+       box-shadow: 0px 0px 5px rgba(15, 20, 38, 0.06), 0px 3px 12px rgba(15, 20, 38, 0.06);
+       padding:40px 32px;
+       border-radius: 6px;
+       .icon{
+           height: 50px;
+           display: flex;
+           align-items: flex-end;
+           margin-bottom: 20px;
+       }
+       p{
+           font-size: 16px;
+           font-weight: 400;
+           color:color(dark-grey,light-100);
+           line-height: 1.5;
+           margin:0
+       }
+    }
+}
+
+.partners{
+    padding: 100px 0;
+    background: color(background-color,primary);
+    h2{
+        text-align: center;
+        font-weight: 700;
+        margin-bottom: 50px;
+    }
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+}

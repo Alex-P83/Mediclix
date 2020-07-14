@@ -1,19 +1,7 @@
-// _functions.scss
-// @function color($key) {
-//     @if map-has-key($colors, $key) {
-//       @return map-get($colors, $key);
-//     }
-
-//     @warn "Unknown `#{$key}` in $colors.";
-//     @return null;
-//   }
-
-@function color($base, $shade: base) {
-  $cls: map-get(map-get($colors, $base), $shade);
-  @return $cls;
-}
-
 $colors: (
+  background-color:(
+    primary:#F7F9FC
+  ),
   white:(
     primary:#fff
   ),
@@ -65,5 +53,35 @@ $colors: (
     dark-200:#CF8A0A,
     dark-300:#B8760D,
     dark-400:#A36308
+  ),
+  green:(
+    light-800:#F8FFE8,
+    light-700:#F0FCD7,
+    light-600:#E7FABE,
+    light-500:#DBF5A4, 
+    light-400:#C6EB8F,
+    light-300:#B3E072,
+    light-200:#99D158,
+    light-100:#7FBF47,
+    primary:#6AB239,
+    dark-100:#549C35,
+    dark-200:#458A37,
+    dark-300:#3C7A3C,
+    dark-400:#34633A                    
+  ),
+  blue:(
+    light-800:#EDFAFF,
+    light-700:#D6F4FF,
+    light-600:#B8EBFF,
+    light-500:#9ADFFF,
+    light-400:#75CBFD,  
+    light-300:#66BBF3,
+    light-200:#4FA6E9,
+    light-100:#328FDD,
+    primary:#207BD3,
+    dark-100:#2167B8,
+    dark-200:#1656AB,
+    dark-300:#0F4494,
+    dark-400:#0C3370                                           
   )
 );

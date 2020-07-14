@@ -1,12 +1,11 @@
 @import "vars";
 @import "libs";
 @import "fonts";
-
-
-body{
-    background:color(error,dark-300);
-    color:color(warning, primary);
-}
-
-
+@import "typography";
+@import "function";
+@import "buttons";
+@import "forms";
+@import "header";
+@import "main";
+@import "footer";
 @import "media";
