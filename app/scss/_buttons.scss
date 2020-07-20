@@ -1,63 +1,89 @@
-.btn{
-    transition:0.3s;
-    text-decoration: none;
-    border-radius: 4px;   
+.btn {
+  transition: 0.3s;
+  text-decoration: none;
+  border-radius: 4px;
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
 }
 
-.primary-btn{
-    color:color(white,primary);
-    background: color(green,primary);
-    &:hover{
-      color:color(white,primary);  
-      background: color(green,dark-100);  
-    }
-    &:active{
-      color:color(white,primary);  
-      background: color(green,dark-200);          
-    }
-    &:disabled,&.disabled{
-        color:color(dark-grey,light-500);
-        background:color(light-grey,light-200);
-        opacity: 1;
-    }     
+.primary-btn {
+  color: color(white, primary);
+  background: color(green, primary);
+  &:hover {
+    color: color(white, primary);
+    background: color(green, dark-100);
+  }
+  &:active {
+    color: color(white, primary);
+    background: color(green, dark-200);
+  }
+  &:disabled,
+  &.disabled {
+    color: color(dark-grey, light-500);
+    background: color(light-grey, light-200);
+    opacity: 1;
+  }
 }
 
-.secondary-btn{
-    color:color(dark-grey,primary);
-    background: color(light-grey,light-200);
-    &:hover{
-        color:color(dark-grey,primary);
-        background: color(light-grey,light-100); 
-    }
-    &:active{
-        color:color(dark-grey,primary);
-        background: color(light-grey,primary);         
-    }
-    &:disabled,&.disabled{
-        color:color(dark-grey,light-500);
-        background:color(light-grey,light-200);
-        opacity: 1;
-    }     
+.secondary-btn {
+  color: color(dark-grey, primary);
+  background: color(light-grey, light-200);
+  &:hover {
+    color: color(dark-grey, primary);
+    background: color(light-grey, light-100);
+  }
+  &:active {
+    color: color(dark-grey, primary);
+    background: color(light-grey, primary);
+  }
+  &:disabled,
+  &.disabled {
+    color: color(dark-grey, light-500);
+    background: color(light-grey, light-200);
+    opacity: 1;
+  }
 }
 
-.ghost-btn{
-    color:color(dark-grey,primary);
+.ghost-btn {
+  color: color(dark-grey, primary);
+  background: unset;
+  border: 1px solid color(light-grey, light-100);
+  &:hover {
+    color: color(dark-grey, primary);
     background: unset;
-    border:1px solid color(light-grey,light-100);
-    &:hover{
-        color:color(dark-grey,primary);
-        background: unset; 
-        border-color:color(green,light-200);
-    }
-    &:active{
-        color:color(dark-grey,primary);
-        background: unset;
-        border-color:color(green,dark-100);         
-    }
-    &:disabled,&.disabled{
-        color:color(dark-grey,light-500);
-        background: unset;
-        border-color:color(light-grey,light-100);
-        opacity: 1;
-    }     
+    border-color: color(green, light-200);
+  }
+  &:active {
+    color: color(dark-grey, primary);
+    background: unset;
+    border-color: color(green, dark-100);
+  }
+  &:disabled,
+  &.disabled {
+    color: color(dark-grey, light-500);
+    background: unset;
+    border-color: color(light-grey, light-100);
+    opacity: 1;
+  }
+}
+
+.add-btn {
+  color: color(white, primary);
+  background: color(black, primary);
+  &:hover {
+    color: color(white, primary);
+    background: lighten(color(black, primary), 10%);
+  }
+  &:active {
+    color: color(white, primary);
+    background: lighten(color(black, primary), 15%);
+  }
+  &:disabled,
+  &.disabled {
+    color: color(dark-grey, light-500);
+    background: color(light-grey, light-200);
+    opacity: 1;
+  }
 }

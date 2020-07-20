@@ -3,6 +3,7 @@ h1{
     font-weight: 200;
     line-height: 0.86;
     margin:unset;
+
 }
 
 h2{
@@ -10,6 +11,9 @@ h2{
     font-weight: 300;
     line-height: 1;
     margin:unset;
+    &.alternative{
+        font-weight: 700;
+    }
 }
 
 h3{
@@ -44,4 +48,9 @@ h6{
         line-height: 1.25;
         font-variant: small-caps;
     }
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
 }

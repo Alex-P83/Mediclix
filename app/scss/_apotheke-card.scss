@@ -1,0 +1,91 @@
+.apotheke {
+  &__card {
+    position: relative;
+    background: color(white, primary);
+    @include box_shadow(2);
+    border-radius: 6px;
+    transition: 0.3s;
+    cursor: pointer;
+    padding: 15px;
+    .icon {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 170px;
+      margin-bottom: 20px;
+    }
+    &:hover {
+      @include box_shadow(5);
+    }
+    &-membership {
+      position: absolute;
+      top: 8px;
+      right: 9px;
+      width: 114px;
+      height: 32px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      &.gold {
+        background: linear-gradient(180deg, #facf4b 0%, #ebb617 100%);
+      }
+      &.silver {
+        background: linear-gradient(180deg, #bfbfbf 0%, #999999 100%);
+      }
+      &.bronze {
+        background: linear-gradient(180deg, #ffa04d 0%, #e67e22 100%);
+      }
+      span {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 1.23;
+        font-weight: 600;
+        color: color(white, primary);
+      }
+    }
+    &-name {
+      min-height: 45px;
+      p {
+        font-size: 16px;
+        line-height: 1.25;
+        font-weight: 600;
+      }
+    }
+    &-work-time {
+      display: flex;
+      flex-direction: column;
+      padding-left: 20px;
+      margin-bottom: 15px;
+      span {
+        font-size: 14px;
+        line-height: 1.43;
+        &.status{
+            position: relative;
+            svg{
+                position: absolute;
+                top:50%;
+                transform:translateY(-50%);
+                left:-20px;
+            }
+            &.opened{
+                color:color(green,dark-100);
+                svg{
+                    path{
+                        stroke:color(green,dark-100);
+                    }
+                }                
+            }
+            &.closed{
+                color:color(dark-grey,light-500);
+                svg{
+                    path{
+                        stroke:color(dark-grey,light-500);
+                    }
+                }
+            }
+        }
+      }
+    }
+  }
+}
