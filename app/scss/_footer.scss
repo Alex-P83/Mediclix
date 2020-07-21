@@ -1,5 +1,103 @@
-footer{
-    min-height: 360px;
-    clip-path: polygon(0 0, 93% 0, 100% 100%, 0 100%);
-    background: url('../img/footer-bg.svg') no-repeat top right 20%, linear-gradient(345.82deg, #78CEFF -0.46%, #3889D5 35.38%, #1261BD 70.47%);
+footer {
+  min-height: 360px;
+  padding: 65px 0 30px;
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+  background: url("../img/footer-bg.svg") no-repeat top right 20%,
+    linear-gradient(345.82deg, #78ceff -0.46%, #3889d5 35.38%, #1261bd 70.47%);
+  .footer {
+    &__top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      .logo {
+        width: 22%;
+      }
+      .social {
+        display: flex;
+        width: 22%;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding: unset;
+        margin: unset;
+        margin-top: 15px;
+        li {
+          list-style: none;
+          margin-left: 12px;
+          &:first-child {
+            margin-left: unset;
+          }
+        }
+      }
+    }
+    &__bottom {
+      display: flex;
+      align-items: center;
+      margin-top: 78px;
+      .copy {
+          position: relative;
+        padding-right: 24px;
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          color: color(white, primary);
+          margin: unset;
+        }
+        &:after{
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            right:0;
+            width: 1px;
+            height: 9px;
+            content:'';
+            background: #679CE6;
+        }
+      }
+      .designed {
+        padding-left: 24px;
+        p {
+          font-size: 14px;
+          font-weight: 400;
+          color: color(white, primary);
+          margin: unset;
+          a {
+            display: inline-block;
+            font-size: 14px;
+            font-weight: 400;
+            color: color(white, primary);
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    &__wrap-lists {
+      width: 56%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      figure {
+        padding-top: 20px;
+        margin: unset;
+        h6 {
+          color: color(white, primary);
+          margin-bottom: 12px;
+        }
+        ul {
+          padding: unset;
+          margin: unset;
+          li {
+            list-style: none;
+            margin-bottom: 4px;
+            a {
+              font-size: 14px;
+              line-height: 1.43;
+              font-weight: 600;
+              color: color(white, primary);
+              text-decoration: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -1,18 +1,23 @@
 .apotheke {
   &__card {
+    // max-width: 300px;
     position: relative;
     background: color(white, primary);
     @include box_shadow(2);
     border-radius: 6px;
     transition: 0.3s;
     cursor: pointer;
-    padding: 15px;
+    padding: 15px 20px;
+    margin: 0 auto;
     .icon {
       display: flex;
       align-items: center;
       justify-content: center;
       height: 170px;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
+      img{
+        max-width: 100%;
+      }
     }
     &:hover {
       @include box_shadow(5);
@@ -45,23 +50,25 @@
       }
     }
     &-name {
-      min-height: 45px;
+      min-height: 57px;
       p {
         font-size: 16px;
         line-height: 1.25;
         font-weight: 600;
+        margin: unset;
       }
     }
     &-work-time {
       display: flex;
       flex-direction: column;
-      padding-left: 20px;
+      padding-left: 25px;
       margin-bottom: 15px;
       span {
         font-size: 14px;
         line-height: 1.43;
         &.status{
             position: relative;
+            margin-bottom: 5px;
             svg{
                 position: absolute;
                 top:50%;

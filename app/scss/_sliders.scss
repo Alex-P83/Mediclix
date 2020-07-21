@@ -1,7 +1,86 @@
-.apotheke{
-    &__slider{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        column-gap: 19px;
+.apotheke {
+  &__slider {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 19px;
+    .slick-list {
+      .slick-track {
+        padding: 15px 0;
+      }
+      .slick-slide {
+        padding: 0 10px;
+      }
     }
+    .slick-dots {
+      margin: unset;
+      padding: unset;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      li {
+        list-style: none;
+        button {
+          font-size: 0;
+          padding: unset;
+          border: unset;
+          width: 8px;
+          height: 8px;
+          border-radius: 4px;
+          background: color(light-grey, primary);
+          margin: 0 4px;
+          transition: 0.3s;
+          &:focus {
+            outline: none;
+          }
+        }
+        &.slick-active {
+          button {
+            width: 32px;
+            background: color(green, primary);
+          }
+        }
+      }
+    }
+  }
+}
+
+.clix-steps {
+  .slick-list {
+    .slick-track {
+      padding: 15px 0;
+    }
+    .slick-slide {
+      padding: 0 10px;
+    }
+  }
+  .slick-dots {
+    margin: unset;
+    padding: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    li {
+      list-style: none;
+      button {
+        font-size: 0;
+        padding: unset;
+        border: unset;
+        width: 8px;
+        height: 8px;
+        border-radius: 4px;
+        background: color(light-grey, primary);
+        margin: 0 4px;
+        transition: 0.3s;
+        &:focus {
+          outline: none;
+        }
+      }
+      &.slick-active {
+        button {
+          width: 32px;
+          background: color(green, primary);
+        }
+      }
+    }
+  }
 }

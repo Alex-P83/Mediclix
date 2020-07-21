@@ -30,7 +30,7 @@ body {
     .wrap-step {
       position: relative;
       text-align: center;
-      .icon{
+      .icon {
         margin-bottom: 5px;
       }
       p {
@@ -87,24 +87,26 @@ body {
     align-items: flex-start;
     .text {
       padding-right: 75px;
+      margin-top: 13px;
       h2 {
         margin-bottom: 20px;
+        line-height: 1.1;
       }
       p {
         font-size: 16px;
         line-height: 1.5;
         color: color(dark-grey, light-100);
+        margin-bottom: 12px;
       }
     }
     .video-content {
       width: 760px;
+      height: 438px;
       flex-shrink: 0;
-      .wrapper {
-        font-size: 0;
-        border-radius: 6px;
-        overflow: hidden;
-        @include box_shadow(2);
-      }
+      font-size: 0;
+      border-radius: 6px;
+      overflow: hidden;
+      @include box_shadow(2);
     }
   }
 }
@@ -124,6 +126,7 @@ body {
     justify-items: center;
     .collage {
       &-top {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
@@ -132,6 +135,7 @@ body {
         grid-area: 1/1;
         img {
           grid-area: 1/1;
+          position: relative !important;
           &:nth-of-type(1) {
             margin-top: 105px;
             z-index: 2;
@@ -151,6 +155,7 @@ body {
         z-index: 2;
         img {
           grid-area: 1/1;
+          position: relative !important;
           @include box_shadow(4);
           &:nth-of-type(1) {
             margin: -81px -252px 0px 0px;
@@ -187,22 +192,23 @@ body {
         width: 160px;
         display: flex;
         align-items: center;
-        img{
-          margin-right: 9px;
-        }
-        label {
-          margin: unset;
-          line-height: 1;
-          text-align: left;
-          span {
-            font-size: 12px;
-            line-height: 1;
-            &:last-child{
-              font-size: 14px;
-              font-weight: 600;
-            }
-          }
-        }
+        padding: unset;
+        // img{
+        //   margin-right: 9px;
+        // }
+        // label {
+        //   margin: unset;
+        //   line-height: 1;
+        //   text-align: left;
+        //   span {
+        //     font-size: 12px;
+        //     line-height: 1;
+        //     &:last-child{
+        //       font-size: 14px;
+        //       font-weight: 600;
+        //     }
+        //   }
+        // }
       }
       &-section {
         width: 100%;
@@ -258,16 +264,18 @@ body {
 }
 
 .partners {
-  padding: 100px 0;
+  padding: 100px 0 130px;
   background: color(background-color, primary);
   h2 {
     text-align: center;
     font-weight: 700;
-    margin-bottom: 50px;
+    margin-bottom: 60px;
   }
   &__wrapper {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    max-width: 1060px;
+    margin: 0 auto;
   }
 }

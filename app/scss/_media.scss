@@ -1,0 +1,91 @@
+@media (max-width: 1350px) {
+    header,footer{
+        clip-path: unset;
+    }
+  }
+
+  @media (max-width: 1258px) {
+    .video-block{
+      .container{
+        .text{
+            padding-right: 15px;
+        }
+        .video-content{
+            width: 700px;
+            height: 390px;
+        }   
+      }  
+    } 
+  }
+
+// Large devices (desktops, less than 1200px)
+@media (max-width: 1199.98px) {
+    .apotheke{
+        &__slider{
+            display: block;
+            grid-template-columns: unset;
+            column-gap: unset;
+        }
+    }
+    .video-block{
+        .container{
+            .text{
+                margin-top: unset;
+            }
+          .video-content{
+              width: 50%;
+              height: 336px;
+          }   
+        }  
+      }
+      .advantages{
+        .container{
+            padding-left: unset;
+        }   
+      }      
+  }
+
+// Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    header{
+        .container{
+            max-width: 100%;
+        }
+    }
+    .main-screen{
+      form{
+        button{
+            width: 100%;
+        }  
+      }   
+    } 
+    .video-block{
+        .container{
+            flex-direction: column;
+            .text{
+               margin-bottom: 30px;
+            }
+          .video-content{
+              width: 100%;
+          }   
+        }  
+      } 
+ }
+
+// Small devices (landscape phones, less than 768px)
+@media (max-width: 767.98px) { 
+    .main-screen{
+        .container{
+            max-width: 100%;
+        }
+    }
+ }
+
+// Extra small devices (portrait phones, less than 576px)
+@media (max-width: 575.98px) {
+    
+ }
+
+
+// Extra large devices (large desktops)
+// No media query since the extra-large breakpoint has no upper bound on its width

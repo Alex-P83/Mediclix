@@ -43,10 +43,12 @@ h6{
     line-height: 1.33;
     margin:unset;
     &.subheader{
-        font-size: 16px;
+        // font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         line-height: 1.25;
-        font-variant: small-caps;
+        // font-variant: small-caps;
+        text-transform: uppercase;
     }
 }
 
