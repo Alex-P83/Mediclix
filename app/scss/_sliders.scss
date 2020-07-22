@@ -45,6 +45,11 @@
 }
 
 .clix-steps {
+  .slick-slide{
+    img{
+      margin:  0 auto;
+    }
+  }
   .slick-list {
     .slick-track {
       padding: 15px 0;

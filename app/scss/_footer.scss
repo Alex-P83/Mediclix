@@ -1,9 +1,19 @@
 footer {
+  position: relative;
   min-height: 360px;
   padding: 65px 0 30px;
-  clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
-  background: url("../img/footer-bg.svg") no-repeat top right 20%,
+  background: url("../img/footer-bg.svg") no-repeat top right 42%,
     linear-gradient(345.82deg, #78ceff -0.46%, #3889d5 35.38%, #1261bd 70.47%);
+  #bottom-corner{
+    position: absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    transform: rotate(180deg);
+    path{
+      fill:color(background-color, primary)!important;
+    }
+  }  
   .footer {
     &__top {
       display: flex;
@@ -11,6 +21,11 @@ footer {
       justify-content: center;
       .logo {
         width: 22%;
+        a{
+          img{
+            max-width: 146px;
+          }
+        }
       }
       .social {
         display: flex;
@@ -34,7 +49,7 @@ footer {
       align-items: center;
       margin-top: 78px;
       .copy {
-          position: relative;
+        position: relative;
         padding-right: 24px;
         p {
           font-size: 14px;
@@ -42,15 +57,15 @@ footer {
           color: color(white, primary);
           margin: unset;
         }
-        &:after{
-            position: absolute;
-            top:50%;
-            transform: translateY(-50%);
-            right:0;
-            width: 1px;
-            height: 9px;
-            content:'';
-            background: #679CE6;
+        &:after {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          right: 0;
+          width: 1px;
+          height: 9px;
+          content: "";
+          background: #679ce6;
         }
       }
       .designed {

@@ -5,11 +5,32 @@
 }
 
 body {
+  position: relative;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
   font-weight: 400;
   background: color(white, primary);
   color: color(dark-grey, primary);
+  &.disable {
+    position: relative;
+    overflow: hidden;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    content: "";
+    opacity: 0;
+    transition: 0.5s;
+    z-index: -2;
+    &.active {
+      opacity: 1;
+      z-index: 2;
+    }
+  }  
 }
 
 .main-screen {
@@ -24,20 +45,28 @@ body {
   .clix-steps {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     max-width: 720px;
     margin: 40px auto 80px;
     .wrap-step {
       position: relative;
       text-align: center;
-      .icon {
-        margin-bottom: 5px;
+      display: flex;
+      align-items: flex-start;
+      &-block{
+        .icon {
+          margin-bottom: 7px;
+        }
+        p {
+          font-size: 14px;
+          line-height: 1.25;
+          color: color(dark-grey, light-100);
+          margin: unset;
+          text-transform: uppercase;
+        }        
       }
-      p {
-        font-size: 16px;
-        line-height: 1.25;
-        color: color(dark-grey, light-100);
-        margin: unset;
+      .wrap-arrow{
+        padding: 37px 18px 0;
       }
     }
   }
@@ -60,7 +89,7 @@ body {
       }
       input {
         background: color(light-grey, light-300) url("../img/map-pointer.svg")
-          no-repeat left 10px center;
+          no-repeat left 15px center;
       }
     }
     button {
@@ -119,9 +148,10 @@ body {
       rgba(0, 32, 128, 0) 100%
     ),
     linear-gradient(-257.88deg, #78ceff 0%, #3889d5 47.45%, #1261bd 93.92%);
+    overflow: hidden;
   &-collage {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 100%;
     grid-template-rows: 1fr;
     justify-items: center;
     .collage {
@@ -131,17 +161,21 @@ body {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         justify-items: center;
-        align-items: start;
+        align-items: center;
         grid-area: 1/1;
         img {
           grid-area: 1/1;
           position: relative !important;
           &:nth-of-type(1) {
-            margin-top: 105px;
+            margin-top: 20px;
+            margin-bottom: 85px;
             z-index: 2;
           }
+          &:nth-of-type(2) {
+            margin-top: -90px;
+          }          
           &:nth-of-type(3) {
-            margin-top: 167px;
+            margin-top: 75px;
           }
         }
       }
@@ -174,13 +208,14 @@ body {
     }
   }
   &-additional {
-    margin: 52px 0 0 77px;
+    margin:-10px 0 0 77px;
     h2 {
       color: color(white, primary);
-      margin-bottom: 20px;
+      margin-bottom: 21px;
     }
     p {
       color: color(white, primary);
+      margin-bottom: 12px;
     }
     .additional {
       margin-top: 20px;
@@ -193,22 +228,6 @@ body {
         display: flex;
         align-items: center;
         padding: unset;
-        // img{
-        //   margin-right: 9px;
-        // }
-        // label {
-        //   margin: unset;
-        //   line-height: 1;
-        //   text-align: left;
-        //   span {
-        //     font-size: 12px;
-        //     line-height: 1;
-        //     &:last-child{
-        //       font-size: 14px;
-        //       font-weight: 600;
-        //     }
-        //   }
-        // }
       }
       &-section {
         width: 100%;
@@ -277,5 +296,6 @@ body {
     justify-content: space-around;
     max-width: 1060px;
     margin: 0 auto;
+    flex-wrap: wrap;
   }
 }

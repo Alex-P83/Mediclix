@@ -1,12 +1,26 @@
 header{
-    clip-path: polygon(100% 100%, 100% 0%, 0% 0%, 50px 100%);
+    position: relative;
     padding: 28px 0;
     background: linear-gradient(355.76deg, #78CEFF -0.46%, #3889D5 35.38%, #1261BD 70.47%);
+    #bottom-corner{
+        position: absolute;
+        top:0;
+        left:0;
+        height: 100%;
+        content:'';
+        z-index: 2;
+        
+    }
     .header{
         &__wrapper{
             display: flex;
             align-items: center;
             justify-content: space-between;
+            .logo{
+                .mobile-logo{
+                    display: none;
+                }
+            }
         }
         &__controls{
             min-height: 40px;
@@ -31,6 +45,7 @@ header{
                     }
                     &:nth-of-type(1){
                         padding-right: 40px;
+                        margin-right: 40px;
                         &:after{
                             position: absolute;
                             top:50%;
@@ -41,10 +56,7 @@ header{
                             background: color(light-grey,light-100);
                             content:'';
                         }
-                    }
-                    &:nth-of-type(2){
-                        padding-left: 40px;
-                    }                    
+                    }                  
                 }
             }
             .cart{
@@ -52,10 +64,8 @@ header{
                 align-items: center;
                 margin-left: 40px;
                 text-decoration: none;
-                img{
-                    margin-right: 10px;
-                }
                 &__counter{
+                    margin-left: 10px;
                     font-size: 16px;
                     font-weight: 400;
                     color:color(dark-grey,primary);

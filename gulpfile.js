@@ -28,7 +28,9 @@ gulp.task('css', function () {
     'node_modules/slick-carousel/slick/slick.css',
     'node_modules/normalize.css/normalize.css',
     'node_modules/bootstrap/dist/css/bootstrap.css',
-    'node_modules/bootstrap-select/dist/css/bootstrap-select.css'
+    'node_modules/bootstrap-select/dist/css/bootstrap-select.css',
+    // 'node_modules/animate.css/animate.css'
+    'node_modules/wow.js/css/libs/animate.css'
 
   ])
     .pipe(concat('_libs.scss'))
@@ -51,7 +53,8 @@ gulp.task('js', function () {
     'node_modules/slick-carousel/slick/slick.js',
     'node_modules/bootstrap/dist/js/bootstrap.js',
     'node_modules/bootstrap-select/dist/js/bootstrap-select.js',
-    'node_modules/parallax-js/dist/parallax.js'
+    'node_modules/parallax-js/dist/parallax.js',
+    'node_modules/wow.js/dist/wow.js'
   ])
     .pipe(concat('libs.min.js'))
     .pipe(uglify())

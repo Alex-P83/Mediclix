@@ -12,10 +12,27 @@
 <body>
   <!-- Header  -->
   <header>
+    <svg id="bottom-corner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100" preserveAspectRatio="none"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M0,0,36.58,73.17A48.56,48.56,0,0,0,80,100H0Z"/></svg>
+    <div id="mobile-menu">
+      <div class="header">
+        <a href="" class="logo">
+          <img src="img/logo-mini.svg" alt="logo" class="mobile-logo">
+        </a>
+        <a href="#" class="close-menu">
+          <span></span>
+          <span></span>
+        </a>        
+      </div>
+      <ul>
+        <li><a href="#">Login / Registrieren</a></li>
+        <li><a href="#">Suchen</a></li>
+      </ul>
+    </div>
     <div class="container">
       <div class="header__wrapper">
         <a href="" class="logo">
-          <img src="img/logo.svg" alt="logo">
+          <img src="img/logo.svg" alt="logo" class="desktop-logo">
+          <img src="img/logo-mini.svg" alt="logo" class="mobile-logo">
         </a>
         <div class="header__controls">
           <ul>
@@ -23,8 +40,18 @@
             <li><a href="#">Login / Registrieren</a></li>
           </ul>
           <a href="" class="cart">
-            <img src="img/cart.svg" alt="cart">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6.07511 13.7891L3.04623 2.17214L1 1" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M3.9707 5.66528L6.09786 13.789H16.8839L18.9995 5.66528H3.9707Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M7.43926 19C8.07774 19 8.59533 18.4804 8.59533 17.8395C8.59533 17.1985 8.07774 16.679 7.43926 16.679C6.80079 16.679 6.2832 17.1985 6.2832 17.8395C6.2832 18.4804 6.80079 19 7.43926 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M15.532 19C16.1705 19 16.6881 18.4804 16.6881 17.8395C16.6881 17.1985 16.1705 16.679 15.532 16.679C14.8936 16.679 14.376 17.1985 14.376 17.8395C14.376 18.4804 14.8936 19 15.532 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
             <span class="cart__counter">0</span>
+          </a>
+          <a href="#" class="menu-btn">
+            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21.1335 9.33333H0.866829C0.600163 9.33333 0.333496 9.06667 0.333496 8.8V7.2C0.333496 6.93333 0.600163 6.66667 0.866829 6.66667H21.1335C21.4002 6.66667 21.6668 6.93333 21.6668 7.2V8.8C21.6668 9.06667 21.4002 9.33333 21.1335 9.33333ZM21.1335 13.3333H0.866829C0.600163 13.3333 0.333496 13.6 0.333496 13.8667V15.4667C0.333496 15.7333 0.600163 16 0.866829 16H21.1335C21.4002 16 21.6668 15.7333 21.6668 15.4667V13.8667C21.6668 13.6 21.4002 13.3333 21.1335 13.3333ZM21.1335 0H0.866829C0.600163 0 0.333496 0.266667 0.333496 0.533333V2.13333C0.333496 2.4 0.600163 2.66667 0.866829 2.66667H21.1335C21.4002 2.66667 21.6668 2.4 21.6668 2.13333V0.533333C21.6668 0.266667 21.4002 0 21.1335 0Z" fill="white"/>
+              </svg>
           </a>
         </div>         
       </div>   
@@ -35,44 +62,52 @@
     <div class="container">
       <h1><span>Clix</span> dich gesund</h1>
       <div class="clix-steps">
-        <div class="wrap-step">
-          <div class="icon">
-            <img src="img/main-icon1.svg" alt="">
+        <div class="wrap-step wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">
+          <div class="wrap-step-block">
+            <div class="icon">
+              <img src="img/main-icon1.svg" alt="">
+            </div>
+            <p>Apotheke finden</p>            
           </div>
-          <p>Apotheke finden</p>
-        </div>
-        <div class="wrap-arrow">
-          <svg width="32" height="6" viewBox="0 0 32 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32 3L27 0.113249V5.88675L32 3ZM0 3.5H27.5V2.5H0V3.5Z" fill="#D1D2D6"/>
-            </svg>
-        </div>
-        <div class="wrap-step">
-          <div class="icon">
-            <img src="img/main-icon2.svg" alt="">
+          <div class="wrap-arrow">
+            <svg width="32" height="6" viewBox="0 0 32 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 3L27 0.113249V5.88675L32 3ZM0 3.5H27.5V2.5H0V3.5Z" fill="#D1D2D6"/>
+              </svg>
           </div>
-          <p>Beraten lassen</p>
         </div>
-        <div class="wrap-arrow">
-          <svg width="32" height="6" viewBox="0 0 32 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32 3L27 0.113249V5.88675L32 3ZM0 3.5H27.5V2.5H0V3.5Z" fill="#D1D2D6"/>
-            </svg>
-        </div>
-        <div class="wrap-step">
-          <div class="icon">
-            <img src="img/main-icon3.svg" alt="">
+        <div class="wrap-step wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
+          <div class="wrap-step-block">
+            <div class="icon">
+              <img src="img/main-icon2.svg" alt="">
+            </div>
+            <p>Beraten lassen</p>            
           </div>
-          <p>Medikamente bestellen</p>
-        </div>
-        <div class="wrap-arrow">
-          <svg width="32" height="6" viewBox="0 0 32 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M32 3L27 0.113249V5.88675L32 3ZM0 3.5H27.5V2.5H0V3.5Z" fill="#D1D2D6"/>
-            </svg>
-        </div>
-        <div class="wrap-step">
-          <div class="icon">
-            <img src="img/main-icon4.svg" alt="">
+          <div class="wrap-arrow">
+            <svg width="32" height="6" viewBox="0 0 32 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 3L27 0.113249V5.88675L32 3ZM0 3.5H27.5V2.5H0V3.5Z" fill="#D1D2D6"/>
+              </svg>
           </div>
-          <p>Bestellung abholen</p>
+        </div>
+        <div class="wrap-step wow fadeIn" data-wow-duration="2s" data-wow-delay="1.5s">
+          <div class="wrap-step-block">
+            <div class="icon">
+              <img src="img/main-icon3.svg" alt="">
+            </div>
+            <p>Medikamente bestellen</p>            
+          </div>
+          <div class="wrap-arrow">
+            <svg width="32" height="6" viewBox="0 0 32 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M32 3L27 0.113249V5.88675L32 3ZM0 3.5H27.5V2.5H0V3.5Z" fill="#D1D2D6"/>
+              </svg>
+          </div>
+        </div>
+        <div class="wrap-step wow fadeIn" data-wow-duration="2s" data-wow-delay="2s">
+          <div class="wrap-step-block">
+            <div class="icon">
+              <img src="img/main-icon4.svg" alt="">
+            </div>
+            <p>Bestellung abholen</p>            
+          </div>
         </div>
       </div>
       <form action="">
@@ -87,7 +122,7 @@
   <!-- Apotheken -->
   <section class="apotheken">
     <div class="container">
-      <div class="apotheke__slider">
+      <div class="apotheke__slider wow fadeInUp" data-wow-duration="1s" data-wow-delay="1s">
         <div>
           <div class="apotheke__card">
             <div class="apotheke__card-membership silver">
@@ -224,8 +259,8 @@
   <!-- Mediclix app  -->
   <section class="mediclix-app">
     <div class="container">
-      <div class="row">
-        <div class="col-6">
+      <div class="row align-items-center">
+        <div class="col-12 col-md-6 left">
           <div class="mediclix-app-collage">
             <div class="collage-top" id="scene1">
               <img src="img/app-bg-1.svg" alt="" data-depth="0.3">
@@ -239,7 +274,7 @@
             </div>
           </div>
         </div>
-        <div class="col-6">
+        <div class="col-12 col-md-6 right">
           <div class="mediclix-app-additional">
             <h2 class="alternative">Mediclix App</h2>
             <p>Jetzt, in Web und bald als App!</p>
@@ -264,38 +299,38 @@
   </section>
   <!-- Advanges -->
   <section class="advantages">
-    <div class="container">
-      <div class="advantages__item">
+    <div class="container  wow slideInLeft" data-wow-duration="2s" data-wow-delay="0.5s">
+      <div class="advantages__item" >
         <div class="icon">
           <img src="img/advantages-icon1.svg" alt="icon">
         </div>
         <p>Kein Postweg — schnelle Verfügbarkeit,<br> noch am gleichen Tag.</p>
       </div>
-      <div class="advantages__item">
+      <div class="advantages__item ">
         <div class="icon">
           <img src="img/advantages-icon1.svg" alt="icon">
         </div>
         <p>Kein Postweg — schnelle Verfügbarkeit,<br> noch am gleichen Tag.</p>
       </div>
-      <div class="advantages__item">
+      <div class="advantages__item ">
         <div class="icon">
           <img src="img/advantages-icon2.svg" alt="icon">
         </div>
         <p>Online Beratung durch di Apotheke deines Vertrauens.</p>
       </div>
-      <div class="advantages__item">
+      <div class="advantages__item ">
         <div class="icon">
           <img src="img/advantages-icon3.svg" alt="icon">
         </div>
         <p>Du Gist krank und schaffst es nicht zur nächsten Apotheke? Die Apotheke liefert gern zu dir nach Hause! </p>
       </div>
-      <div class="advantages__item">
+      <div class="advantages__item ">
         <div class="icon">
           <img src="img/advantages-icon3.svg" alt="icon">
         </div>
         <p>Du Gist krank und schaffst es nicht zur nächsten Apotheke? Die Apotheke liefert gern zu dir nach Hause! </p>
       </div>
-      <div class="advantages__item">
+      <div class="advantages__item ">
         <div class="icon">
           <img src="img/advantages-icon4.svg" alt="icon">
         </div>
@@ -317,6 +352,7 @@
   </section>
   <!-- Footer  -->
   <footer>
+    <svg id="bottom-corner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100" preserveAspectRatio="none"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M0,0,36.58,73.17A48.56,48.56,0,0,0,80,100H0Z"/></svg>
     <div class="container">
       <div class="footer__top">
         <div class="logo">
@@ -385,6 +421,8 @@
       </div>        
     </div>
   </footer>
+  <!-- Overlay  -->
+  <div class="overlay"></div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>
   <script src="js/main.js"></script>
