@@ -23,6 +23,10 @@ header{
             }
         }
         &__controls{
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            right: 40px;
             min-height: 40px;
             display: flex;
             align-items: center;
@@ -70,6 +74,9 @@ header{
                     font-weight: 400;
                     color:color(dark-grey,primary);
                 }
+            }
+            .menu-btn{
+                display: none;
             }
         }
     }
