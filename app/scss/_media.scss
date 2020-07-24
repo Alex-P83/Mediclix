@@ -1,4 +1,4 @@
-@media (max-width: 1550px) {
+@media (max-width: 1440px) {
   header,
   footer {
     #bottom-corner {
@@ -23,6 +23,18 @@
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
+  header{
+    .header{
+      &__wrapper{
+        .logo{
+          margin-left: 17px;
+        }
+        .header__controls{
+          margin-right: 17px;
+        }
+      }
+    }  
+  }
   .apotheke {
     &__slider {
       display: block;
