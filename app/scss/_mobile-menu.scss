@@ -1,57 +1,93 @@
-#mobile-menu{
-    width: 300px;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -300px;
-    background: color(white,primary);
-    margin: unset;
-    z-index: 3;
-    overflow: hidden;
-    -webkit-transition: .5s;
-    -o-transition: .5s;
-    transition: .5s;
-    .header{
-        padding: 16px 15px 12px;
-        background: linear-gradient(355.76deg, #78CEFF -0.46%, #3889D5 35.38%, #1261BD 70.47%);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        .close-menu{
-            position: relative;
-            width: 30px;
-            height: 30px;
-            border: 1px solid color(white,primary);
-            border-radius: 50%;
-            span{
-                background-color: color(white,primary);
-                width: 15px;
-                height: 2px;
-                border-radius: 2px;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                &:first-child{
-                    transform: translate(-50%,-50%) rotate(45deg);
-                }
-                &:last-child{
-                    transform: translate(-50%,-50%) rotate(-45deg);
-                }
-            }
-        }        
+#mobile-menu {
+  position: relative;
+  width: 310px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -310px;
+  z-index: 3;
+  overflow: hidden;
+  transition: 0.5s;
+  padding-right: 20px;
+  margin: unset;
+  .wrapper {
+    height: 100%;
+    padding: 0 15px 15px;
+    background: color(white, primary);
+  }
+  .header {
+    height: 72px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 1px solid color(light-grey, light-200);
+    span{
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 600;
+        color: color(dark-grey, primary);        
+        margin-left: 12px;
     }
-    ul{
-        padding: 25px;
+    .close-menu {
+      position: absolute;
+      width: 48px;
+      height: 48px;
+      border: 1px solid color(light-grey, light-200);
+      background: color(white, primary);
+      border-radius: 50%;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -35px;
+      margin:unset;
+      span {
+        background-color: color(dark-grey, light-500);
+        width: 15px;
+        height: 2px;
+        border-radius: 2px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
         margin:unset;
-        li{
-            list-style: none;
-            margin: 10px 0;
-            a{
-                font-size: 16px;
-                font-weight: 400;
-                text-decoration: none;
-                color: color(dark-grey, primary);
-            }
+        &:first-child {
+          transform: translate(-50%, -50%) rotate(45deg);
         }
+        &:last-child {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+      }
     }
+  }
+  ul {
+    margin: unset;
+    padding: 20px 0;
+    border-bottom: 1px solid color(light-grey, light-200);
+    li {
+      list-style: none;
+      margin: 15px 0;
+      a {
+        font-size: 16px;
+        line-height: 1.5;
+        font-weight: 400;
+        text-decoration: none;
+        color: color(dark-grey, primary);
+        transition: 0.2s;
+        &:hover {
+          color: color(green, light-100);
+        }
+      }
+    }
+  }
+  .fur-apotheken{
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: color(dark-grey, primary);
+    transition: 0.2s;
+    text-decoration: none;
+    margin-top: 36px;
+    &:hover {
+      color: color(green, light-100);
+    }
+  }
 }

@@ -23,44 +23,153 @@
 
 // Large devices (desktops, less than 1200px)
 @media (max-width: 1199.98px) {
-  header{
-    .header{
-      &__wrapper{
-        .logo{
+  header {
+    padding: 20px 0;
+    .header {
+      &__wrapper {
+        .logo {
           margin-left: 17px;
+          .desktop-logo {
+            width: 145px;
+          }
         }
-        .header__controls{
+        .header__controls {
           margin-right: 17px;
+          padding: 8px 40px;
+          ul {
+            li {
+              &:nth-of-type(1) {
+                padding-right: 25px;
+                margin-right: 25px;
+              }
+            }
+          }
+          .cart {
+            margin-left: 24px;
+          }
         }
       }
-    }  
+    }
   }
-  .apotheke {
-    &__slider {
-      display: block;
-      grid-template-columns: unset;
-      column-gap: unset;
+  .main-screen {
+    padding: 66px 0 72px;
+    h1 {
+      font-size: 40px;
+    }
+    .clix-steps {
+      margin: 44px auto 71px;
+      .wrap-step {
+        .wrap-step-block {
+          .icon {
+            img {
+              width: 65px;
+            }
+          }
+        }
+        .wrap-arrow {
+          padding: 30px 10px 0;
+        }
+      }
+    }
+    form {
+      max-width: 460px;
+      button {
+        width: 100%;
+      }
+    }
+  }
+  .apotheken {
+    padding: 46px 0 58px;
+    .container {
+      max-width: 100%;
+    }
+    .apotheke {
+      &__slider {
+        display: block;
+        grid-template-columns: unset;
+        column-gap: unset;
+      }
     }
   }
   .video-block {
+    padding: 51px 0 62px;
     .container {
-      .text {
-        margin-top: unset;
-      }
-      .video-content {
-        width: 50%;
-        height: 260px;
+      .video-wrapper {
+        flex-direction: column;
+        padding: 0 50px;
+        .text {
+          margin-bottom: 20px;
+          padding-right: unset;
+        }
+        .video-content {
+          width: 100%;
+          height: 480px;
+        }
       }
     }
   }
   .mediclix-app {
+    padding: 33px 0;
+    .container{
+      max-width: 100%;
+    }
+    .left{
+      width: 37%;
+    }
+    .right{
+      width: 63%;
+    }
+    &-collage{
+      .collage{
+        &-top{
+          img {
+            &:nth-of-type(1) {
+              width: 260px;
+            }
+            &:nth-of-type(2) {
+              width: 260px;
+            }
+            &:nth-of-type(3) {
+              width: 350px;
+            }
+          }
+        }
+        &-bottom{
+          img{
+            &:nth-of-type(1){
+              width: 150px;
+              margin: -103px -139px 0px 0px;
+            }
+            &:nth-of-type(2){
+              width: 150px;
+              margin: 86px -58px 0px 0px;
+            }
+            &:nth-of-type(3){
+              width: 150px;
+              margin: -20px 0px 0px -120px;
+            }                        
+          }
+        }
+      }
+    }
     &-additional {
       margin: unset;
+      max-width: 332px;
+      .additional{
+        &-section{
+          display: none;
+        }
+      }
     }
   }
   .advantages {
-    .container {
-      padding-left: 15px;
+    padding: 65px 0 65px;
+    &-wrapper{
+      grid-template-columns: 1fr 1fr;
+      padding-left: unset;
+    }
+    &__item{
+      padding: 38px 24px;
     }
   }
 }
@@ -73,9 +182,9 @@
     }
   }
   .main-screen {
-    .clix-steps{
-      .wrap-step-block{
-        p{
+    .clix-steps {
+      .wrap-step-block {
+        p {
           font-size: 13px;
         }
       }
@@ -89,12 +198,14 @@
   .video-block {
     .container {
       flex-direction: column;
-      .text {
-        margin-bottom: 30px;
-      }
-      .video-content {
-        width: 100%;
-        height: 380px;
+      .video-wrapper{
+        .text {
+          margin-bottom: 30px;
+        }
+        .video-content {
+          width: 100%;
+          height: 330px;
+        }        
       }
     }
   }
@@ -102,6 +213,12 @@
     .container {
       max-width: 100%;
     }
+    .left{
+      width: 50%;
+    }
+    .right{
+      width: 50%;
+    }    
     &-collage {
       .collage {
         &-top {
@@ -146,16 +263,17 @@
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  .partners{
-    &__wrapper{
-      img{
-        margin:20px 45px;
+  .partners {
+    padding: 65px 0;
+    &__wrapper {
+      img {
+        margin: 20px 45px;
       }
     }
   }
   footer {
     background: url("../img/footer-bg-mini.svg") no-repeat top right 2%,
-    linear-gradient(345.82deg, #78ceff -0.46%, #3889d5 35.38%, #1261bd 70.47%);
+      linear-gradient(345.82deg, #78ceff -0.46%, #3889d5 35.38%, #1261bd 70.47%);
     padding: 30px 0 64px;
     .footer {
       &__top {
@@ -180,21 +298,40 @@
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
   header {
-    .header__controls {
-      padding: 8px 20px;
-      right: 15px;
-      ul {
-        li {
-          &:first-child {
-            padding-right: 20px;
-            margin-right: 20px;
+    .header {
+      &__wrapper {
+        .logo {
+          .desktop-logo {
+            display: none;
+          }
+          .mobile-logo {
+            display: block;
           }
         }
+        .header__controls {
+          background: unset;
+          padding: 5px;
+          ul {
+            display: none;
+          }
+          .cart {
+            margin: unset;
+            svg {
+              path {
+                stroke: color(white, primary);
+              }
+            }
+            span {
+              display: none;
+            }
+          }
+          .menu-btn {
+            display: block;
+            margin-left: 30px;
+          }
+        }        
       }
-      .cart {
-        margin-left: 20px;
-      }
-    }
+    }    
   }
   .main-screen {
     .container {
@@ -202,13 +339,16 @@
     }
   }
   .video-block {
-    .container{
+    .container {
+      .video-wrapper{
+        padding: unset;
+      }
       .video-content {
         width: 100%;
         height: 286px;
-      }      
+      }
     }
-  }  
+  }
   .apotheken {
     .container {
       max-width: 100%;
@@ -219,12 +359,15 @@
       max-width: 540px;
     }
     .left {
+      width: 100%;
       order: 2;
     }
     .right {
+      width: 100%;
       order: 1;
     }
     &-additional {
+      max-width: unset;
       .additional {
         max-width: unset;
         flex-direction: column;
@@ -242,8 +385,8 @@
       max-width: 100%;
     }
   }
-  .partners{
-    &__wrapper{
+  .partners {
+    &__wrapper {
       flex-direction: column;
     }
   }
@@ -286,27 +429,28 @@
             display: block;
           }
         }
-      }
-      &__controls {
-        background: unset;
-        ul{
-          display: none;
-        }
-        .cart{
-          margin: unset;
-          svg{
-            path{
-              stroke:color(white,primary);
-            }
-          }
-          span{
+        .header__controls {
+          background: unset;
+          padding: 5px;
+          ul {
             display: none;
           }
-        }
-        .menu-btn{
-          display: block;
-          margin-left: 30px;
-        }
+          .cart {
+            margin: unset;
+            svg {
+              path {
+                stroke: color(white, primary);
+              }
+            }
+            span {
+              display: none;
+            }
+          }
+          .menu-btn {
+            display: block;
+            margin-left: 30px;
+          }
+        }        
       }
     }
   }
@@ -337,16 +481,16 @@
   }
   .video-block {
     padding: 48px 0 64px;
-    .container{
+    .container {
       .video-content {
         width: 100%;
         height: 250px;
-      }      
-    }    
+      }
+    }
   }
   .advantages {
     padding: 48px 0;
-    .container {
+    &-wrapper{
       grid-template-columns: 1fr;
     }
     &__item {

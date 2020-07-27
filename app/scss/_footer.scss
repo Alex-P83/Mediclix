@@ -8,7 +8,7 @@ footer {
     position: absolute;
     top:0;
     right:0;
-    height: 100%;
+    height: 101%;
     transform: rotate(180deg);
     path{
       fill:color(background-color, primary)!important;
@@ -40,6 +40,40 @@ footer {
           margin-left: 12px;
           &:first-child {
             margin-left: unset;
+          }
+          a{
+            display: block;
+            border-radius: 50%;
+            transition: 0.2s;
+            svg{
+              path{
+                transition: 0.2s;
+              }
+            }
+            &:hover{
+              background: color(white,primary);
+              svg{
+                path{
+                  fill:color(green,light-100);
+                }
+              }
+            }
+            &:active{
+              &.facebook{
+                svg{
+                  path{
+                    fill:#3B5998;
+                  }
+                }
+              }
+              &.instagram{
+                svg{
+                  path{
+                    fill:linear-gradient(225deg, #C938A7 6.64%, #FF5D3F 50.68%, #FFD453 93.14%);
+                  }
+                }                
+              }
+            }
           }
         }
       }
@@ -81,6 +115,10 @@ footer {
             font-weight: 400;
             color: color(white, primary);
             text-decoration: none;
+            transition: 0.2s;
+            &:hover{
+              color:color(green,light-300);
+            }
           }
         }
       }
@@ -109,6 +147,10 @@ footer {
               font-weight: 600;
               color: color(white, primary);
               text-decoration: none;
+              transition: 0.2s;
+              &:hover{
+                color:color(green,light-300);
+              }
             }
           }
         }

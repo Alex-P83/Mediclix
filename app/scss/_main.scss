@@ -30,7 +30,7 @@ body {
       opacity: 1;
       z-index: 2;
     }
-  }  
+  }
 }
 
 .main-screen {
@@ -53,7 +53,7 @@ body {
       text-align: center;
       display: flex;
       align-items: flex-start;
-      &-block{
+      &-block {
         .icon {
           margin-bottom: 7px;
         }
@@ -63,9 +63,9 @@ body {
           color: color(dark-grey, light-100);
           margin: unset;
           text-transform: uppercase;
-        }        
+        }
       }
-      .wrap-arrow{
+      .wrap-arrow {
         padding: 37px 18px 0;
       }
     }
@@ -112,30 +112,32 @@ body {
 .video-block {
   padding: 100px 0;
   .container {
-    display: flex;
-    align-items: flex-start;
-    .text {
-      padding-right: 75px;
-      margin-top: 13px;
-      h2 {
-        margin-bottom: 20px;
-        line-height: 1.1;
+    .video-wrapper {
+      display: flex;
+      align-items: flex-start;
+      .text {
+        padding-right: 75px;
+        margin-top: 13px;
+        h2 {
+          margin-bottom: 20px;
+          line-height: 1.1;
+        }
+        p {
+          font-size: 16px;
+          line-height: 1.5;
+          color: color(dark-grey, light-100);
+          margin-bottom: 12px;
+        }
       }
-      p {
-        font-size: 16px;
-        line-height: 1.5;
-        color: color(dark-grey, light-100);
-        margin-bottom: 12px;
+      .video-content {
+        width: 760px;
+        height: 438px;
+        flex-shrink: 0;
+        font-size: 0;
+        border-radius: 6px;
+        overflow: hidden;
+        @include box_shadow(2);
       }
-    }
-    .video-content {
-      width: 760px;
-      height: 438px;
-      flex-shrink: 0;
-      font-size: 0;
-      border-radius: 6px;
-      overflow: hidden;
-      @include box_shadow(2);
     }
   }
 }
@@ -148,7 +150,21 @@ body {
       rgba(0, 32, 128, 0) 100%
     ),
     linear-gradient(-257.88deg, #78ceff 0%, #3889d5 47.45%, #1261bd 93.92%);
-    overflow: hidden;
+  overflow: hidden;
+  .left{
+    position: relative;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 1;
+  }
+  .right{
+    position: relative;
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 2;
+  }
   &-collage {
     display: grid;
     grid-template-columns: 100%;
@@ -173,7 +189,7 @@ body {
           }
           &:nth-of-type(2) {
             margin-top: -90px;
-          }          
+          }
           &:nth-of-type(3) {
             margin-top: 75px;
           }
@@ -208,7 +224,7 @@ body {
     }
   }
   &-additional {
-    margin:-10px 0 0 77px;
+    margin: -10px 0 0 77px;
     h2 {
       color: color(white, primary);
       margin-bottom: 21px;
@@ -254,17 +270,17 @@ body {
 
 .advantages {
   padding: 100px 0;
-  .container {
+  &-wrapper{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 24px;
-    padding-left: 87px;
+    padding-left: 70px;    
   }
   &__item {
     background: color(white, primary);
     box-shadow: 0px 0px 5px rgba(15, 20, 38, 0.06),
       0px 3px 12px rgba(15, 20, 38, 0.06);
-    padding: 40px 32px;
+    padding: 40px 34px;
     border-radius: 6px;
     .icon {
       height: 50px;

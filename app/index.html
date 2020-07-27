@@ -14,19 +14,24 @@
   <header>
     <svg id="bottom-corner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 100" preserveAspectRatio="none"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M0,0,36.58,73.17A48.56,48.56,0,0,0,80,100H0Z"/></svg>
     <div id="mobile-menu">
-      <div class="header">
-        <a href="" class="logo">
-          <img src="img/logo-mini.svg" alt="logo" class="mobile-logo">
-        </a>
-        <a href="#" class="close-menu">
-          <span></span>
-          <span></span>
-        </a>        
+      <div class="wrapper">
+        <div class="header">
+          <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 10C5.2 10 3 7.8 3 5C3 2.2 5.2 0 8 0C10.8 0 13 2.2 13 5C13 7.8 10.8 10 8 10ZM8 2C6.3 2 5 3.3 5 5C5 6.7 6.3 8 8 8C9.7 8 11 6.7 11 5C11 3.3 9.7 2 8 2ZM15 19H1C0.7 19 0.4 18.9 0.2 18.6C0 18.4 0 18 0 17.7C1 13.7 4.3 11 8 11C11.7 11 14.9 13.8 16 17.7C16.1 18 16 18.3 15.8 18.6C15.6 18.9 15.3 19 15 19ZM2.4 17H13.6C12.5 14.6 10.4 13 8 13C5.6 13 3.5 14.6 2.4 17Z" fill="#6AB339"/>
+            </svg>
+          <span>Hello, Sign in</span>
+          <a href="#" class="close-menu">
+            <span></span>
+            <span></span>
+          </a>          
+        </div>
+        <ul>
+          <li><a href="#">Login / Registrieren</a></li>
+          <li><a href="#">Warenkorb</a></li>
+          <li><a href="#">Suchen</a></li>
+        </ul>
+        <a href="#" class="fur-apotheken">Für Apotheken</a>        
       </div>
-      <ul>
-        <li><a href="#">Login / Registrieren</a></li>
-        <li><a href="#">Suchen</a></li>
-      </ul>
     </div>
     <div class="container">
       <div class="header__wrapper">
@@ -39,15 +44,59 @@
             <li><a href="#">Für Apotheken</a></li>
             <li><a href="#">Login / Registrieren</a></li>
           </ul>
-          <a href="" class="cart">
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.07511 13.7891L3.04623 2.17214L1 1" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M3.9707 5.66528L6.09786 13.789H16.8839L18.9995 5.66528H3.9707Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M7.43926 19C8.07774 19 8.59533 18.4804 8.59533 17.8395C8.59533 17.1985 8.07774 16.679 7.43926 16.679C6.80079 16.679 6.2832 17.1985 6.2832 17.8395C6.2832 18.4804 6.80079 19 7.43926 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M15.532 19C16.1705 19 16.6881 18.4804 16.6881 17.8395C16.6881 17.1985 16.1705 16.679 15.532 16.679C14.8936 16.679 14.376 17.1985 14.376 17.8395C14.376 18.4804 14.8936 19 15.532 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            <span class="cart__counter">0</span>
-          </a>
+          <div class="cart-wrapper">
+            <a href="" class="cart">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6.07511 13.7891L3.04623 2.17214L1 1" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M3.9707 5.66528L6.09786 13.789H16.8839L18.9995 5.66528H3.9707Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.43926 19C8.07774 19 8.59533 18.4804 8.59533 17.8395C8.59533 17.1985 8.07774 16.679 7.43926 16.679C6.80079 16.679 6.2832 17.1985 6.2832 17.8395C6.2832 18.4804 6.80079 19 7.43926 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M15.532 19C16.1705 19 16.6881 18.4804 16.6881 17.8395C16.6881 17.1985 16.1705 16.679 15.532 16.679C14.8936 16.679 14.376 17.1985 14.376 17.8395C14.376 18.4804 14.8936 19 15.532 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              <span class="cart__counter">0</span>
+            </a>
+            <div class="dropdown-content">
+              <div class="inner-content">
+                <a href="#">
+                  <span class="inner-cart">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.07511 13.7891L3.04623 2.17214L1 1" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.9707 5.66528L6.09786 13.789H16.8839L18.9995 5.66528H3.9707Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.43926 19C8.07774 19 8.59533 18.4804 8.59533 17.8395C8.59533 17.1985 8.07774 16.679 7.43926 16.679C6.80079 16.679 6.2832 17.1985 6.2832 17.8395C6.2832 18.4804 6.80079 19 7.43926 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.532 19C16.1705 19 16.6881 18.4804 16.6881 17.8395C16.6881 17.1985 16.1705 16.679 15.532 16.679C14.8936 16.679 14.376 17.1985 14.376 17.8395C14.376 18.4804 14.8936 19 15.532 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                    <span class="inner-cart-counter">1</span>
+                  </span>
+                  <span class="">
+                    <span class="apotheke-name">Berlinapotheke hackescher markt</span>
+                    <span class="price">32,05 €</span>
+                  </span>
+                </a>
+                <a href="#">
+                  <span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.07511 13.7891L3.04623 2.17214L1 1" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.9707 5.66528L6.09786 13.789H16.8839L18.9995 5.66528H3.9707Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.43926 19C8.07774 19 8.59533 18.4804 8.59533 17.8395C8.59533 17.1985 8.07774 16.679 7.43926 16.679C6.80079 16.679 6.2832 17.1985 6.2832 17.8395C6.2832 18.4804 6.80079 19 7.43926 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.532 19C16.1705 19 16.6881 18.4804 16.6881 17.8395C16.6881 17.1985 16.1705 16.679 15.532 16.679C14.8936 16.679 14.376 17.1985 14.376 17.8395C14.376 18.4804 14.8936 19 15.532 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                    <span class="inner-cart-counter">1</span>
+                  </span>
+                </a>
+                <a href="#">
+                  <span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.07511 13.7891L3.04623 2.17214L1 1" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M3.9707 5.66528L6.09786 13.789H16.8839L18.9995 5.66528H3.9707Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.43926 19C8.07774 19 8.59533 18.4804 8.59533 17.8395C8.59533 17.1985 8.07774 16.679 7.43926 16.679C6.80079 16.679 6.2832 17.1985 6.2832 17.8395C6.2832 18.4804 6.80079 19 7.43926 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.532 19C16.1705 19 16.6881 18.4804 16.6881 17.8395C16.6881 17.1985 16.1705 16.679 15.532 16.679C14.8936 16.679 14.376 17.1985 14.376 17.8395C14.376 18.4804 14.8936 19 15.532 19Z" stroke="#232735" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                    <span class="inner-cart-counter">1</span>
+                  </span>
+                </a>
+                <span class="choice-cart">Wählen Sie einen Warenkorb an um zu der Detailansicht zu gelangen.</span>                
+              </div>
+            </div>                        
+          </div>
           <a href="#" class="menu-btn">
             <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M21.1335 9.33333H0.866829C0.600163 9.33333 0.333496 9.06667 0.333496 8.8V7.2C0.333496 6.93333 0.600163 6.66667 0.866829 6.66667H21.1335C21.4002 6.66667 21.6668 6.93333 21.6668 7.2V8.8C21.6668 9.06667 21.4002 9.33333 21.1335 9.33333ZM21.1335 13.3333H0.866829C0.600163 13.3333 0.333496 13.6 0.333496 13.8667V15.4667C0.333496 15.7333 0.600163 16 0.866829 16H21.1335C21.4002 16 21.6668 15.7333 21.6668 15.4667V13.8667C21.6668 13.6 21.4002 13.3333 21.1335 13.3333ZM21.1335 0H0.866829C0.600163 0 0.333496 0.266667 0.333496 0.533333V2.13333C0.333496 2.4 0.600163 2.66667 0.866829 2.66667H21.1335C21.4002 2.66667 21.6668 2.4 21.6668 2.13333V0.533333C21.6668 0.266667 21.4002 0 21.1335 0Z" fill="white"/>
@@ -239,20 +288,20 @@
   <!-- Video  -->
   <section class="video-block">
     <div class="container">
-      <div class="text">
-        <h2 class="alternative">Deine Volteile<br> auf einen Blick</h2>
-        <p>Molestie arcu ac dolor ut eu adipiscing. 
-        Sapien turpis adipiscing neque orci. 
-        Odio fermentum semper ullamcorper at posuere nullam mus ornare eu.</p>
-        <p>Massa nisi, sollicitudin sagittis, nibh at praesent mauris massa eu. 
-        Vitae cras nec aenean volutpat potenti in.</p>
-        <p>Nulla mauris congue amet gravida sit varius. 
-        Aliquam in dictum in non maecenas lectus eget a ipsum. 
-        Augue amet tristique metus nisi. Imperdiet suspendisse dolor, interdum amet, nisi, a quis. 
-        Accumsan leo ipsum vehicula faucibus.</p>
-      </div>
-      <div class="video-content">
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CV4LAWSlnpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="video-wrapper">
+        <div class="text">
+          <h2 class="alternative">Deine Volteile<br> auf einen Blick</h2>
+          <p>Molestie arcu ac dolor ut eu adipiscing. 
+          Sapien turpis adipiscing neque orci. 
+          Odio fermentum semper ullamcorper at posuere nullam mus ornare eu.</p>
+          <p>Massa nisi, sollicitudin sagittis, nibh at praesent mauris massa eu. 
+          Vitae cras nec aenean volutpat potenti in.</p>
+          <p>Nulla mauris congue amet gravida sit varius. Aliquam in dictum in non maecenas lectus eget a ipsum. Augue amet tristique metus nisi. Imperdiet suspendisse dolor, interdum amet, nisi, a quis. 
+          Accumsan leo ipsum vehicula faucibus.</p>
+        </div>
+        <div class="video-content">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/CV4LAWSlnpk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>        
       </div>
     </div>
   </section>
@@ -260,7 +309,7 @@
   <section class="mediclix-app">
     <div class="container">
       <div class="row align-items-center">
-        <div class="col-12 col-md-6 left">
+        <div class="left">
           <div class="mediclix-app-collage">
             <div class="collage-top" id="scene1">
               <img src="img/app-bg-1.svg" alt="" data-depth="0.3">
@@ -274,7 +323,7 @@
             </div>
           </div>
         </div>
-        <div class="col-12 col-md-6 right">
+        <div class="right">
           <div class="mediclix-app-additional">
             <h2 class="alternative">Mediclix App</h2>
             <p>Jetzt, in Web und bald als App!</p>
@@ -300,41 +349,43 @@
   <!-- Advanges -->
   <section class="advantages">
     <div class="container">
-      <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.1s">
-        <div class="icon">
-          <img src="img/advantages-icon1.svg" alt="icon">
+      <div class="advantages-wrapper">
+        <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.1s">
+          <div class="icon">
+            <img src="img/advantages-icon1.svg" alt="icon">
+          </div>
+          <p>Kein Postweg — schnelle Verfügbarkeit,<br> noch am gleichen Tag.</p>
         </div>
-        <p>Kein Postweg — schnelle Verfügbarkeit,<br> noch am gleichen Tag.</p>
-      </div>
-      <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.1s">
-        <div class="icon">
-          <img src="img/advantages-icon1.svg" alt="icon">
+        <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.1s">
+          <div class="icon">
+            <img src="img/advantages-icon1.svg" alt="icon">
+          </div>
+          <p>Kein Postweg — schnelle Verfügbarkeit,<br> noch am gleichen Tag.</p>
         </div>
-        <p>Kein Postweg — schnelle Verfügbarkeit,<br> noch am gleichen Tag.</p>
-      </div>
-      <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.1s">
-        <div class="icon">
-          <img src="img/advantages-icon2.svg" alt="icon">
+        <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.1s">
+          <div class="icon">
+            <img src="img/advantages-icon2.svg" alt="icon">
+          </div>
+          <p>Online Beratung durch di Apotheke deines Vertrauens.</p>
         </div>
-        <p>Online Beratung durch di Apotheke deines Vertrauens.</p>
-      </div>
-      <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
-        <div class="icon">
-          <img src="img/advantages-icon3.svg" alt="icon">
+        <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="icon">
+            <img src="img/advantages-icon3.svg" alt="icon">
+          </div>
+          <p>Du Gist krank und schaffst es nicht zur nächsten Apotheke? Die Apotheke liefert gern zu dir nach Hause! </p>
         </div>
-        <p>Du Gist krank und schaffst es nicht zur nächsten Apotheke? Die Apotheke liefert gern zu dir nach Hause! </p>
-      </div>
-      <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
-        <div class="icon">
-          <img src="img/advantages-icon3.svg" alt="icon">
+        <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="icon">
+            <img src="img/advantages-icon3.svg" alt="icon">
+          </div>
+          <p>Du Gist krank und schaffst es nicht zur nächsten Apotheke? Die Apotheke liefert gern zu dir nach Hause! </p>
         </div>
-        <p>Du Gist krank und schaffst es nicht zur nächsten Apotheke? Die Apotheke liefert gern zu dir nach Hause! </p>
-      </div>
-      <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
-        <div class="icon">
-          <img src="img/advantages-icon4.svg" alt="icon">
-        </div>
-        <p>Benötigst du regelmäßig Medikamente, kannst du nun auch eine automatische Neubestellung in deiner Apotheke einrichten</p>
+        <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
+          <div class="icon">
+            <img src="img/advantages-icon4.svg" alt="icon">
+          </div>
+          <p>Benötigst du regelmäßig Medikamente, kannst du nun auch eine automatische Neubestellung in deiner Apotheke einrichten</p>
+        </div>        
       </div>
     </div>
   </section>
@@ -397,12 +448,12 @@
           </figure>          
         </div>
         <ul class="social">
-          <li><a href="#">
+          <li><a href="#" class="facebook">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0C8.0589 0 0 8.0589 0 18C0 27.9411 8.0589 36 18 36C27.9411 36 36 27.9411 36 18C36 8.0589 27.9411 0 18 0ZM19.8762 18.7906V28.5836H15.8243V18.791H13.8V15.4163H15.8243V13.3902C15.8243 10.6371 16.9673 9 20.2149 9H22.9186V12.3751H21.2286C19.9644 12.3751 19.8808 12.8467 19.8808 13.7269L19.8762 15.4159H22.9377L22.5794 18.7906H19.8762Z" fill="white"/>
               </svg>
           </a></li>
-          <li><a href="#">
+          <li><a href="#" class="instagram">
             <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path fill-rule="evenodd" clip-rule="evenodd" d="M18 0C8.0589 0 0 8.0589 0 18C0 27.9411 8.0589 36 18 36C27.9411 36 36 27.9411 36 18C36 8.0589 27.9411 0 18 0ZM14.0425 8.45798C15.0665 8.4114 15.3937 8.4 18.0009 8.4H17.9979C20.6059 8.4 20.9319 8.4114 21.9559 8.45798C22.978 8.50478 23.6759 8.66663 24.288 8.904C24.9199 9.14902 25.454 9.477 25.9879 10.011C26.522 10.5446 26.85 11.0802 27.096 11.7116C27.332 12.3221 27.494 13.0196 27.542 14.0417C27.588 15.0657 27.6 15.3928 27.6 18.0001C27.6 20.6073 27.588 20.9337 27.542 21.9578C27.494 22.9793 27.332 23.6771 27.096 24.2878C26.85 24.919 26.522 25.4546 25.9879 25.9882C25.4545 26.5222 24.9198 26.851 24.2886 27.0962C23.6777 27.3336 22.9793 27.4954 21.9574 27.5422C20.9333 27.5888 20.6071 27.6002 17.9997 27.6002C15.3927 27.6002 15.0657 27.5888 14.0417 27.5422C13.0198 27.4954 12.3221 27.3336 11.7113 27.0962C11.0802 26.851 10.5446 26.5222 10.0112 25.9882C9.47738 25.4546 9.1494 24.919 8.904 24.2875C8.66677 23.6771 8.505 22.9795 8.45798 21.9575C8.41162 20.9335 8.4 20.6073 8.4 18.0001C8.4 15.3928 8.412 15.0655 8.45782 14.0414C8.5038 13.0199 8.6658 12.3221 8.90378 11.7114C9.14978 11.0802 9.47783 10.5446 10.0118 10.011C10.5455 9.47722 11.081 9.14917 11.7125 8.904C12.3229 8.66663 13.0205 8.50478 14.0425 8.45798Z" fill="white"/>
               <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1398 10.1301C17.3069 10.1299 17.4869 10.1299 17.681 10.13L18.001 10.1301C20.5642 10.1301 20.868 10.1393 21.8802 10.1853C22.8162 10.2281 23.3242 10.3845 23.6626 10.5159C24.1106 10.6899 24.43 10.8979 24.7658 11.2339C25.1018 11.5699 25.3098 11.89 25.4843 12.3379C25.6157 12.676 25.7723 13.1839 25.8149 14.1199C25.8608 15.132 25.8708 15.436 25.8708 17.998C25.8708 20.56 25.8608 20.864 25.8149 21.8761C25.772 22.8121 25.6157 23.32 25.4843 23.6581C25.3103 24.106 25.1018 24.4251 24.7658 24.7609C24.4298 25.0969 24.1108 25.3049 23.6626 25.4789C23.3246 25.6109 22.8162 25.7669 21.8802 25.8097C20.8682 25.8557 20.5642 25.8657 18.001 25.8657C15.4376 25.8657 15.1337 25.8557 14.1217 25.8097C13.1857 25.7665 12.6777 25.6101 12.3391 25.4787C11.8911 25.3047 11.5711 25.0966 11.2351 24.7606C10.8991 24.4246 10.6911 24.1054 10.5167 23.6572C10.3853 23.3193 10.2287 22.8112 10.1861 21.8752C10.1401 20.8633 10.1309 20.5592 10.1309 17.9956C10.1309 15.432 10.1401 15.1296 10.1861 14.1175C10.2289 13.1815 10.3853 12.6736 10.5167 12.3352C10.6907 11.8871 10.8991 11.5672 11.2351 11.2312C11.5711 10.8952 11.8911 10.6871 12.3391 10.5127C12.6775 10.3807 13.1857 10.2247 14.1217 10.1817C15.0073 10.1417 15.3506 10.1297 17.1398 10.1277V10.1301ZM23.1254 11.7241C22.4894 11.7241 21.9734 12.2395 21.9734 12.8758C21.9734 13.5118 22.4894 14.0278 23.1254 14.0278C23.7614 14.0278 24.2774 13.5118 24.2774 12.8758C24.2774 12.2398 23.7614 11.7238 23.1254 11.7238V11.7241ZM13.0709 18.0002C13.0709 15.2776 15.2782 13.0702 18.0008 13.0702C20.7234 13.0702 22.9302 15.2776 22.9302 18.0002C22.9302 20.7229 20.7236 22.9293 18.001 22.9293C15.2783 22.9293 13.0709 20.7229 13.0709 18.0002Z" fill="white"/>

@@ -17,14 +17,14 @@ $('.menu-btn').on('click', function (e) {
 });
 $('.close-menu').on('click', function (e) {
   e.preventDefault();
-  sideNav.style.left = "-300px";
+  sideNav.style.left = "-310px";
   $('body').removeClass('disable');
   $('.overlay').removeClass('active');
 });
 
 $('.overlay').on('click',function(){
   $('body').removeClass('disable');
-  sideNav.style.left = "-300px";
+  sideNav.style.left = "-310px";
   $(this).removeClass('active');  
 });
 
