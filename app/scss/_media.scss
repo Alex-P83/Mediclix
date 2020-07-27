@@ -110,18 +110,18 @@
   }
   .mediclix-app {
     padding: 33px 0;
-    .container{
+    .container {
       max-width: 100%;
     }
-    .left{
+    .left {
       width: 37%;
     }
-    .right{
+    .right {
       width: 63%;
     }
-    &-collage{
-      .collage{
-        &-top{
+    &-collage {
+      .collage {
+        &-top {
           img {
             &:nth-of-type(1) {
               width: 260px;
@@ -134,20 +134,20 @@
             }
           }
         }
-        &-bottom{
-          img{
-            &:nth-of-type(1){
+        &-bottom {
+          img {
+            &:nth-of-type(1) {
               width: 150px;
               margin: -103px -139px 0px 0px;
             }
-            &:nth-of-type(2){
+            &:nth-of-type(2) {
               width: 150px;
               margin: 86px -58px 0px 0px;
             }
-            &:nth-of-type(3){
+            &:nth-of-type(3) {
               width: 150px;
               margin: -20px 0px 0px -120px;
-            }                        
+            }
           }
         }
       }
@@ -155,8 +155,8 @@
     &-additional {
       margin: unset;
       max-width: 332px;
-      .additional{
-        &-section{
+      .additional {
+        &-section {
           display: none;
         }
       }
@@ -164,11 +164,11 @@
   }
   .advantages {
     padding: 65px 0 65px;
-    &-wrapper{
+    &-wrapper {
       grid-template-columns: 1fr 1fr;
       padding-left: unset;
     }
-    &__item{
+    &__item {
       padding: 38px 24px;
     }
   }
@@ -198,14 +198,14 @@
   .video-block {
     .container {
       flex-direction: column;
-      .video-wrapper{
+      .video-wrapper {
         .text {
           margin-bottom: 30px;
         }
         .video-content {
           width: 100%;
           height: 330px;
-        }        
+        }
       }
     }
   }
@@ -213,12 +213,12 @@
     .container {
       max-width: 100%;
     }
-    .left{
+    .left {
       width: 50%;
     }
-    .right{
+    .right {
       width: 50%;
-    }    
+    }
     &-collage {
       .collage {
         &-top {
@@ -321,7 +321,7 @@
                 stroke: color(white, primary);
               }
             }
-            span {
+            span.cart__counter {
               display: none;
             }
           }
@@ -329,9 +329,9 @@
             display: block;
             margin-left: 30px;
           }
-        }        
+        }
       }
-    }    
+    }
   }
   .main-screen {
     .container {
@@ -340,12 +340,12 @@
   }
   .video-block {
     .container {
-      .video-wrapper{
+      .video-wrapper {
         padding: unset;
-      }
-      .video-content {
-        width: 100%;
-        height: 286px;
+        .video-content {
+          width: 100%;
+          height: 286px;
+        }
       }
     }
   }
@@ -442,7 +442,7 @@
                 stroke: color(white, primary);
               }
             }
-            span {
+            span.cart__counter {
               display: none;
             }
           }
@@ -450,7 +450,7 @@
             display: block;
             margin-left: 30px;
           }
-        }        
+        }
       }
     }
   }
@@ -490,7 +490,7 @@
   }
   .advantages {
     padding: 48px 0;
-    &-wrapper{
+    &-wrapper {
       grid-template-columns: 1fr;
     }
     &__item {

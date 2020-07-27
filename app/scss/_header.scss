@@ -1,12 +1,7 @@
 header {
   position: relative;
   padding: 18px 0;
-  background: linear-gradient(
-    355.76deg,
-    #78ceff -0.46%,
-    #3889d5 35.38%,
-    #1261bd 70.47%
-  );
+  background: linear-gradient(355.76deg, #78ceff -0.46%, #3889d5 35.38%, #1261bd 70.47%);
   .container {
     max-width: 100%;
   }
@@ -73,8 +68,14 @@ header {
         }
       }
       .cart {
+        cursor: pointer;
         &-wrapper {
           position: relative;
+          &:hover{
+            .dropdown-content{
+              display: block;
+            }
+          }
         }
         display: flex;
         align-items: center;
@@ -87,29 +88,93 @@ header {
           color: color(dark-grey, primary);
         }
         &:hover {
-          svg {
+          & > svg {
             path {
               stroke: color(green, dark-100);
             }
           }
-          span {
+          span.cart__counter {
             color: color(green, dark-100);
           }
         }
       }
       .dropdown-content {
-        // display: none;
+        display: none;
         position: absolute;
+        top: 0;
         right: 0;
         width: 256px;
         z-index: 1;
+        margin-top: 40px;
+        &:after{
+          position: absolute;
+          height: 40px;
+          width: 80px;
+          content:'';
+          top:-40px;
+          right:0;
+        }
         .inner-content {
-          background:color(white,primary);
+          background: color(white, primary);
           @include box_shadow(3);
+          padding: 12px 0;
           border-radius: 8px;
           display: flex;
           flex-direction: column;
-
+          a {
+            display: flex;
+            align-items: flex-start;
+            padding: 12px 24px;
+            text-decoration: none;
+            transition:0.2s;
+            &:hover{
+              background: color(green,light-700);
+            }
+            .inner-cart {
+              position: relative;
+              margin-right: 25px;
+              svg{
+                path{
+                  stroke:color(dark-grey,primary);
+                }
+              }
+              .inner-cart-counter {
+                position: absolute;
+                bottom: 0;
+                left: 13px;
+                height: 12px;
+                padding: 0 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 9px;
+                background: color(red,primary);
+                font-size: 10px;
+                line-height: 1.2;
+                font-weight: 600;
+                color:color(white,primary);
+              }
+            }
+            .apotheke-name{
+              display: inline-block;
+              font-size: 14px;
+              line-height: 1.43;
+              color:color(dark-grey,primary);
+            }
+            .price{
+              display: inline-block;
+              font-size: 16px;
+              line-height: 1.5;
+              font-weight: 700;
+              color:color(dark-grey,primary);
+            }            
+          }
+          .choice-cart{
+            padding: 12px 24px;
+            font-size: 14px;
+            line-height: 1.43;
+            color:color(dark-grey,light-200);
+          }
         }
       }
       .menu-btn {
