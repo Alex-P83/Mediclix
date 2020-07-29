@@ -1,4 +1,4 @@
-@media (max-width: 1440px) {
+@media (max-width: 1400px) {
   header,
   footer {
     #bottom-corner {
@@ -318,7 +318,7 @@
             margin: unset;
             svg {
               path {
-                stroke: color(white, primary);
+                fill: color(white, primary);
               }
             }
             span.cart__counter {
@@ -439,7 +439,7 @@
             margin: unset;
             svg {
               path {
-                stroke: color(white, primary);
+                fill: color(white, primary);
               }
             }
             span.cart__counter {

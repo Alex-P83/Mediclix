@@ -90,7 +90,7 @@ header {
         &:hover {
           & > svg {
             path {
-              stroke: color(green, dark-100);
+              fill: color(green, dark-100);
             }
           }
           span.cart__counter {
@@ -102,14 +102,14 @@ header {
         display: none;
         position: absolute;
         top: 0;
-        right: 0;
+        right: -65px;
         width: 256px;
         z-index: 1;
         margin-top: 40px;
         &:after{
           position: absolute;
           height: 40px;
-          width: 80px;
+          width: 150px;
           content:'';
           top:-40px;
           right:0;
@@ -135,7 +135,7 @@ header {
               margin-right: 25px;
               svg{
                 path{
-                  stroke:color(dark-grey,primary);
+                  fill:color(dark-grey,primary);
                 }
               }
               .inner-cart-counter {
@@ -156,7 +156,7 @@ header {
               }
             }
             .apotheke-name{
-              display: inline-block;
+              display: block;
               font-size: 14px;
               line-height: 1.43;
               color:color(dark-grey,primary);

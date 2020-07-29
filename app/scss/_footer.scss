@@ -6,10 +6,9 @@ footer {
     linear-gradient(345.82deg, #78ceff -0.46%, #3889d5 35.38%, #1261bd 70.47%);
   #bottom-corner{
     position: absolute;
-    top:0;
+    top:-1px;
     right:0;
     height: 101%;
-    transform: rotate(180deg);
     path{
       fill:color(background-color, primary)!important;
     }
