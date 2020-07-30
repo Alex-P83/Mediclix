@@ -4,15 +4,15 @@ footer {
   padding: 65px 0 30px;
   background: url("../img/footer-bg.svg") no-repeat top right 42%,
     linear-gradient(345.82deg, #78ceff -0.46%, #3889d5 35.38%, #1261bd 70.47%);
-  #bottom-corner{
+  #bottom-corner {
     position: absolute;
-    top:-1px;
-    right:0;
+    top: -1px;
+    right: 0;
     height: 101%;
-    path{
-      fill:color(background-color, primary)!important;
+    path {
+      fill: color(background-color, primary) !important;
     }
-  }  
+  }
   .footer {
     &__top {
       display: flex;
@@ -20,8 +20,8 @@ footer {
       justify-content: center;
       .logo {
         width: 22%;
-        a{
-          img{
+        a {
+          img {
             max-width: 146px;
           }
         }
@@ -40,37 +40,31 @@ footer {
           &:first-child {
             margin-left: unset;
           }
-          a{
-            display: block;
+          a {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
             border-radius: 50%;
             transition: 0.2s;
-            svg{
-              path{
-                transition: 0.2s;
+            img {
+              grid-column: 1 / -1;
+              grid-row: 1 / -1;
+              transition: 0.3s;
+              &:nth-of-type(1) {
+                opacity: 1;
+              }
+              &:nth-of-type(2) {
+                opacity: 0;
               }
             }
-            &:hover{
-              background: color(white,primary);
-              svg{
-                path{
-                  fill:color(green,light-100);
+            &:hover {
+              img {
+                &:nth-of-type(1) {
+                  opacity: 0;
                 }
-              }
-            }
-            &:active{
-              &.facebook{
-                svg{
-                  path{
-                    fill:#3B5998;
-                  }
+                &:nth-of-type(2) {
+                  opacity: 1;
                 }
-              }
-              &.instagram{
-                svg{
-                  path{
-                    fill:linear-gradient(225deg, #C938A7 6.64%, #FF5D3F 50.68%, #FFD453 93.14%);
-                  }
-                }                
               }
             }
           }
@@ -115,8 +109,8 @@ footer {
             color: color(white, primary);
             text-decoration: none;
             transition: 0.2s;
-            &:hover{
-              color:color(green,light-300);
+            &:hover {
+              color: color(green, light-300);
             }
           }
         }
@@ -147,8 +141,8 @@ footer {
               color: color(white, primary);
               text-decoration: none;
               transition: 0.2s;
-              &:hover{
-                color:color(green,light-300);
+              &:hover {
+                color: color(green, light-300);
               }
             }
           }
