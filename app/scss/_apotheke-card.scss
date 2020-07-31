@@ -32,6 +32,8 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      background-size: cover;
+      background-position: center;
       &.gold {
         background: linear-gradient(180deg, #facf4b 0%, #ebb617 100%);
       }
