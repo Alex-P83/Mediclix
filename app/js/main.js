@@ -178,3 +178,17 @@ function initSliders(){
 initSliders();
 $(window).resize(initSliders);
 
+
+$(function () {
+//   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+
+//     alert("Вы используете мобильное устройство (телефон или планшет).")
+
+// } else alert("Вы используете ПК.")
+if (navigator.userAgent.match(/iPhone/i)) {
+  var viewportmeta = document.querySelector('meta[name="viewport"]');
+  if (viewportmeta) {
+      viewportmeta.content = 'width=device-width, initial-scale=1';
+  }
+}
+});
