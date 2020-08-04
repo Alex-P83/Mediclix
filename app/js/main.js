@@ -1,10 +1,3 @@
-$(function(){
-
-
-
-  
-});
-
 //Menu
 
 let sideNav = document.getElementById("mobile-menu");
@@ -28,23 +21,10 @@ $('.overlay').on('click',function(){
   $(this).removeClass('active');  
 });
 
-//Resize window
-// var overlay = $('.overlay'); 
-// var menu = $();
-// $(window).resize(function(){
-//     var wid = $(window).width();
-//     if(wid > 570 && blockMenu.is(':hidden')) {
-//         blockMenu.removeAttr('style');
-//     } 
-// }); 
-
-
 // wow.js
 new WOW().init();
 
 // Slick sliders 
-
-// let apotheke__slider = $('.apotheke__slider');
 
 let apotheke__slider__settings = {
   arrows:false,
@@ -79,30 +59,7 @@ let apotheke__slider__settings = {
   ]  
 }
 
-// if(window.innerWidth < 1200){
-//     apotheke__slider.slick(apotheke__slider__settings);
-// }
-
-//Resize slider
-// $(window).resize(function (e) {
-//   if (window.innerWidth >= 1200) {
-//     if (apotheke__slider.hasClass('slick-initialized')) {
-//       setTimeout(function(){
-//           apotheke__slider.slick('unslick');
-//       }, 100);
-//     }
-//   }
-//   else {
-//       if(!apotheke__slider.hasClass('slick-initialized')){
-//         apotheke__slider.slick(apotheke__slider__settings);
-//     }    
-//   }
-// });
-
-
 // Slick sliders 
-
-//let clix_steps__slider = $('.clix-steps');
 
 let clix_steps__slider__settings = {
   arrows:false,
@@ -136,27 +93,6 @@ let clix_steps__slider__settings = {
   ]  
 }
 
-// if(window.innerWidth < 575){
-//   clix_steps__slider.slick(clix_steps__slider__settings);
-// }
-
-// //Resize slider
-// $(window).resize(function (e) {
-//   if (window.innerWidth >= 575) {
-//     if (clix_steps__slider.hasClass('slick-initialized')) {
-//       setTimeout(function(){
-//         clix_steps__slider.slick('unslick');
-//       }, 100);
-      
-//     }
-//   }
-//   else {
-//       if(!clix_steps__slider.hasClass('slick-initialized')){
-//         clix_steps__slider.slick(clix_steps__slider__settings);
-//     }    
-//   }
-// });
-
 function tryInitSlider($sliderDv, settings, width) {
   const isInitialized = $sliderDv.hasClass('slick-initialized');
   if (window.innerWidth < width) {
@@ -177,18 +113,3 @@ function initSliders(){
 
 initSliders();
 $(window).resize(initSliders);
-
-
-$(function () {
-//   if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
-
-//     alert("Вы используете мобильное устройство (телефон или планшет).")
-
-// } else alert("Вы используете ПК.")
-if (navigator.userAgent.match(/iPhone/i)) {
-  var viewportmeta = document.querySelector('meta[name="viewport"]');
-  if (viewportmeta) {
-      viewportmeta.content = 'width=device-width, initial-scale=1';
-  }
-}
-});

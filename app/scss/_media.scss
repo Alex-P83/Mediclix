@@ -1,7 +1,18 @@
+@media only screen and (min-width: 767px) and (-webkit-device-pixel-ratio: 2){
+      body{
+        zoom:0.8;    
+    }  
+}
+
+@media only screen and (max-width: 600px) and (-webkit-device-pixel-ratio: 2){
+      body{
+        zoom:1;    
+    }  
+}
+
 @media (max-width: 1400px) {
   footer{
     .container{
-      // max-width: 100%;
       padding-right: 80px;
     }
   }  
@@ -425,19 +436,7 @@
 }
 
 // Extra small devices (portrait phones, less than 576px)
-@media (max-width: 575.98px) {
-  // @-ms-viewport { 
-  //   width: device-width;
-  //   zoom: 1!important;
-  //  }
-  //  @-o-viewport { 
-  //   width: device-width;
-  //   zoom: 1!important;
-  //  }
-  //  @viewport { 
-  //   width: device-width;
-  //   zoom: 1!important;
-  //  }   
+@media (max-width: 575.98px) { 
   h2 {
     font-size: 28px !important;
   }
