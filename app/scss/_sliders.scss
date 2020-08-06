@@ -1,8 +1,17 @@
 .apotheke {
   &__slider {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    column-gap: 19px;
+    // display: grid;
+    // grid-template-columns: repeat(5, 1fr);
+    // column-gap: 19px;
+    display: flex;
+    margin-left: -10px;
+    margin-right: -10px;
+    align-items: flex-start;
+    justify-content: center;
+    &>div{
+      width: calc(100%/5);
+      padding: 0 10px;
+    }
     .slick-list {
       .slick-track {
         padding: 15px 0;

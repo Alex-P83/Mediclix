@@ -110,8 +110,9 @@
     .apotheke {
       &__slider {
         display: block;
-        grid-template-columns: unset;
-        column-gap: unset;
+        &>div{
+          width: 100%;
+        }
       }
     }
   }
