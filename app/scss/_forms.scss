@@ -28,14 +28,14 @@ input {
   &:-ms-input-placeholder {
     color: color(light-grey, dark-100);
   }
-  &:focus{
+  &:focus {
     border-color: color(dark-grey, light-500);
   }
-  &:active{
+  &:active {
     border-color: color(green, primary);
   }
-  &:disabled{
-    background-color: color(light-grey,light-200)!important;
+  &:disabled {
+    background-color: color(light-grey, light-200) !important;
   }
 }
 
@@ -65,13 +65,21 @@ textarea {
   &:-ms-input-placeholder {
     color: color(light-grey, dark-100);
   }
-  &:focus{
+  &:focus {
     border-color: color(dark-grey, light-500);
   }
-  &:active{
+  &:active {
     border-color: color(green, primary);
   }
-  &:disabled{
-    background-color: color(light-grey,light-200)!important;
+  &:disabled {
+    background-color: color(light-grey, light-200) !important;
   }
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  width: 11px;
+  height: 11px;
+  background-image: url("../img/cross.svg");
+  margin-right: 10px;
 }

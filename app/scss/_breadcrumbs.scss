@@ -1,0 +1,32 @@
+.breadcrumbs {
+  padding: 24px 0;
+  .container {
+    max-width: 100%;
+  }
+  .breadcrumb {
+    padding: unset;
+    margin: 0 94px;
+    background: unset;
+    &-item {
+      font-size: 14px;
+      line-height: 1.43;
+      font-weight: 400;
+      color: color(dark-grey, light-200);
+      a {
+        color: color(dark-grey, light-200);
+        text-decoration: none;
+        transition: 0.2s;
+        &:hover {
+          color: color(green, dark-100);
+        }
+      }
+      & + .breadcrumb-item::before {
+        content: "\203a";
+        color:color(light-grey,primary);
+      }
+      &.active{
+          color:color(dark-grey,light-500);
+      }
+    }
+  }
+}
