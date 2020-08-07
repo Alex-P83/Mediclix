@@ -1,7 +1,12 @@
 header {
   position: relative;
   padding: 18px 0;
-  background: linear-gradient(355.76deg, #78ceff -0.46%, #3889d5 35.38%, #1261bd 70.47%);
+  background: linear-gradient(
+    355.76deg,
+    #78ceff -0.46%,
+    #3889d5 35.38%,
+    #1261bd 70.47%
+  );
   .container {
     max-width: 100%;
   }
@@ -50,6 +55,48 @@ header {
             &:hover {
               color: color(green, dark-100);
             }
+            .user{
+              display: none;
+              svg{
+                margin-right: 8px;
+              }
+            }
+          }
+          label {
+            margin: unset;
+            .dropdown-content {
+              width: 204px;
+              left: 50%;
+              transform: translateX(-50%);
+              right: unset;
+              .inner-content{
+                a{
+                  align-items: center;
+                  .icon{
+                    width: 20px;
+                    height: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 14px;
+                  }                
+                }                
+              }
+              &:after {
+                height: 20px;
+                width: 100%;
+                top: -20px;
+              }
+            }
+            &:hover {
+              cursor: pointer;
+              .dropdown-content {
+                display: block;
+                a{
+                  color: color(dark-grey, primary);
+                }
+              }
+            }
           }
           &:nth-of-type(1) {
             padding-right: 40px;
@@ -71,9 +118,31 @@ header {
         cursor: pointer;
         &-wrapper {
           position: relative;
-          &:hover{
-            .dropdown-content{
+          &:hover {
+            .dropdown-content {
               display: block;
+            }
+          }
+          .cart{
+            .icon{
+              position: relative;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+            &.with-products{
+              .icon{
+                &:after{
+                  position: absolute;
+                  bottom:2px;
+                  right:-3px;
+                  width: 8px;
+                  height: 8px;
+                  border-radius: 50%;
+                  background: color(red,primary);
+                  content:'';
+                }                
+              }
             }
           }
         }
@@ -88,7 +157,7 @@ header {
           color: color(dark-grey, primary);
         }
         &:hover {
-          & > svg {
+          .icon svg {
             path {
               fill: color(green, dark-100);
             }
@@ -106,13 +175,13 @@ header {
         width: 256px;
         z-index: 1;
         margin-top: 40px;
-        &:after{
+        &:after {
           position: absolute;
           height: 40px;
           width: 150px;
-          content:'';
-          top:-40px;
-          right:0;
+          content: "";
+          top: -40px;
+          right: 0;
         }
         .inner-content {
           background: color(white, primary);
@@ -126,16 +195,16 @@ header {
             align-items: flex-start;
             padding: 12px 24px;
             text-decoration: none;
-            transition:0.2s;
-            &:hover{
-              background: color(green,light-700);
+            transition: 0.2s;
+            &:hover {
+              background: color(green, light-700);
             }
             .inner-cart {
               position: relative;
               margin-right: 25px;
-              svg{
-                path{
-                  fill:color(dark-grey,primary);
+              svg {
+                path {
+                  fill: color(dark-grey, primary);
                 }
               }
               .inner-cart-counter {
@@ -148,32 +217,32 @@ header {
                 align-items: center;
                 justify-content: center;
                 border-radius: 9px;
-                background: color(red,primary);
+                background: color(red, primary);
                 font-size: 10px;
                 line-height: 1.2;
                 font-weight: 600;
-                color:color(white,primary);
+                color: color(white, primary);
               }
             }
-            .apotheke-name{
+            .apotheke-name {
               display: block;
               font-size: 14px;
               line-height: 1.43;
-              color:color(dark-grey,primary);
+              color: color(dark-grey, primary);
             }
-            .price{
+            .price {
               display: inline-block;
               font-size: 16px;
               line-height: 1.5;
               font-weight: 700;
-              color:color(dark-grey,primary);
-            }            
+              color: color(dark-grey, primary);
+            }
           }
-          .choice-cart{
+          .choice-cart {
             padding: 12px 24px;
             font-size: 14px;
             line-height: 1.43;
-            color:color(dark-grey,light-200);
+            color: color(dark-grey, light-200);
           }
         }
       }

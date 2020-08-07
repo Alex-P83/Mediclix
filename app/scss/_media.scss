@@ -342,10 +342,12 @@
           }
           .cart {
             margin: unset;
-            svg {
-              path {
-                fill: color(white, primary);
-              }
+            .icon{
+              svg {
+                path {
+                  fill: color(white, primary);
+                }
+              }              
             }
             span.cart__counter {
               display: none;
@@ -354,6 +356,11 @@
           .menu-btn {
             display: block;
             margin-left: 30px;
+          }
+          .dropdown-content{
+            &:after{
+              right:40px;
+            }
           }
         }
       }

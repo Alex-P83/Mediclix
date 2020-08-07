@@ -102,6 +102,33 @@ body {
       margin-top: 32px;
     }
   }
+  @include respond(lg-screen){
+    padding: 66px 0 72px;
+    h1 {
+      font-size: 40px;
+    }
+    .clix-steps {
+      margin: 44px auto 71px;
+      .wrap-step {
+        .wrap-step-block {
+          .icon {
+            img {
+              width: 65px;
+            }
+          }
+        }
+        .wrap-arrow {
+          padding: 30px 10px 0;
+        }
+      }
+    }
+    form {
+      max-width: 460px;
+      button {
+        width: 100%;
+      }
+    }
+  }
 }
 
 .apotheken {

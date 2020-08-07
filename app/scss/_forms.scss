@@ -5,7 +5,7 @@ input {
   border-radius: 4px;
   font-size: 16px;
   font-weight: 400;
-  color: color(light-grey, dark-100);
+  color: color(dark-grey, primary);
   outline: none;
   padding-left: 8px;
   &.icon-input {
@@ -28,5 +28,50 @@ input {
   &:-ms-input-placeholder {
     color: color(light-grey, dark-100);
   }
+  &:focus{
+    border-color: color(dark-grey, light-500);
+  }
+  &:active{
+    border-color: color(green, primary);
+  }
+  &:disabled{
+    background-color: color(light-grey,light-200)!important;
+  }
 }
 
+textarea {
+  border: 1px solid color(light-grey, light-100);
+  background: color(white, primary);
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 400;
+  color: color(dark-grey, primary);
+  outline: none;
+  padding-left: 8px;
+  &::-webkit-input-placeholder {
+    color: color(light-grey, dark-100);
+  }
+
+  &::-moz-placeholder {
+    color: color(light-grey, dark-100);
+  }
+
+  /* Firefox 19+ */
+  &:-moz-placeholder {
+    color: color(light-grey, dark-100);
+  }
+
+  /* Firefox 18- */
+  &:-ms-input-placeholder {
+    color: color(light-grey, dark-100);
+  }
+  &:focus{
+    border-color: color(dark-grey, light-500);
+  }
+  &:active{
+    border-color: color(green, primary);
+  }
+  &:disabled{
+    background-color: color(light-grey,light-200)!important;
+  }
+}
