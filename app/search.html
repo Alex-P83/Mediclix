@@ -165,12 +165,17 @@
   <!-- Layout -->
   <div class="layout">
       <div class="container">
-          <div class="content">
+          <div class="layout__wrapper">
               <div class="layout__header">
-                  <h2>Apotheken in deiner Nähe</h2>
+                  <h3>Apotheken in deiner Nähe</h3>
                   <form action="">
                       <div class="form-field">
-                         <input type="search" name="" placeholder="">
+                         <input type="text" name="search" placeholder="Tor-apotheke">
+                         <a href="#">
+                          <svg width='11px' height="11px">
+                              <use xlink:href="../img/cross.svg#cross"/>
+                          </svg>                             
+                         </a>
                       </div>
                       <button>
                         <svg width='17px' height="17px">
@@ -179,7 +184,94 @@
                       </button>
                   </form>
               </div>
-              <div class="sidebar"></div>
+              <div class="sidebar">
+                <div class="address__block">
+                  <div class="location">
+                    <div class="icon">
+                      <svg width='16px' height="16px">
+                          <use xlink:href="../img/location-pointer.svg#location-pointer"/>
+                      </svg>                       
+                    </div>
+                    <figure>
+                      <h5>Pädagogienstraße 20, 
+                        18055 Rostock</h5>
+                      <span>32 Apotheken</span>                      
+                    </figure>
+                  </div>
+                  <a href="#" class="btn primary-btn">Karte anzeigen</a>
+                </div>
+                <div class="filter__block">
+                  <label for="favoritenapotheken" class="switch-label">
+                    <span class="body1-bold">Favoritenapotheken</span>
+                    <figure  class="switch">
+                      <input type="checkbox" id="favoritenapotheken">
+                      <span class="slider"></span>                      
+                    </figure>
+                  </label>
+                  <label for="geöffnet" class="switch-label">
+                    <span class="body1-bold">Geöffnet</span>
+                    <figure class="switch">
+                      <input type="checkbox" id="geöffnet">
+                      <span class="slider"></span>                      
+                    </figure>
+                  </label>
+                  <div class="range__block">
+                    <span class="body1-bold">Bewertung</span>
+                    <label for="" class="range-label">
+                      <span class="body2">Gesamt</span>
+                      <div class="rating">
+                        <input type="radio" id="star5" name="rating1" value="5" /><label for="star5"></label>
+                        <input type="radio" id="star4" name="rating1" value="4" /><label for="star4"></label>
+                        <input type="radio" id="star3" name="rating1" value="3" checked/><label for="star3"></label>
+                        <input type="radio" id="star2" name="rating1" value="2" /><label for="star2"></label>
+                        <input type="radio" id="star1" name="rating1" value="1" /><label for="star1"></label>
+                      </div>                       
+                    </label>
+                  </div>                  
+                  <a href="" class="btn secondary-btn">Kein Filter</a>
+                </div>
+              </div>
+              <div class="content">
+                <div class="apotheke__card">
+                  <div class="apotheke__card-inner">
+                    <div class="icon">
+                      <img src="img/logo-ph1.png" alt="">
+                    </div>
+                    <div class="apotheke__card-inner-content">
+                      <div class="rating__stars">
+                        <div class="rating__star ">
+                          <svg width="16" height="15">
+                              <use xlink:href="../img/star.svg#star"></use>
+                          </svg>
+                        </div>
+                        <div class="rating__star ">
+                          <svg width="16" height="15">
+                              <use xlink:href="../img/star.svg#star"></use>
+                          </svg>
+                        </div>
+                        <div class="rating__star ">
+                          <svg width="16" height="15">
+                              <use xlink:href="../img/star.svg#star"></use>
+                          </svg>
+                        </div>
+                        <div class="rating__star ">
+                          <svg width="16" height="15">
+                              <use xlink:href="../img/star.svg#star"></use>
+                          </svg>
+                        </div>
+                        <div class="rating__star ">
+                          <svg width="16" height="15">
+                              <use xlink:href="../img/star.svg#star"></use>
+                          </svg>
+                        </div>                                                                                                
+                      </div>
+                      <div class="rating__review-count">
+                        <span>541</span>Bewertungen
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
           </div>
       </div>
   </div>
