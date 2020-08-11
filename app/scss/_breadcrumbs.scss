@@ -29,4 +29,9 @@
       }
     }
   }
+  @include respond(lg-screen){
+    .breadcrumb{
+      margin:0 17px;
+    }
+  }
 }

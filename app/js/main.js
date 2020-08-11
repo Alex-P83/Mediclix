@@ -21,6 +21,27 @@ $('.overlay').on('click',function(){
   $(this).removeClass('active');  
 });
 
+let filterNav = document.getElementById("filter");
+
+$('.menu-btn').on('click', function (e) {
+  e.preventDefault();
+  sideNav.style.left = "0px";
+  $('body').addClass('disable');
+  $('.overlay').addClass('active');
+});
+$('.close-menu').on('click', function (e) {
+  e.preventDefault();
+  sideNav.style.left = "-310px";
+  $('body').removeClass('disable');
+  $('.overlay').removeClass('active');
+});
+
+$('.overlay').on('click',function(){
+  $('body').removeClass('disable');
+  sideNav.style.left = "-310px";
+  $(this).removeClass('active');  
+});
+
 // wow.js
 new WOW().init();
 

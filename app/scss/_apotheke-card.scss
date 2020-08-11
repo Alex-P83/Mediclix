@@ -99,5 +99,129 @@
         }
       }
     }
+    &.search-detail{
+      display: grid;
+      grid-template-columns: 60% 40%;
+      padding: 20px 24px;
+      .apotheke__card-inner{
+        display: flex;
+        align-items: flex-start;
+        .icon{
+          height: unset;
+          margin: unset;
+          margin-right: 16px;
+          img{
+            width: auto;
+            max-width: 64px;
+            max-height: 64px;            
+          }
+        }
+        .apotheke__card-name{
+          min-height: unset;
+          margin-top: 4px;
+          h6{
+            margin-bottom: 6px;
+          }
+        }
+        &-content{
+          display: flex;
+          align-items: center;
+          margin-bottom: 24px;
+          .rating{
+            &__stars{
+              display: flex;
+              align-items: center;
+              .rating__star{
+                display: inline-flex;
+                svg{
+                  &>use{
+                    fill: color(light-grey, light-100);
+                  }                    
+                }
+                &.active{
+                  svg{
+                    &>use{
+                      fill: #f2c94c;
+                    }                    
+                  }
+                }
+              }
+            }
+            &__review-count{
+              font-size: 13px;
+              font-weight: 400;
+              line-height: 1;
+              color:color(dark-grey, light-300);
+              margin:0 8px;
+              span{
+                display: inline-block;
+                margin-right: 3px;
+              }
+            }
+          }
+        }
+      }
+      .apotheke__card-work-time{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-end;
+        margin:unset;
+        padding: unset;
+        .status{
+          position: relative;
+          padding-left: 20px;
+          padding-right: 20px;
+          margin:unset;
+          font-weight: 600;
+          svg{
+            left:0;
+          }
+          &:after{
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            right:8px;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: color(light-grey, dark-100);
+            content:'';
+          }
+        }
+      }
+      .apotheke__card-info{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding-left: 80px;
+        .info-label{
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 28px;
+          border-radius: 14px;
+          padding: 4px 10px;
+          background: color(light-grey,light-300);
+          margin:4px 8px 4px 0;
+          &:last-child{
+            margin-right: unset;
+          }
+          .label-icon{
+            display: inline-flex;
+            margin-right: 8px;
+          }
+          span{
+            font-size: 14px;
+            font-weight: 600;
+          }
+          &:hover{
+            &>.tooltip-label{
+              display: flex;
+            }
+          }
+        }
+      }
+    }
   }
 }

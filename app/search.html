@@ -198,9 +198,17 @@
                       <span>32 Apotheken</span>                      
                     </figure>
                   </div>
-                  <a href="#" class="btn primary-btn">Karte anzeigen</a>
+                  <div class="wrap-btn">
+                    <a href="#" class="btn primary-btn">Karte anzeigen</a>
+                    <a href="#" class="filter-btn">
+                      <svg width='17' height="18px">
+                        <use xlink:href="../img/filter-btn.svg#filter"/>
+                      </svg>
+                      <span>Filter</span>                     
+                    </a>                    
+                  </div>
                 </div>
-                <div class="filter__block">
+                <div class="filter__block" id="filter">
                   <label for="favoritenapotheken" class="switch-label">
                     <span class="body1-bold">Favoritenapotheken</span>
                     <figure  class="switch">
@@ -232,45 +240,430 @@
                 </div>
               </div>
               <div class="content">
-                <div class="apotheke__card">
-                  <div class="apotheke__card-inner">
-                    <div class="icon">
-                      <img src="img/logo-ph1.png" alt="">
-                    </div>
-                    <div class="apotheke__card-inner-content">
-                      <div class="rating__stars">
-                        <div class="rating__star ">
-                          <svg width="16" height="15">
-                              <use xlink:href="../img/star.svg#star"></use>
-                          </svg>
-                        </div>
-                        <div class="rating__star ">
-                          <svg width="16" height="15">
-                              <use xlink:href="../img/star.svg#star"></use>
-                          </svg>
-                        </div>
-                        <div class="rating__star ">
-                          <svg width="16" height="15">
-                              <use xlink:href="../img/star.svg#star"></use>
-                          </svg>
-                        </div>
-                        <div class="rating__star ">
-                          <svg width="16" height="15">
-                              <use xlink:href="../img/star.svg#star"></use>
-                          </svg>
-                        </div>
-                        <div class="rating__star ">
-                          <svg width="16" height="15">
-                              <use xlink:href="../img/star.svg#star"></use>
-                          </svg>
-                        </div>                                                                                                
+                <div class="card__cell">
+                  <div class="apotheke__card search-detail">
+                    <div class="apotheke__card-inner">
+                      <div class="icon">
+                        <img src="img//apotheke-logo1.png" alt="apotheke logo">
                       </div>
-                      <div class="rating__review-count">
-                        <span>541</span>Bewertungen
+                      <div class="apotheke__card-inner-wrap">
+                        <div class="apotheke__card-name">
+                          <h6>Berlinapotheke hackescher markt</h6>
+                        </div>
+                        <div class="apotheke__card-inner-content">
+                          <div class="rating__stars">
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star ">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>                                                                                                
+                          </div>
+                          <div class="rating__review-count">
+                            <span>541</span>Bewertungen
+                          </div>
+                        </div>                      
                       </div>
                     </div>
-                  </div>
+                    <div class="apotheke__card-work-time">
+                      <span class="status opened">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        </svg>
+                        Jetzt geoffen</span>
+                      <span>Offnet om 8:00 Do</span>
+                    </div>
+                    <div class="apotheke__card-info">
+                      <div class="info-label">
+                        <div class="tooltip-label">
+                          <div class="cell">
+                            <div class="tooltip-icon">
+                              <svg width='24px' height="24px">
+                                <use xlink:href="../img/pedestrian.svg#pedestrian"/>
+                            </svg> 
+                            </div>
+                            <span>900 m</span>
+                          </div>
+                          <div class="cell">
+                            <div class="tooltip-icon">
+                              <svg width='24px' height="24px">
+                                <use xlink:href="../img/cyclist.svg#cyclist"/>
+                            </svg> 
+                            </div>
+                            <span>1.3 km</span>
+                          </div>
+                          <div class="cell">
+                            <div class="tooltip-icon">
+                              <svg width='24px' height="24px">
+                                <use xlink:href="../img/bus.svg#bus"/>
+                            </svg> 
+                            </div>
+                            <span>1.6 km</span>
+                          </div>
+                          <div class="cell">
+                            <div class="tooltip-icon">
+                              <svg width='24px' height="24px">
+                                <use xlink:href="../img/car.svg#car"/>
+                            </svg> 
+                            </div>
+                            <span>1.5 km</span>
+                          </div>
+                        </div>
+                        <div class="label-icon">
+                          <svg width="12" height="16">
+                            <use xlink:href="../img/location-icon.svg#location-icon"></use>
+                          </svg>
+                        </div>
+                        <span>50 m</span>
+                      </div>
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="16" height="13">
+                            <use xlink:href="../img/delivery-icon.svg#delivery-icon"></use>
+                          </svg>
+                        </div>
+                        <span>12,90 €</span>
+                      </div>
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="10" height="15">
+                            <use xlink:href="../img/lock-icon.svg#lock-icon"></use>
+                          </svg>
+                        </div>
+                        <span>Selbstabholung</span>
+                      </div>
+                    </div>
+                  </div>                  
                 </div>
+                <div class="card__cell">
+                  <div class="apotheke__card search-detail">
+                    <div class="apotheke__card-inner">
+                      <div class="icon">
+                        <img src="img//apotheke-logo2.png" alt="apotheke logo">
+                      </div>
+                      <div class="apotheke__card-inner-wrap">
+                        <div class="apotheke__card-name">
+                          <h6>Gethsemane apotheke</h6>
+                        </div>
+                        <div class="apotheke__card-inner-content">
+                          <div class="rating__stars">
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star ">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>                                                                                                
+                          </div>
+                          <div class="rating__review-count">
+                            <span>15</span>Bewertungen
+                          </div>
+                        </div>                      
+                      </div>
+                    </div>
+                    <div class="apotheke__card-work-time">
+                      <span class="status opened">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        </svg>
+                        Jetzt geoffen</span>
+                      <span>Offnet om 8:00 Do</span>
+                    </div>
+                    <div class="apotheke__card-info">
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="12" height="16">
+                            <use xlink:href="../img/location-icon.svg#location-icon"></use>
+                          </svg>
+                        </div>
+                        <span>50 m</span>
+                      </div>
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="16" height="13">
+                            <use xlink:href="../img/delivery-icon.svg#delivery-icon"></use>
+                          </svg>
+                        </div>
+                        <span>12,90 €</span>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+                <div class="card__cell">
+                  <div class="apotheke__card search-detail">
+                    <div class="apotheke__card-inner">
+                      <div class="icon">
+                        <img src="img//apotheke-logo3.png" alt="apotheke logo">
+                      </div>
+                      <div class="apotheke__card-inner-wrap">
+                        <div class="apotheke__card-name">
+                          <h6>Tor-apotheke</h6>
+                        </div>
+                        <div class="apotheke__card-inner-content">
+                          <div class="rating__stars">
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>                                                                                                
+                          </div>
+                          <div class="rating__review-count">
+                            <span>148</span>Bewertungen
+                          </div>
+                        </div>                      
+                      </div>
+                    </div>
+                    <div class="apotheke__card-work-time">
+                      <span class="status closed">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        </svg>
+                        Jetzt geschlossen</span>
+                      <span>Offnet om 8:00 Do</span>
+                    </div>
+                    <div class="apotheke__card-info">
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="12" height="16">
+                            <use xlink:href="../img/location-icon.svg#location-icon"></use>
+                          </svg>
+                        </div>
+                        <span>50 m</span>
+                      </div>
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="16" height="13">
+                            <use xlink:href="../img/delivery-icon.svg#delivery-icon"></use>
+                          </svg>
+                        </div>
+                        <span>12,90 €</span>
+                      </div>
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="10" height="15">
+                            <use xlink:href="../img/lock-icon.svg#lock-icon"></use>
+                          </svg>
+                        </div>
+                        <span>Selbstabholung</span>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+                <div class="card__cell">
+                  <div class="apotheke__card search-detail">
+                    <div class="apotheke__card-inner">
+                      <div class="icon">
+                        <img src="img//apotheke-logo4.png" alt="apotheke logo">
+                      </div>
+                      <div class="apotheke__card-inner-wrap">
+                        <div class="apotheke__card-name">
+                          <h6>Ring-center berlin</h6>
+                        </div>
+                        <div class="apotheke__card-inner-content">
+                          <div class="rating__stars">
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>                                                                                                
+                          </div>
+                          <div class="rating__review-count">
+                            <span>569</span>Bewertungen
+                          </div>
+                        </div>                      
+                      </div>
+                    </div>
+                    <div class="apotheke__card-work-time">
+                      <span class="status opened">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        </svg>
+                        Jetzt geschlossen</span>
+                      <span>Offnet om 8:00 Do</span>
+                    </div>
+                    <div class="apotheke__card-info">
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="12" height="16">
+                            <use xlink:href="../img/location-icon.svg#location-icon"></use>
+                          </svg>
+                        </div>
+                        <span>50 m</span>
+                      </div>
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="16" height="13">
+                            <use xlink:href="../img/delivery-icon.svg#delivery-icon"></use>
+                          </svg>
+                        </div>
+                        <span>12,90 €</span>
+                      </div>
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="10" height="15">
+                            <use xlink:href="../img/lock-icon.svg#lock-icon"></use>
+                          </svg>
+                        </div>
+                        <span>Selbstabholung</span>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+                <div class="card__cell">
+                  <div class="apotheke__card search-detail">
+                    <div class="apotheke__card-inner">
+                      <div class="icon">
+                        <img src="img//apotheke-logo5.png" alt="apotheke logo">
+                      </div>
+                      <div class="apotheke__card-inner-wrap">
+                        <div class="apotheke__card-name">
+                          <h6>Tor-apotheke</h6>
+                        </div>
+                        <div class="apotheke__card-inner-content">
+                          <div class="rating__stars">
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star active">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>
+                            <div class="rating__star">
+                              <svg width="16" height="15">
+                                  <use xlink:href="../img/star.svg#star"></use>
+                              </svg>
+                            </div>                                                                                                
+                          </div>
+                          <div class="rating__review-count">
+                            <span>569</span>Bewertungen
+                          </div>
+                        </div>                      
+                      </div>
+                    </div>
+                    <div class="apotheke__card-work-time">
+                      <span class="status opened">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
+                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        </svg>
+                        Jetzt geschlossen</span>
+                      <span>Offnet om 8:00 Do</span>
+                    </div>
+                    <div class="apotheke__card-info">
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="12" height="16">
+                            <use xlink:href="../img/location-icon.svg#location-icon"></use>
+                          </svg>
+                        </div>
+                        <span>50 m</span>
+                      </div>
+                      <div class="info-label">
+                        <div class="label-icon">
+                          <svg width="16" height="13">
+                            <use xlink:href="../img/delivery-icon.svg#delivery-icon"></use>
+                          </svg>
+                        </div>
+                        <span>12,90 €</span>
+                      </div>
+                    </div>
+                  </div>                  
+                </div>
+                <a href="#" class="btn secondary-btn mehr-laden">Mehr laden</a>                                   
               </div>
           </div>
       </div>

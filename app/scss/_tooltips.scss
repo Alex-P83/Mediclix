@@ -1,0 +1,40 @@
+.tooltip {
+  &-label {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 232px;
+    border-radius: 4px;
+    background: color(dark-grey, primary);
+    z-index: 2;
+    content: "";
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    display: none;
+    &:before {
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 8px 8px 0 8px;
+      border-color:color(dark-grey, primary)  transparent transparent transparent;
+      bottom:-8px;
+      left:50%;
+      transform: translateX(-50%);
+      content:'';
+    }
+    .cell{
+        .tooltip-icon{
+            display: flex;
+            justify-content: center;
+        }
+        span{
+            color:color(white,primary);
+        }        
+    }
+
+  }
+}
