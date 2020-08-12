@@ -167,7 +167,17 @@
       <div class="container">
           <div class="layout__wrapper">
               <div class="layout__header">
-                  <h3>Apotheken in deiner Nähe</h3>
+                  <div class="title">
+                    <h3>Apotheken in deiner Nähe</h3>
+                    <div class="layout__header-location">
+                      <div class="icon">
+                        <svg width='16px' height="16px">
+                            <use xlink:href="../img/location-pointer.svg#location-pointer"/>
+                        </svg>                       
+                      </div>
+                      <p class="body1">Pädagogienstraße 20,18055 Rostock</p>                      
+                    </div>
+                  </div>
                   <form action="">
                       <div class="form-field">
                          <input type="text" name="search" placeholder="Tor-apotheke">
@@ -209,34 +219,47 @@
                   </div>
                 </div>
                 <div class="filter__block" id="filter">
-                  <label for="favoritenapotheken" class="switch-label">
-                    <span class="body1-bold">Favoritenapotheken</span>
-                    <figure  class="switch">
-                      <input type="checkbox" id="favoritenapotheken">
-                      <span class="slider"></span>                      
-                    </figure>
-                  </label>
-                  <label for="geöffnet" class="switch-label">
-                    <span class="body1-bold">Geöffnet</span>
-                    <figure class="switch">
-                      <input type="checkbox" id="geöffnet">
-                      <span class="slider"></span>                      
-                    </figure>
-                  </label>
-                  <div class="range__block">
-                    <span class="body1-bold">Bewertung</span>
-                    <label for="" class="range-label">
-                      <span class="body2">Gesamt</span>
-                      <div class="rating">
-                        <input type="radio" id="star5" name="rating1" value="5" /><label for="star5"></label>
-                        <input type="radio" id="star4" name="rating1" value="4" /><label for="star4"></label>
-                        <input type="radio" id="star3" name="rating1" value="3" checked/><label for="star3"></label>
-                        <input type="radio" id="star2" name="rating1" value="2" /><label for="star2"></label>
-                        <input type="radio" id="star1" name="rating1" value="1" /><label for="star1"></label>
-                      </div>                       
+                  <div class="title">
+                    <h4>Sortiere Ergebnisse</h4>
+                    <a href="#" class="close-filter">
+                      <svg width='11px' height="11px">
+                        <use xlink:href="../img/cross.svg#cross"/>
+                    </svg>                       
+                    </a>
+                  </div>
+                  <div class="filter__block-wrapper">
+                    <label for="favoritenapotheken" class="switch-label">
+                      <span class="body1-bold">Favoritenapotheken</span>
+                      <figure  class="switch">
+                        <input type="checkbox" id="favoritenapotheken">
+                        <span class="slider"></span>                      
+                      </figure>
                     </label>
-                  </div>                  
-                  <a href="" class="btn secondary-btn">Kein Filter</a>
+                    <label for="geöffnet" class="switch-label">
+                      <span class="body1-bold">Geöffnet</span>
+                      <figure class="switch">
+                        <input type="checkbox" id="geöffnet">
+                        <span class="slider"></span>                      
+                      </figure>
+                    </label>
+                    <div class="range__block">
+                      <span class="body1-bold">Bewertung</span>
+                      <label for="" class="range-label">
+                        <span class="body2">Gesamt</span>
+                        <div class="rating">
+                          <input type="radio" id="star5" name="rating1" value="5" /><label for="star5"></label>
+                          <input type="radio" id="star4" name="rating1" value="4" /><label for="star4"></label>
+                          <input type="radio" id="star3" name="rating1" value="3" checked/><label for="star3"></label>
+                          <input type="radio" id="star2" name="rating1" value="2" /><label for="star2"></label>
+                          <input type="radio" id="star1" name="rating1" value="1" /><label for="star1"></label>
+                        </div>                       
+                      </label>
+                    </div>
+                    <div class="wrap-btn">
+                      <a href="#" class="btn secondary-btn">Kein Filter</a>
+                      <a href="#" class="btn primary-btn">Anwenden</a>                         
+                    </div>                  
+                  </div>
                 </div>
               </div>
               <div class="content">
@@ -669,7 +692,7 @@
       </div>
   </div>
   <!-- Footer  -->
-  <footer>
+  <footer class="white">
     <svg id="bottom-corner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 360"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M0,0H160V360L93.92,62.65A80,80,0,0,0,15.83,0Z"/></svg>
     <div class="container">
       <div class="footer__top">

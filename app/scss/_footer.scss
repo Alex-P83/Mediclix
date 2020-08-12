@@ -13,6 +13,17 @@ footer {
       fill: color(background-color, primary) !important;
     }
   }
+  &.white{
+    #bottom-corner {
+      position: absolute;
+      top: -1px;
+      right: 0;
+      height: 100%;
+      path {
+        fill: color(white, primary) !important;
+      }
+    }    
+  }
   .footer {
     &__top {
       display: flex;

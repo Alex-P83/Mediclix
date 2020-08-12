@@ -23,22 +23,22 @@ $('.overlay').on('click',function(){
 
 let filterNav = document.getElementById("filter");
 
-$('.menu-btn').on('click', function (e) {
+$('.filter-btn').on('click', function (e) {
   e.preventDefault();
-  sideNav.style.left = "0px";
+  filterNav.style.left = "0px";
   $('body').addClass('disable');
   $('.overlay').addClass('active');
 });
-$('.close-menu').on('click', function (e) {
+$('.close-filter').on('click', function (e) {
   e.preventDefault();
-  sideNav.style.left = "-310px";
+  filterNav.style.left = "-100%";
   $('body').removeClass('disable');
   $('.overlay').removeClass('active');
 });
 
 $('.overlay').on('click',function(){
   $('body').removeClass('disable');
-  sideNav.style.left = "-310px";
+  sideNav.style.left = "-100%";
   $(this).removeClass('active');  
 });
 

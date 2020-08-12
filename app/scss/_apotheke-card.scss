@@ -101,7 +101,7 @@
     }
     &.search-detail{
       display: grid;
-      grid-template-columns: 60% 40%;
+      grid-template-columns: 58% 42%;
       padding: 20px 24px;
       .apotheke__card-inner{
         display: flex;
@@ -195,6 +195,7 @@
         flex-wrap: wrap;
         align-items: center;
         padding-left: 80px;
+        grid-column: 1/-1;
         .info-label{
           position: relative;
           display: flex;
@@ -218,6 +219,28 @@
           &:hover{
             &>.tooltip-label{
               display: flex;
+            }
+          }
+        }
+      }
+      @include respond(s-screen){
+        grid-template-columns: 1fr;
+        .apotheke__card-inner{
+          border-bottom:1px solid color(light-grey,light-200);
+        }
+        .apotheke__card-work-time{
+          justify-content: flex-start;
+          margin:16px 0 12px;
+        }
+        .apotheke__card-info{
+          padding: unset;
+          .info-label{
+            .tooltip-label{
+              left:0;
+              transform: unset;
+              &:before{
+                left:15%;
+              }
             }
           }
         }
