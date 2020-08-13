@@ -1,8 +1,8 @@
 $stars: 5;
 $star-size: 20px;
 $star-spacing: 2px;
-$star-on-color: #F9DF4A;
-$star-off-color: #CCCCCC;
+$star-on-color: color(yellow,primary);
+$star-off-color: color(light-grey,light-100);
 
 .rating {
         display: inline-flex;
@@ -13,16 +13,16 @@ $star-off-color: #CCCCCC;
 		width: $star-size;
 		height: $star-size;
 		cursor: pointer;
-
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		&:not(:first-of-type) {
 			padding-right: $star-spacing;
 		}
-		
-		&:before {
-			content: "\2605";
-			font-size: $star-size + 2px;
-			color: $star-off-color;
-			line-height: 1;
+		svg{
+			use{
+				fill:color(light-grey,light-100);
+			}
 		}
 	}
 	
@@ -30,9 +30,9 @@ $star-off-color: #CCCCCC;
 		display: none;
 	}
 	
-	input:checked ~ label:before,
-	&:not(:checked) > label:hover:before,
-	&:not(:checked) > label:hover ~ label:before {
-		color: $star-on-color;
+	input:checked ~ label svg use,
+	&:not(:checked) > label:hover svg use,
+	&:not(:checked) > label:hover ~ label svg use{
+		fill:color(yellow,primary);
 	}
 }

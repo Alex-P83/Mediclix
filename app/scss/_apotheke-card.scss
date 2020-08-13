@@ -1,7 +1,16 @@
 .apotheke {
   &__card {
+    display: block;
     position: relative;
     background: color(white, primary);
+    color: color(dark-grey, primary);
+    text-decoration: none;
+    outline: none;
+    overflow: hidden;
+    &:hover {
+      text-decoration: none;
+      color: color(dark-grey, primary);
+    }
     @include box_shadow(2);
     border-radius: 6px;
     transition: 0.3s;
@@ -14,7 +23,7 @@
       justify-content: center;
       height: 170px;
       margin-bottom: 10px;
-      img{
+      img {
         max-width: 100%;
       }
     }
@@ -27,24 +36,17 @@
       right: 9px;
       width: 114px;
       height: 32px;
-      border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background-size: cover;
-      background-position: center;
-      padding: 2px 10px;
-      &.gold {
-        background: linear-gradient(180deg, #facf4b 0%, #ebb617 100%);
-      }
-      &.silver {
-        background: linear-gradient(180deg, #bfbfbf 0%, #999999 100%);
-      }
-      &.bronze {
-        background: linear-gradient(180deg, #ffa04d 0%, #e67e22 100%);
+      display: grid;
+      grid-template-columns: 1fr;
+      overflow: hidden;
+      img{
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        height: 100%;
+        width: 100%;
       }
       span {
-        display:block;
+        display: block;
         font-size: 13px;
         line-height: 1.23;
         font-weight: 600;
@@ -52,6 +54,10 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        grid-column: 1/-1;
+        grid-row: 1/-1;
+        align-self: center;
+        text-align: center;        
       }
     }
     &-name {
@@ -71,89 +77,110 @@
       span {
         font-size: 14px;
         line-height: 1.43;
-        &.status{
-            position: relative;
-            margin-bottom: 5px;
-            svg{
-                position: absolute;
-                top:50%;
-                transform:translateY(-50%);
-                left:-20px;
+        &.status {
+          position: relative;
+          margin-bottom: 5px;
+          svg {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -20px;
+          }
+          &.opened {
+            color: color(green, dark-100);
+            svg {
+              path {
+                stroke: color(green, dark-100);
+              }
             }
-            &.opened{
-                color:color(green,dark-100);
-                svg{
-                    path{
-                        stroke:color(green,dark-100);
-                    }
-                }                
+          }
+          &.closed {
+            color: color(dark-grey, light-500);
+            svg {
+              path {
+                stroke: color(dark-grey, light-500);
+              }
             }
-            &.closed{
-                color:color(dark-grey,light-500);
-                svg{
-                    path{
-                        stroke:color(dark-grey,light-500);
-                    }
-                }
-            }
+          }
         }
       }
     }
-    &.search-detail{
+    &.favorite {
+      &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: url("../img/favorite-heart.svg");
+        z-index: 2;
+      }
+    }
+    &.search-detail {
       display: grid;
       grid-template-columns: 58% 42%;
       padding: 20px 24px;
-      .apotheke__card-inner{
+      .apotheke__card-inner {
         display: flex;
         align-items: flex-start;
-        .icon{
+        flex-grow: 1;
+        .icon {
           height: unset;
           margin: unset;
           margin-right: 16px;
-          img{
+          img {
             width: auto;
             max-width: 64px;
-            max-height: 64px;            
+            max-height: 64px;
           }
         }
-        .apotheke__card-name{
+        .apotheke__card-name {
+          position: relative;
           min-height: unset;
           margin-top: 4px;
-          h6{
+          display: flex;
+          align-items: flex-start;
+          h6 {
+            margin-bottom: 6px;
+            padding-right: 5px;
+          }
+          .apotheke__card-membership{
+            position: relative;
+            flex-shrink: 0;
+            top:unset;
+            right:unset;
             margin-bottom: 6px;
           }
         }
-        &-content{
+        &-content {
           display: flex;
           align-items: center;
           margin-bottom: 24px;
-          .rating{
-            &__stars{
+          .rating {
+            &__stars {
               display: flex;
               align-items: center;
-              .rating__star{
+              .rating__star {
                 display: inline-flex;
-                svg{
-                  &>use{
+                svg {
+                  & > use {
                     fill: color(light-grey, light-100);
-                  }                    
+                  }
                 }
-                &.active{
-                  svg{
-                    &>use{
+                &.active {
+                  svg {
+                    & > use {
                       fill: #f2c94c;
-                    }                    
+                    }
                   }
                 }
               }
             }
-            &__review-count{
+            &__review-count {
               font-size: 13px;
               font-weight: 400;
               line-height: 1;
-              color:color(dark-grey, light-300);
-              margin:0 8px;
-              span{
+              color: color(dark-grey, light-300);
+              margin: 0 8px;
+              span {
                 display: inline-block;
                 margin-right: 3px;
               }
@@ -161,85 +188,103 @@
           }
         }
       }
-      .apotheke__card-work-time{
+      .apotheke__card-work-time {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: flex-end;
-        margin:unset;
+        margin: unset;
         padding: unset;
-        .status{
+        .status {
           position: relative;
           padding-left: 20px;
           padding-right: 20px;
-          margin:unset;
+          margin: unset;
           font-weight: 600;
-          svg{
-            left:0;
+          svg {
+            left: 0;
           }
-          &:after{
+          &:after {
             position: absolute;
-            top:50%;
+            top: 50%;
             transform: translateY(-50%);
-            right:8px;
+            right: 8px;
             width: 4px;
             height: 4px;
             border-radius: 50%;
             background: color(light-grey, dark-100);
-            content:'';
+            content: "";
           }
         }
       }
-      .apotheke__card-info{
+      .apotheke__card-info {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         padding-left: 80px;
         grid-column: 1/-1;
-        .info-label{
+        .info-label {
           position: relative;
           display: flex;
           align-items: center;
           height: 28px;
           border-radius: 14px;
           padding: 4px 10px;
-          background: color(light-grey,light-300);
-          margin:4px 8px 4px 0;
-          &:last-child{
+          background: color(light-grey, light-300);
+          margin: 4px 8px 4px 0;
+          &:last-child {
             margin-right: unset;
           }
-          .label-icon{
+          .label-icon {
             display: inline-flex;
             margin-right: 8px;
           }
-          span{
+          span {
             font-size: 14px;
             font-weight: 600;
           }
-          &:hover{
-            &>.tooltip-label{
+          &:hover {
+            & > .tooltip-label {
               display: flex;
             }
           }
         }
       }
-      @include respond(s-screen){
-        grid-template-columns: 1fr;
-        .apotheke__card-inner{
-          border-bottom:1px solid color(light-grey,light-200);
-        }
-        .apotheke__card-work-time{
+      @include respond(s-screen) {
+        grid-template-columns: 1fr auto;
+        .apotheke__card-work-time {
+          flex-direction: column;
+          align-items: flex-end;
           justify-content: flex-start;
-          margin:16px 0 12px;
+          padding-left: 15px;
+          .status {
+            padding-right: unset;
+          }
         }
-        .apotheke__card-info{
+      }
+      @include respond(es-screen) {
+        grid-template-columns: 1fr;
+        .apotheke__card-inner {
+          border-bottom: 1px solid color(light-grey, light-200);
+        }
+        .apotheke__card-work-time {
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-start;
+          margin: 16px 0 12px;
+          padding-left: unset;
+          .status {
+            padding-right: 20px;
+          }
+        }
+        .apotheke__card-info {
           padding: unset;
-          .info-label{
-            .tooltip-label{
-              left:0;
+          .info-label {
+            .tooltip-label {
+              left: 0;
               transform: unset;
-              &:before{
-                left:15%;
+              &:before {
+                left: 15%;
               }
             }
           }

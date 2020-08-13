@@ -134,3 +134,20 @@ function initSliders(){
 
 initSliders();
 $(window).resize(initSliders);
+
+
+//search-close-clear-btn
+
+$('.search-close-clear-btn').on('click',function(){
+  $('.layout__header').toggleClass('active');
+});
+
+// Hidden menu
+
+var layoutHeader = $('.layout__header');
+$(window).resize(function(){
+    var wid = $(window).width();
+    if(wid > 768 && layoutHeader.hasClass('active')) {
+      layoutHeader.removeClass('active');  
+    } 
+});
