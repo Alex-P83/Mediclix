@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/png" href="img/favicon.png" />
+
   <title>Mediclix</title>
+  
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="~/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="~/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="~/favicon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="~/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="~/favicon/favicon-16x16.png" sizes="16x16" />
+
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -38,8 +50,8 @@
     <div class="container">
       <div class="header__wrapper">
         <a href="" class="logo">
-          <img src="img/logo.svg" alt="logo" class="desktop-logo">
-          <img src="img/logo-mini.svg" alt="logo" class="mobile-logo">
+          <img src="img/shared/logo.svg" alt="logo" class="desktop-logo">
+          <img src="img/shared/logo-mini.svg" alt="logo" class="mobile-logo">
         </a>
         <div class="header__controls">
           <ul>
@@ -49,8 +61,8 @@
                 <a href="#">
                   <span class="entrance">Login / Registrieren</span>
                   <span class="user">
-                    <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 10C5.2 10 3 7.8 3 5C3 2.2 5.2 0 8 0C10.8 0 13 2.2 13 5C13 7.8 10.8 10 8 10ZM8 2C6.3 2 5 3.3 5 5C5 6.7 6.3 8 8 8C9.7 8 11 6.7 11 5C11 3.3 9.7 2 8 2ZM15 19H1C0.7 19 0.4 18.9 0.2 18.6C0 18.4 0 18 0 17.7C1 13.7 4.3 11 8 11C11.7 11 14.9 13.8 16 17.7C16.1 18 16 18.3 15.8 18.6C15.6 18.9 15.3 19 15 19ZM2.4 17H13.6C12.5 14.6 10.4 13 8 13C5.6 13 3.5 14.6 2.4 17Z" fill="#6AB339"/>
+                    <svg width="17" height="19" fill="none">
+                      <use xlink:href="img/shared/icons.svg#user" />
                     </svg>
                     Max Mustermann</span>
                 </a>
@@ -96,18 +108,18 @@
           <div class="cart-wrapper">
             <div class="cart with-products">
               <span class="icon">
-                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.5 3H5.9C5.8 3 5.7 2.9 5.7 2.9L4.9 0.7C4.8 0.3 4.4 0 4 0H0.4L0 2H3.1C3.2 2 3.3 2.1 3.3 2.1L6 10L5 13.8C4.9 14.1 5 14.4 5.2 14.7C5.4 14.9 5.7 15 6 15H16.3C16.4 15 16.5 14.9 16.5 14.9L17 13.2C17 13.1 17 13.1 16.9 13.1H7.4C7.3 13.1 7.3 13 7.3 13L7.7 11.3C7.7 11.2 7.8 11.1 7.9 11.1H17C17.4 11.1 17.8 10.8 17.9 10.4L20.1 3.9C20.2 3.4 20 3 19.5 3ZM16.1 9H7.9C7.8 9 7.7 8.9 7.7 8.9L6.4 5.1C6.4 5 6.4 5 6.5 5H17.4C17.5 5 17.5 5.1 17.5 5.1L16.3 8.8C16.3 8.9 16.2 9 16.1 9ZM7.5 19C6.7 19 6 18.3 6 17.5C6 16.7 6.7 16 7.5 16C8.3 16 9 16.7 9 17.5C9 18.3 8.3 19 7.5 19ZM13.5 19C12.7 19 12 18.3 12 17.5C12 16.7 12.7 16 13.5 16C14.3 16 15 16.7 15 17.5C15 18.3 14.3 19 13.5 19Z" fill="#232735"/>
-                  </svg>                
+                <svg width="21" height="19">
+                  <use xlink:href="img/shared/icons.svg#cart" />
+                </svg>               
               </span>
               <span class="cart__counter">0</span>
               <div class="dropdown-content">
                 <div class="inner-content">
                   <a href="#">
                     <span class="inner-cart">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.5 3H5.9C5.8 3 5.7 2.9 5.7 2.9L4.9 0.7C4.8 0.3 4.4 0 4 0H0.4L0 2H3.1C3.2 2 3.3 2.1 3.3 2.1L6 10L5 13.8C4.9 14.1 5 14.4 5.2 14.7C5.4 14.9 5.7 15 6 15H16.3C16.4 15 16.5 14.9 16.5 14.9L17 13.2C17 13.1 17 13.1 16.9 13.1H7.4C7.3 13.1 7.3 13 7.3 13L7.7 11.3C7.7 11.2 7.8 11.1 7.9 11.1H17C17.4 11.1 17.8 10.8 17.9 10.4L20.1 3.9C20.2 3.4 20 3 19.5 3ZM16.1 9H7.9C7.8 9 7.7 8.9 7.7 8.9L6.4 5.1C6.4 5 6.4 5 6.5 5H17.4C17.5 5 17.5 5.1 17.5 5.1L16.3 8.8C16.3 8.9 16.2 9 16.1 9ZM7.5 19C6.7 19 6 18.3 6 17.5C6 16.7 6.7 16 7.5 16C8.3 16 9 16.7 9 17.5C9 18.3 8.3 19 7.5 19ZM13.5 19C12.7 19 12 18.3 12 17.5C12 16.7 12.7 16 13.5 16C14.3 16 15 16.7 15 17.5C15 18.3 14.3 19 13.5 19Z" fill="#232735"/>
-                        </svg>
+                      <svg width="21" height="19">
+                        <use xlink:href="/img/shared/icons.svg#cart" />
+                      </svg>
                       <span class="inner-cart-counter">2</span>
                     </span>
                     <span class="">
@@ -117,9 +129,9 @@
                   </a>
                   <a href="#">
                     <span class="inner-cart">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.5 3H5.9C5.8 3 5.7 2.9 5.7 2.9L4.9 0.7C4.8 0.3 4.4 0 4 0H0.4L0 2H3.1C3.2 2 3.3 2.1 3.3 2.1L6 10L5 13.8C4.9 14.1 5 14.4 5.2 14.7C5.4 14.9 5.7 15 6 15H16.3C16.4 15 16.5 14.9 16.5 14.9L17 13.2C17 13.1 17 13.1 16.9 13.1H7.4C7.3 13.1 7.3 13 7.3 13L7.7 11.3C7.7 11.2 7.8 11.1 7.9 11.1H17C17.4 11.1 17.8 10.8 17.9 10.4L20.1 3.9C20.2 3.4 20 3 19.5 3ZM16.1 9H7.9C7.8 9 7.7 8.9 7.7 8.9L6.4 5.1C6.4 5 6.4 5 6.5 5H17.4C17.5 5 17.5 5.1 17.5 5.1L16.3 8.8C16.3 8.9 16.2 9 16.1 9ZM7.5 19C6.7 19 6 18.3 6 17.5C6 16.7 6.7 16 7.5 16C8.3 16 9 16.7 9 17.5C9 18.3 8.3 19 7.5 19ZM13.5 19C12.7 19 12 18.3 12 17.5C12 16.7 12.7 16 13.5 16C14.3 16 15 16.7 15 17.5C15 18.3 14.3 19 13.5 19Z" fill="#232735"/>
-                        </svg>
+                      <svg width="21" height="19">
+                        <use xlink:href="/img/shared/icons.svg#cart" />
+                      </svg>
                       <span class="inner-cart-counter">10</span>
                     </span>
                     <span class="">
@@ -129,9 +141,9 @@
                   </a>
                   <a href="#">
                     <span class="inner-cart">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.5 3H5.9C5.8 3 5.7 2.9 5.7 2.9L4.9 0.7C4.8 0.3 4.4 0 4 0H0.4L0 2H3.1C3.2 2 3.3 2.1 3.3 2.1L6 10L5 13.8C4.9 14.1 5 14.4 5.2 14.7C5.4 14.9 5.7 15 6 15H16.3C16.4 15 16.5 14.9 16.5 14.9L17 13.2C17 13.1 17 13.1 16.9 13.1H7.4C7.3 13.1 7.3 13 7.3 13L7.7 11.3C7.7 11.2 7.8 11.1 7.9 11.1H17C17.4 11.1 17.8 10.8 17.9 10.4L20.1 3.9C20.2 3.4 20 3 19.5 3ZM16.1 9H7.9C7.8 9 7.7 8.9 7.7 8.9L6.4 5.1C6.4 5 6.4 5 6.5 5H17.4C17.5 5 17.5 5.1 17.5 5.1L16.3 8.8C16.3 8.9 16.2 9 16.1 9ZM7.5 19C6.7 19 6 18.3 6 17.5C6 16.7 6.7 16 7.5 16C8.3 16 9 16.7 9 17.5C9 18.3 8.3 19 7.5 19ZM13.5 19C12.7 19 12 18.3 12 17.5C12 16.7 12.7 16 13.5 16C14.3 16 15 16.7 15 17.5C15 18.3 14.3 19 13.5 19Z" fill="#232735"/>
-                        </svg>
+                      <svg width="21" height="19">
+                        <use xlink:href="/img/shared/icons.svg#cart" />
+                      </svg>
                       <span class="inner-cart-counter">8</span>
                     </span>
                     <span class="">
@@ -145,9 +157,9 @@
             </div>     
           </div>
           <a href="#" class="menu-btn">
-            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21.1335 9.33333H0.866829C0.600163 9.33333 0.333496 9.06667 0.333496 8.8V7.2C0.333496 6.93333 0.600163 6.66667 0.866829 6.66667H21.1335C21.4002 6.66667 21.6668 6.93333 21.6668 7.2V8.8C21.6668 9.06667 21.4002 9.33333 21.1335 9.33333ZM21.1335 13.3333H0.866829C0.600163 13.3333 0.333496 13.6 0.333496 13.8667V15.4667C0.333496 15.7333 0.600163 16 0.866829 16H21.1335C21.4002 16 21.6668 15.7333 21.6668 15.4667V13.8667C21.6668 13.6 21.4002 13.3333 21.1335 13.3333ZM21.1335 0H0.866829C0.600163 0 0.333496 0.266667 0.333496 0.533333V2.13333C0.333496 2.4 0.600163 2.66667 0.866829 2.66667H21.1335C21.4002 2.66667 21.6668 2.4 21.6668 2.13333V0.533333C21.6668 0.266667 21.4002 0 21.1335 0Z" fill="white"/>
-              </svg>
+            <svg width="22" height="16" fill="none">
+              <use xlink:href="img/shared/icons.svg#menu-icon" />
+            </svg>
           </a>
         </div>         
       </div>   
@@ -161,46 +173,46 @@
         <div class="wrap-step wow fadeIn" data-wow-duration="2s" data-wow-delay="0.5s">
           <div class="wrap-step-block">
             <div class="icon">
-              <img src="img/main-icon1.svg" alt="">
+              <img src="img/content/home/main-icon1.svg" alt="">
             </div>
             <p>Apotheke finden</p>            
           </div>
           <div class="wrap-arrow">
-            <svg width="32" height="6" viewBox="0 0 32 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 3L27 0.113249V5.88675L32 3ZM0 3.5H27.5V2.5H0V3.5Z" fill="#D1D2D6"/>
-              </svg>
+            <svg width="32" height="6" fill="none">
+              <use xlink:href="img/shared/icons.svg#arrow-right" />
+            </svg>
           </div>
         </div>
         <div class="wrap-step wow fadeIn" data-wow-duration="2s" data-wow-delay="1s">
           <div class="wrap-step-block">
             <div class="icon">
-              <img src="img/main-icon2.svg" alt="">
+              <img src="img/content/home/main-icon2.svg" alt="">
             </div>
             <p>Beraten lassen</p>            
           </div>
           <div class="wrap-arrow">
-            <svg width="32" height="6" viewBox="0 0 32 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 3L27 0.113249V5.88675L32 3ZM0 3.5H27.5V2.5H0V3.5Z" fill="#D1D2D6"/>
-              </svg>
+            <svg width="32" height="6" fill="none">
+              <use xlink:href="/img/shared/icons.svg#arrow-right" />
+            </svg>
           </div>
         </div>
         <div class="wrap-step wow fadeIn" data-wow-duration="2s" data-wow-delay="1.5s">
           <div class="wrap-step-block">
             <div class="icon">
-              <img src="img/main-icon3.svg" alt="">
+              <img src="/img/content/home/main-icon3.svg" alt="">
             </div>
             <p>Medikamente bestellen</p>            
           </div>
           <div class="wrap-arrow">
-            <svg width="32" height="6" viewBox="0 0 32 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M32 3L27 0.113249V5.88675L32 3ZM0 3.5H27.5V2.5H0V3.5Z" fill="#D1D2D6"/>
-              </svg>
+            <svg width="32" height="6" fill="none">
+              <use xlink:href="/img/shared/icons.svg#arrow-right" />
+            </svg>
           </div>
         </div>
         <div class="wrap-step wow fadeIn" data-wow-duration="2s" data-wow-delay="2s">
           <div class="wrap-step-block">
             <div class="icon">
-              <img src="img/main-icon4.svg" alt="">
+              <img src="img/content/home/main-icon4.svg" alt="">
             </div>
             <p>Bestellung abholen</p>            
           </div>
@@ -222,21 +234,20 @@
         <div>
           <a href="#" class="apotheke__card">
             <div class="apotheke__card-membership silver">
-              <img src="img/membership-silver.png" alt="Silver client">
+              <img src="/img/content/apotheke/membership-silver.png" alt="Silver client">
               <span>Silver client</span>
             </div>            
             <div class="icon">
-              <img src="img/logo-ph1.png" alt="">
+              <img src="img/content/apotheke/logo-ph1.png" alt="">
             </div>
             <div class="apotheke__card-name">
               <p>Berlinapotheke hackescher markt</p>
             </div>
             <div class="apotheke__card-work-time">
               <span class="status closed">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"/>
-                  </svg>
+                <svg width="14" height="14" fill="none">
+                  <use xlink:href="/img/shared/icons.svg#clock" />
+                </svg>
                 Jetzt geschlossen</span>
               <span>Offnet om 8:00 Do</span>
             </div>
@@ -245,21 +256,20 @@
         <div>
           <a href="#" class="apotheke__card">
             <div class="apotheke__card-membership gold">
-              <img src="img/membership-gold.png" alt="Gold client">
+              <img src="img/content/apotheke/membership-gold.png" alt="Gold client">
               <span>Gold client</span>
             </div>            
             <div class="icon">
-              <img src="img/logo-ph2.png" alt="">
+              <img src="img/content/apotheke/logo-ph2.png" alt="">
             </div>
             <div class="apotheke__card-name">
               <p>Gethsemane apotheke</p>
             </div>
             <div class="apotheke__card-work-time">
               <span class="status opened">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"/>
-                  </svg>
+                <svg width="14" height="14" fill="none">
+                  <use xlink:href="/img/shared/icons.svg#clock" />
+                </svg>
                 Jetzt geoffen</span>
               <span>Offnet om 8:00 Do</span>
             </div>
@@ -268,20 +278,19 @@
         <div>
           <a href="#" class="apotheke__card">
             <div class="apotheke__card-membership gold">
-              <img src="img/membership-gold.png" alt="Gold client">
+              <img src="img/content/apotheke/membership-gold.png" alt="Gold client">
               <span>Gold client</span>
             </div>            
             <div class="icon">
-              <img src="img/logo-ph3.png" alt="">
+              <img src="img/content/apotheke/logo-ph3.png" alt="">
             </div>
             <div class="apotheke__card-name">
               <p>Tor-apotheke</p>
             </div>
             <div class="apotheke__card-work-time">
               <span class="status opened">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"/>
+                <svg width="14" height="14" fill="none">
+                  <use xlink:href="/img/shared/icons.svg#clock" />
                 </svg>
                 Jetzt geoffen</span>
               <span>Offnet om 8:00 Do</span>
@@ -291,20 +300,19 @@
         <div>
           <a href="#" class="apotheke__card">
             <div class="apotheke__card-membership bronze">
-              <img src="img/membership-bronze.png" alt="Bronze client">  
+              <img src="img/content/apotheke/membership-bronze.png" alt="Bronze client">  
               <span>Bronze client</span>
             </div>                          
             <div class="icon">
-              <img src="img/logo-ph4.png" alt="">
+              <img src="img/content/apotheke/logo-ph4.png" alt="">
             </div>
             <div class="apotheke__card-name">
               <p>Gethsemane apotheke</p>
             </div>
             <div class="apotheke__card-work-time">
               <span class="status closed">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"/>
+                <svg width="14" height="14" fill="none">
+                  <use xlink:href="/img/shared/icons.svg#clock" />
                 </svg>
                 Jetzt geschlossen</span>
               <span>Offnet om 8:00 Do</span>
@@ -314,20 +322,19 @@
         <div>
           <a href="#" class="apotheke__card">
             <div class="apotheke__card-membership silver">
-              <img src="img/membership-silver.png" alt="Silver client">
+              <img src="img/content/apotheke/membership-silver.png" alt="Silver client">
               <span>Silver client</span>
             </div>
             <div class="icon">
-              <img src="img/logo-ph5.png" alt="">
+              <img src="img/content/apotheke/logo-ph5.png" alt="">
             </div>
             <div class="apotheke__card-name">
               <p>Ring-center berlin</p>
             </div>
             <div class="apotheke__card-work-time">
               <span class="status opened">
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"/>
+                <svg width="14" height="14" fill="none">
+                  <use xlink:href="/img/shared/icons.svg#clock" />
                 </svg>
                 Jetzt geoffen</span>
               <span>Offnet om 8:00 Do</span>
@@ -374,14 +381,14 @@
         <div class="left">
           <div class="mediclix-app-collage">
             <div class="collage-top" id="scene1">
-              <img src="img/app-bg-1.svg" alt="" data-depth="0.3">
-              <img src="img/app-bg-2.svg" alt="" data-depth="0.4">
-              <img src="img/app-bg-3.svg" alt="" data-depth="0.2">
+              <img src="img/content/home/app-bg-1.svg" alt="" data-depth="0.3">
+              <img src="img/content/home/app-bg-2.svg" alt="" data-depth="0.4">
+              <img src="img/content/home/app-bg-3.svg" alt="" data-depth="0.2">
             </div>
             <div class="collage-bottom" id="scene2">
-              <img src="img/app-screen1.png" alt="" data-depth="0.1">
-              <img src="img/app-screen2.png" alt="" data-depth="0.1">
-              <img src="img/app-screen3.png" alt="" data-depth="0.1">
+              <img src="img/content/home/app-screen1.png" alt="" data-depth="0.1">
+              <img src="img/content/home/app-screen2.png" alt="" data-depth="0.1">
+              <img src="img/content/home/app-screen3.png" alt="" data-depth="0.1">
             </div>
           </div>
         </div>
@@ -393,13 +400,13 @@
             <p>Molestie arcu ac dolor ut eu adipiscing. Sapien turpis adipiscing neque Nulla mauris congue amet gravida sit varius. Aliquam in dictum in non. </p>
             <div class="additional">
               <a href="#" class="btn add-btn">
-                <img src="img/apple-btn.svg" alt="">
+                <img src="img/content/home/apple-btn.svg" alt="">
               </a>
               <a href="#" class="btn add-btn">
-                <img src="img/google-btn.svg" alt="">
+                <img src="img/content/home/google-btn.svg" alt="">
               </a>
               <div class="additional-section">
-                <img src="img/qr-code.png" alt="">
+                <img src="img/content/home/qr-code.png" alt="">
                 <p>Auf deinem Smartphone wird Apomove dir zu zusätzliche Funktionen</p>
               </div>
             </div>            
@@ -414,37 +421,37 @@
       <div class="advantages-wrapper">
         <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.1s">
           <div class="icon">
-            <img src="img/advantages-icon1.svg" alt="icon">
+            <img src="img/content/home/advantages-icon1.svg" alt="icon">
           </div>
           <p>Kein Postweg — schnelle Verfügbarkeit,<br> noch am gleichen Tag.</p>
         </div>
         <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.1s">
           <div class="icon">
-            <img src="img/advantages-icon1.svg" alt="icon">
+            <img src="img/content/home/advantages-icon1.svg" alt="icon">
           </div>
           <p>Kein Postweg — schnelle Verfügbarkeit,<br> noch am gleichen Tag.</p>
         </div>
         <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.1s">
           <div class="icon">
-            <img src="img/advantages-icon2.svg" alt="icon">
+            <img src="img/content/home/advantages-icon2.svg" alt="icon">
           </div>
           <p>Online Beratung durch di Apotheke deines Vertrauens.</p>
         </div>
         <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
           <div class="icon">
-            <img src="img/advantages-icon3.svg" alt="icon">
+            <img src="img/content/home/advantages-icon3.svg" alt="icon">
           </div>
           <p>Du Gist krank und schaffst es nicht zur nächsten Apotheke? Die Apotheke liefert gern zu dir nach Hause! </p>
         </div>
         <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
           <div class="icon">
-            <img src="img/advantages-icon3.svg" alt="icon">
+            <img src="img/content/home/advantages-icon3.svg" alt="icon">
           </div>
           <p>Du Gist krank und schaffst es nicht zur nächsten Apotheke? Die Apotheke liefert gern zu dir nach Hause! </p>
         </div>
         <div class="advantages__item wow fadeInUp"  data-wow-duration="1s" data-wow-delay="0.5s">
           <div class="icon">
-            <img src="img/advantages-icon4.svg" alt="icon">
+            <img src="img/content/home/advantages-icon4.svg" alt="icon">
           </div>
           <p>Benötigst du regelmäßig Medikamente, kannst du nun auch eine automatische Neubestellung in deiner Apotheke einrichten</p>
         </div>        
@@ -456,10 +463,10 @@
     <div class="container">
       <h2>Unsere partner</h2>
       <div class="partners__wrapper">
-        <img src="img/partners-logo1.svg" alt="partners-logo">
-        <img src="img/partners-logo2.svg" alt="partners-logo">
-        <img src="img/partners-logo3.svg" alt="partners-logo">
-        <img src="img/partners-logo4.svg" alt="partners-logo">
+        <img src="img/content/home/partners-logo1.svg" alt="partners-logo">
+        <img src="img/content/home/partners-logo2.svg" alt="partners-logo">
+        <img src="img/content/home/partners-logo3.svg" alt="partners-logo">
+        <img src="img/content/home/partners-logo4.svg" alt="partners-logo">
       </div>
     </div>
   </section>
@@ -470,7 +477,7 @@
       <div class="footer__top">
         <div class="logo">
           <a href="#">
-            <img src="img/logo.svg" alt="">
+            <img src="img/shared/logo.svg" alt="">
           </a>
         </div>
         <div class="footer__wrap-lists">
@@ -511,12 +518,12 @@
         </div>
         <ul class="social">
           <li><a href="#" class="facebook">
-            <img src="img/facebook.svg" alt="">
-            <img src="img/facebook_hover.svg" alt="">
+            <img src="img/shared/facebook.svg" alt="">
+            <img src="img/shared/facebook_hover.svg" alt="">
           </a></li>
           <li><a href="#" class="instagram">
-            <img src="img/instagram.svg" alt="">
-            <img src="img/instagram_hover.svg" alt="">
+            <img src="img/shared/instagram.svg" alt="">
+            <img src="img/shared/instagram_hover.svg" alt="">
           </a></li>
         </ul>        
       </div>

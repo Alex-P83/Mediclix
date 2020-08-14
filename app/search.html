@@ -5,7 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="icon" type="image/png" href="img/favicon.png" />
+
   <title>Mediclix</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="~/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="~/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="~/favicon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="~/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="~/favicon/favicon-16x16.png" sizes="16x16" />
+
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -38,8 +50,8 @@
     <div class="container">
       <div class="header__wrapper">
         <a href="" class="logo">
-          <img src="img/logo.svg" alt="logo" class="desktop-logo">
-          <img src="img/logo-mini.svg" alt="logo" class="mobile-logo">
+          <img src="img/shared/logo.svg" alt="logo" class="desktop-logo">
+          <img src="img/shared/logo-mini.svg" alt="logo" class="mobile-logo">
         </a>
         <div class="header__controls">
           <ul>
@@ -49,8 +61,8 @@
                 <a href="#">
                   <span class="entrance">Login / Registrieren</span>
                   <span class="user">
-                    <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M8 10C5.2 10 3 7.8 3 5C3 2.2 5.2 0 8 0C10.8 0 13 2.2 13 5C13 7.8 10.8 10 8 10ZM8 2C6.3 2 5 3.3 5 5C5 6.7 6.3 8 8 8C9.7 8 11 6.7 11 5C11 3.3 9.7 2 8 2ZM15 19H1C0.7 19 0.4 18.9 0.2 18.6C0 18.4 0 18 0 17.7C1 13.7 4.3 11 8 11C11.7 11 14.9 13.8 16 17.7C16.1 18 16 18.3 15.8 18.6C15.6 18.9 15.3 19 15 19ZM2.4 17H13.6C12.5 14.6 10.4 13 8 13C5.6 13 3.5 14.6 2.4 17Z" fill="#6AB339"/>
+                    <svg width="17" height="19" fill="none">
+                      <use xlink:href="img/shared/icons.svg#user" />
                     </svg>
                     Max Mustermann</span>
                 </a>
@@ -96,18 +108,18 @@
           <div class="cart-wrapper">
             <div class="cart with-products">
               <span class="icon">
-                <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.5 3H5.9C5.8 3 5.7 2.9 5.7 2.9L4.9 0.7C4.8 0.3 4.4 0 4 0H0.4L0 2H3.1C3.2 2 3.3 2.1 3.3 2.1L6 10L5 13.8C4.9 14.1 5 14.4 5.2 14.7C5.4 14.9 5.7 15 6 15H16.3C16.4 15 16.5 14.9 16.5 14.9L17 13.2C17 13.1 17 13.1 16.9 13.1H7.4C7.3 13.1 7.3 13 7.3 13L7.7 11.3C7.7 11.2 7.8 11.1 7.9 11.1H17C17.4 11.1 17.8 10.8 17.9 10.4L20.1 3.9C20.2 3.4 20 3 19.5 3ZM16.1 9H7.9C7.8 9 7.7 8.9 7.7 8.9L6.4 5.1C6.4 5 6.4 5 6.5 5H17.4C17.5 5 17.5 5.1 17.5 5.1L16.3 8.8C16.3 8.9 16.2 9 16.1 9ZM7.5 19C6.7 19 6 18.3 6 17.5C6 16.7 6.7 16 7.5 16C8.3 16 9 16.7 9 17.5C9 18.3 8.3 19 7.5 19ZM13.5 19C12.7 19 12 18.3 12 17.5C12 16.7 12.7 16 13.5 16C14.3 16 15 16.7 15 17.5C15 18.3 14.3 19 13.5 19Z" fill="#232735"/>
-                  </svg>                
+                <svg width="21" height="19">
+                  <use xlink:href="img/shared/icons.svg#cart" />
+                </svg>               
               </span>
               <span class="cart__counter">0</span>
               <div class="dropdown-content">
                 <div class="inner-content">
                   <a href="#">
                     <span class="inner-cart">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.5 3H5.9C5.8 3 5.7 2.9 5.7 2.9L4.9 0.7C4.8 0.3 4.4 0 4 0H0.4L0 2H3.1C3.2 2 3.3 2.1 3.3 2.1L6 10L5 13.8C4.9 14.1 5 14.4 5.2 14.7C5.4 14.9 5.7 15 6 15H16.3C16.4 15 16.5 14.9 16.5 14.9L17 13.2C17 13.1 17 13.1 16.9 13.1H7.4C7.3 13.1 7.3 13 7.3 13L7.7 11.3C7.7 11.2 7.8 11.1 7.9 11.1H17C17.4 11.1 17.8 10.8 17.9 10.4L20.1 3.9C20.2 3.4 20 3 19.5 3ZM16.1 9H7.9C7.8 9 7.7 8.9 7.7 8.9L6.4 5.1C6.4 5 6.4 5 6.5 5H17.4C17.5 5 17.5 5.1 17.5 5.1L16.3 8.8C16.3 8.9 16.2 9 16.1 9ZM7.5 19C6.7 19 6 18.3 6 17.5C6 16.7 6.7 16 7.5 16C8.3 16 9 16.7 9 17.5C9 18.3 8.3 19 7.5 19ZM13.5 19C12.7 19 12 18.3 12 17.5C12 16.7 12.7 16 13.5 16C14.3 16 15 16.7 15 17.5C15 18.3 14.3 19 13.5 19Z" fill="#232735"/>
-                        </svg>
+                      <svg width="21" height="19">
+                        <use xlink:href="/img/shared/icons.svg#cart" />
+                      </svg>
                       <span class="inner-cart-counter">2</span>
                     </span>
                     <span class="">
@@ -117,9 +129,9 @@
                   </a>
                   <a href="#">
                     <span class="inner-cart">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.5 3H5.9C5.8 3 5.7 2.9 5.7 2.9L4.9 0.7C4.8 0.3 4.4 0 4 0H0.4L0 2H3.1C3.2 2 3.3 2.1 3.3 2.1L6 10L5 13.8C4.9 14.1 5 14.4 5.2 14.7C5.4 14.9 5.7 15 6 15H16.3C16.4 15 16.5 14.9 16.5 14.9L17 13.2C17 13.1 17 13.1 16.9 13.1H7.4C7.3 13.1 7.3 13 7.3 13L7.7 11.3C7.7 11.2 7.8 11.1 7.9 11.1H17C17.4 11.1 17.8 10.8 17.9 10.4L20.1 3.9C20.2 3.4 20 3 19.5 3ZM16.1 9H7.9C7.8 9 7.7 8.9 7.7 8.9L6.4 5.1C6.4 5 6.4 5 6.5 5H17.4C17.5 5 17.5 5.1 17.5 5.1L16.3 8.8C16.3 8.9 16.2 9 16.1 9ZM7.5 19C6.7 19 6 18.3 6 17.5C6 16.7 6.7 16 7.5 16C8.3 16 9 16.7 9 17.5C9 18.3 8.3 19 7.5 19ZM13.5 19C12.7 19 12 18.3 12 17.5C12 16.7 12.7 16 13.5 16C14.3 16 15 16.7 15 17.5C15 18.3 14.3 19 13.5 19Z" fill="#232735"/>
-                        </svg>
+                      <svg width="21" height="19">
+                        <use xlink:href="/img/shared/icons.svg#cart" />
+                      </svg>
                       <span class="inner-cart-counter">10</span>
                     </span>
                     <span class="">
@@ -129,9 +141,9 @@
                   </a>
                   <a href="#">
                     <span class="inner-cart">
-                      <svg width="21" height="19" viewBox="0 0 21 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M19.5 3H5.9C5.8 3 5.7 2.9 5.7 2.9L4.9 0.7C4.8 0.3 4.4 0 4 0H0.4L0 2H3.1C3.2 2 3.3 2.1 3.3 2.1L6 10L5 13.8C4.9 14.1 5 14.4 5.2 14.7C5.4 14.9 5.7 15 6 15H16.3C16.4 15 16.5 14.9 16.5 14.9L17 13.2C17 13.1 17 13.1 16.9 13.1H7.4C7.3 13.1 7.3 13 7.3 13L7.7 11.3C7.7 11.2 7.8 11.1 7.9 11.1H17C17.4 11.1 17.8 10.8 17.9 10.4L20.1 3.9C20.2 3.4 20 3 19.5 3ZM16.1 9H7.9C7.8 9 7.7 8.9 7.7 8.9L6.4 5.1C6.4 5 6.4 5 6.5 5H17.4C17.5 5 17.5 5.1 17.5 5.1L16.3 8.8C16.3 8.9 16.2 9 16.1 9ZM7.5 19C6.7 19 6 18.3 6 17.5C6 16.7 6.7 16 7.5 16C8.3 16 9 16.7 9 17.5C9 18.3 8.3 19 7.5 19ZM13.5 19C12.7 19 12 18.3 12 17.5C12 16.7 12.7 16 13.5 16C14.3 16 15 16.7 15 17.5C15 18.3 14.3 19 13.5 19Z" fill="#232735"/>
-                        </svg>
+                      <svg width="21" height="19">
+                        <use xlink:href="/img/shared/icons.svg#cart" />
+                      </svg>
                       <span class="inner-cart-counter">8</span>
                     </span>
                     <span class="">
@@ -145,9 +157,9 @@
             </div>     
           </div>
           <a href="#" class="menu-btn">
-            <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M21.1335 9.33333H0.866829C0.600163 9.33333 0.333496 9.06667 0.333496 8.8V7.2C0.333496 6.93333 0.600163 6.66667 0.866829 6.66667H21.1335C21.4002 6.66667 21.6668 6.93333 21.6668 7.2V8.8C21.6668 9.06667 21.4002 9.33333 21.1335 9.33333ZM21.1335 13.3333H0.866829C0.600163 13.3333 0.333496 13.6 0.333496 13.8667V15.4667C0.333496 15.7333 0.600163 16 0.866829 16H21.1335C21.4002 16 21.6668 15.7333 21.6668 15.4667V13.8667C21.6668 13.6 21.4002 13.3333 21.1335 13.3333ZM21.1335 0H0.866829C0.600163 0 0.333496 0.266667 0.333496 0.533333V2.13333C0.333496 2.4 0.600163 2.66667 0.866829 2.66667H21.1335C21.4002 2.66667 21.6668 2.4 21.6668 2.13333V0.533333C21.6668 0.266667 21.4002 0 21.1335 0Z" fill="white"/>
-              </svg>
+            <svg width="22" height="16" fill="none">
+              <use xlink:href="img/shared/icons.svg#menu-icon" />
+            </svg>
           </a>
         </div>         
       </div>   
@@ -172,7 +184,7 @@
                     <div class="layout__header-location">
                       <div class="icon">
                         <svg width='16px' height="16px">
-                            <use xlink:href="img/location-pointer.svg#location-pointer"/>
+                            <use xlink:href="img/content/search/location-pointer.svg#location-pointer"/>
                         </svg>                       
                       </div>
                       <p class="body1">Pädagogienstraße 20,18055 Rostock</p>                      
@@ -184,22 +196,22 @@
                           <input type="text" name="search" placeholder="Tor-apotheke">
                           <a href="#" class="clear-btn">
                             <svg width='11px' height="11px">
-                                <use xlink:href="img/cross.svg#cross"/>
+                                <use xlink:href="img/content/search/cross.svg#cross"/>
                             </svg>                             
                           </a>
                         </div>
                         <button>
                           <svg width='17px' height="17px">
-                              <use xlink:href="img/search.svg#search"/>
+                              <use xlink:href="img/content/search/search.svg#search"/>
                           </svg>
                         </button>                        
                       </div>
                       <a href="#" class="search-close-clear-btn">
                         <svg width='17px' height="17px" class="search-icon">
-                            <use xlink:href="img/search.svg#search"/>
+                            <use xlink:href="img/content/search/search.svg#search"/>
                         </svg>
                         <svg width='11px' height="11px" class="close-icon">
-                            <use xlink:href="img/cross.svg#cross"/>
+                            <use xlink:href="img/content/search/cross.svg#cross"/>
                         </svg>                                                  
                       </a>
                   </form>
@@ -209,7 +221,7 @@
                   <div class="location">
                     <div class="icon">
                       <svg width='16px' height="16px">
-                          <use xlink:href="img/location-pointer.svg#location-pointer"/>
+                          <use xlink:href="img/content/search/location-pointer.svg#location-pointer"/>
                       </svg>                       
                     </div>
                     <figure>
@@ -222,7 +234,7 @@
                     <a href="#" class="btn primary-btn">Karte anzeigen</a>
                     <a href="#" class="filter-btn">
                       <svg width='17' height="18px">
-                        <use xlink:href="img/filter-btn.svg#filter"/>
+                        <use xlink:href="img/content/search/filter-btn.svg#filter"/>
                       </svg>
                       <span>Filter</span>                     
                     </a>                    
@@ -233,7 +245,7 @@
                     <h4>Sortiere Ergebnisse</h4>
                     <a href="#" class="close-filter">
                       <svg width='11px' height="11px">
-                        <use xlink:href="img/cross.svg#cross"/>
+                        <use xlink:href="img/content/search/cross.svg#cross"/>
                     </svg>                       
                     </a>
                   </div>
@@ -260,31 +272,31 @@
                           <input type="radio" id="star5" name="rating1" value="5" />
                           <label for="star5">
                             <svg width="16" height="15">
-                              <use xlink:href="img/star.svg#star"></use>
+                              <use xlink:href="img/content/search/star.svg#star"></use>
                             </svg>
                           </label>
                           <input type="radio" id="star4" name="rating1" value="4" />
                           <label for="star4">
                             <svg width="16" height="15">
-                              <use xlink:href="img/star.svg#star"></use>
+                              <use xlink:href="img/content/search/star.svg#star"></use>
                             </svg>
                           </label>
                           <input type="radio" id="star3" name="rating1" value="3" checked/>
                           <label for="star3">
                             <svg width="16" height="15">
-                              <use xlink:href="img/star.svg#star"></use>
+                              <use xlink:href="img/content/search/star.svg#star"></use>
                             </svg>
                           </label>
                           <input type="radio" id="star2" name="rating1" value="2" />
                           <label for="star2">
                             <svg width="16" height="15">
-                              <use xlink:href="img/star.svg#star"></use>
+                              <use xlink:href="img/content/search/star.svg#star"></use>
                             </svg>
                           </label>
                           <input type="radio" id="star1" name="rating1" value="1" />
                           <label for="star1">
                             <svg width="16" height="15">
-                              <use xlink:href="img/star.svg#star"></use>
+                              <use xlink:href="img/content/search/star.svg#star"></use>
                             </svg>
                           </label>
                         </div>                       
@@ -302,13 +314,13 @@
                   <a href="#" class="apotheke__card search-detail favorite">
                     <div class="apotheke__card-inner">
                       <div class="icon">
-                        <img src="img//apotheke-logo1.png" alt="apotheke logo">
+                        <img src="img/content/apotheke/apotheke-logo1.png" alt="apotheke logo">
                       </div>
                       <div class="apotheke__card-inner-wrap">
                         <div class="apotheke__card-name">
                           <h6>Berlinapotheke hackescher markt</h6>
                           <div class="apotheke__card-membership gold">
-                            <img src="img/membership-gold.png" alt="Gold client">
+                            <img src="img/content/apotheke/membership-gold.png" alt="Gold client">
                             <span>Gold</span>
                           </div>
                         </div>
@@ -316,27 +328,27 @@
                           <div class="rating__stars">
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star ">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>                                                                                                
                           </div>
@@ -348,9 +360,8 @@
                     </div>
                     <div class="apotheke__card-work-time">
                       <span class="status opened">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        <svg width="14" height="14" fill="none">
+                          <use xlink:href="/img/shared/icons.svg#clock" />
                         </svg>
                         Jetzt geoffen</span>
                       <span>Offnet om 8:00 Do</span>
@@ -361,7 +372,7 @@
                           <div class="cell">
                             <div class="tooltip-icon">
                               <svg width='24px' height="24px">
-                                <use xlink:href="img/pedestrian.svg#pedestrian"/>
+                                <use xlink:href="img/content/search/pedestrian.svg#pedestrian"/>
                             </svg> 
                             </div>
                             <span>900 m</span>
@@ -369,7 +380,7 @@
                           <div class="cell">
                             <div class="tooltip-icon">
                               <svg width='24px' height="24px">
-                                <use xlink:href="img/cyclist.svg#cyclist"/>
+                                <use xlink:href="img/content/search/cyclist.svg#cyclist"/>
                             </svg> 
                             </div>
                             <span>1.3 km</span>
@@ -377,7 +388,7 @@
                           <div class="cell">
                             <div class="tooltip-icon">
                               <svg width='24px' height="24px">
-                                <use xlink:href="img/bus.svg#bus"/>
+                                <use xlink:href="img/content/search/bus.svg#bus"/>
                             </svg> 
                             </div>
                             <span>1.6 km</span>
@@ -385,7 +396,7 @@
                           <div class="cell">
                             <div class="tooltip-icon">
                               <svg width='24px' height="24px">
-                                <use xlink:href="img/car.svg#car"/>
+                                <use xlink:href="img/content/search/car.svg#car"/>
                             </svg> 
                             </div>
                             <span>1.5 km</span>
@@ -393,7 +404,7 @@
                         </div>
                         <div class="label-icon">
                           <svg width="12" height="16">
-                            <use xlink:href="img/location-icon.svg#location-icon"></use>
+                            <use xlink:href="img/content/search/location-icon.svg#location-icon"></use>
                           </svg>
                         </div>
                         <span>50 m</span>
@@ -401,7 +412,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="16" height="13">
-                            <use xlink:href="img/delivery-icon.svg#delivery-icon"></use>
+                            <use xlink:href="img/content/search/delivery-icon.svg#delivery-icon"></use>
                           </svg>
                         </div>
                         <span>12,90 €</span>
@@ -409,7 +420,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="10" height="15">
-                            <use xlink:href="img/lock-icon.svg#lock-icon"></use>
+                            <use xlink:href="img/content/search/lock-icon.svg#lock-icon"></use>
                           </svg>
                         </div>
                         <span>Selbstabholung</span>
@@ -421,13 +432,13 @@
                   <div class="apotheke__card search-detail">
                     <div class="apotheke__card-inner">
                       <div class="icon">
-                        <img src="img//apotheke-logo2.png" alt="apotheke logo">
+                        <img src="img/content/apotheke/apotheke-logo2.png" alt="apotheke logo">
                       </div>
                       <div class="apotheke__card-inner-wrap">
                         <div class="apotheke__card-name">
                           <h6>Gethsemane apotheke</h6>
                           <div class="apotheke__card-membership silver">
-                            <img src="img/membership-silver.png" alt="Silver client">
+                            <img src="img/content/apotheke/membership-silver.png" alt="Silver client">
                             <span>Silver</span>
                           </div>
                         </div>
@@ -435,27 +446,27 @@
                           <div class="rating__stars">
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star ">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>                                                                                                
                           </div>
@@ -467,9 +478,8 @@
                     </div>
                     <div class="apotheke__card-work-time">
                       <span class="status opened">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        <svg width="14" height="14" fill="none">
+                          <use xlink:href="/img/shared/icons.svg#clock" />
                         </svg>
                         Jetzt geoffen</span>
                       <span>Offnet om 8:00 Do</span>
@@ -478,7 +488,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="12" height="16">
-                            <use xlink:href="img/location-icon.svg#location-icon"></use>
+                            <use xlink:href="img/content/search/location-icon.svg#location-icon"></use>
                           </svg>
                         </div>
                         <span>50 m</span>
@@ -486,7 +496,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="16" height="13">
-                            <use xlink:href="img/delivery-icon.svg#delivery-icon"></use>
+                            <use xlink:href="img/content/search/delivery-icon.svg#delivery-icon"></use>
                           </svg>
                         </div>
                         <span>12,90 €</span>
@@ -498,13 +508,13 @@
                   <a href="#" class="apotheke__card search-detail">
                     <div class="apotheke__card-inner">
                       <div class="icon">
-                        <img src="img//apotheke-logo3.png" alt="apotheke logo">
+                        <img src="img/content/apotheke/apotheke-logo3.png" alt="apotheke logo">
                       </div>
                       <div class="apotheke__card-inner-wrap">
                         <div class="apotheke__card-name">
                           <h6>Tor-apotheke</h6>
                           <div class="apotheke__card-membership bronze">
-                            <img src="img/membership-bronze.png" alt="Bronze client">
+                            <img src="img/content/apotheke/membership-bronze.png" alt="Bronze client">
                             <span>Bronze</span>
                           </div>
                         </div>
@@ -512,27 +522,27 @@
                           <div class="rating__stars">
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>                                                                                                
                           </div>
@@ -544,9 +554,8 @@
                     </div>
                     <div class="apotheke__card-work-time">
                       <span class="status closed">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        <svg width="14" height="14" fill="none">
+                          <use xlink:href="/img/shared/icons.svg#clock" />
                         </svg>
                         Jetzt geschlossen</span>
                       <span>Offnet om 8:00 Do</span>
@@ -555,7 +564,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="12" height="16">
-                            <use xlink:href="img/location-icon.svg#location-icon"></use>
+                            <use xlink:href="img/content/search/location-icon.svg#location-icon"></use>
                           </svg>
                         </div>
                         <span>50 m</span>
@@ -563,7 +572,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="16" height="13">
-                            <use xlink:href="img/delivery-icon.svg#delivery-icon"></use>
+                            <use xlink:href="img/content/search/delivery-icon.svg#delivery-icon"></use>
                           </svg>
                         </div>
                         <span>12,90 €</span>
@@ -571,7 +580,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="10" height="15">
-                            <use xlink:href="img/lock-icon.svg#lock-icon"></use>
+                            <use xlink:href="img/content/search/lock-icon.svg#lock-icon"></use>
                           </svg>
                         </div>
                         <span>Selbstabholung</span>
@@ -583,7 +592,7 @@
                   <a href="#" class="apotheke__card search-detail">
                     <div class="apotheke__card-inner">
                       <div class="icon">
-                        <img src="img//apotheke-logo4.png" alt="apotheke logo">
+                        <img src="img/content/apotheke/apotheke-logo4.png" alt="apotheke logo">
                       </div>
                       <div class="apotheke__card-inner-wrap">
                         <div class="apotheke__card-name">
@@ -593,27 +602,27 @@
                           <div class="rating__stars">
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>                                                                                                
                           </div>
@@ -625,9 +634,8 @@
                     </div>
                     <div class="apotheke__card-work-time">
                       <span class="status opened">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        <svg width="14" height="14" fill="none">
+                          <use xlink:href="/img/shared/icons.svg#clock" />
                         </svg>
                         Jetzt geschlossen</span>
                       <span>Offnet om 8:00 Do</span>
@@ -636,7 +644,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="12" height="16">
-                            <use xlink:href="img/location-icon.svg#location-icon"></use>
+                            <use xlink:href="img/content/search/location-icon.svg#location-icon"></use>
                           </svg>
                         </div>
                         <span>50 m</span>
@@ -644,7 +652,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="16" height="13">
-                            <use xlink:href="img/delivery-icon.svg#delivery-icon"></use>
+                            <use xlink:href="img/content/search/delivery-icon.svg#delivery-icon"></use>
                           </svg>
                         </div>
                         <span>12,90 €</span>
@@ -652,7 +660,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="10" height="15">
-                            <use xlink:href="img/lock-icon.svg#lock-icon"></use>
+                            <use xlink:href="img/content/search/lock-icon.svg#lock-icon"></use>
                           </svg>
                         </div>
                         <span>Selbstabholung</span>
@@ -664,7 +672,7 @@
                   <a href="#" class="apotheke__card search-detail">
                     <div class="apotheke__card-inner">
                       <div class="icon">
-                        <img src="img/apotheke-logo5.png" alt="apotheke logo">
+                        <img src="img/content/apotheke/apotheke-logo5.png" alt="apotheke logo">
                       </div>
                       <div class="apotheke__card-inner-wrap">
                         <div class="apotheke__card-name">
@@ -674,27 +682,27 @@
                           <div class="rating__stars">
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star active">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
                             <div class="rating__star">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/star.svg#star"></use>
+                                  <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>                                                                                                
                           </div>
@@ -706,9 +714,8 @@
                     </div>
                     <div class="apotheke__card-work-time">
                       <span class="status opened">
-                        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                          <path d="M7 13C10.3137 13 13 10.3137 13 7C13 3.68629 10.3137 1 7 1C3.68629 1 1 3.68629 1 7C1 10.3137 3.68629 13 7 13Z" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                          <path d="M6.80005 3.30005V7.30005H10.8" stroke="#A4A8B4" stroke-width="1.1" stroke-miterlimit="10" stroke-linejoin="round"></path>
+                        <svg width="14" height="14" fill="none">
+                          <use xlink:href="/img/shared/icons.svg#clock" />
                         </svg>
                         Jetzt geschlossen</span>
                       <span>Offnet om 8:00 Do</span>
@@ -717,7 +724,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="12" height="16">
-                            <use xlink:href="img/location-icon.svg#location-icon"></use>
+                            <use xlink:href="img/content/search/location-icon.svg#location-icon"></use>
                           </svg>
                         </div>
                         <span>50 m</span>
@@ -725,7 +732,7 @@
                       <div class="info-label">
                         <div class="label-icon">
                           <svg width="16" height="13">
-                            <use xlink:href="img/delivery-icon.svg#delivery-icon"></use>
+                            <use xlink:href="img/content/search/delivery-icon.svg#delivery-icon"></use>
                           </svg>
                         </div>
                         <span>12,90 €</span>
@@ -739,13 +746,14 @@
       </div>
   </div>
   <!-- Footer  -->
+  <!-- Footer  -->
   <footer class="white">
     <svg id="bottom-corner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 360"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M0,0H160V360L93.92,62.65A80,80,0,0,0,15.83,0Z"/></svg>
     <div class="container">
       <div class="footer__top">
         <div class="logo">
           <a href="#">
-            <img src="img/logo.svg" alt="">
+            <img src="img/shared/logo.svg" alt="">
           </a>
         </div>
         <div class="footer__wrap-lists">
@@ -786,12 +794,12 @@
         </div>
         <ul class="social">
           <li><a href="#" class="facebook">
-            <img src="img/facebook.svg" alt="">
-            <img src="img/facebook_hover.svg" alt="">
+            <img src="img/shared/facebook.svg" alt="">
+            <img src="img/shared/facebook_hover.svg" alt="">
           </a></li>
           <li><a href="#" class="instagram">
-            <img src="img/instagram.svg" alt="">
-            <img src="img/instagram_hover.svg" alt="">
+            <img src="img/shared/instagram.svg" alt="">
+            <img src="img/shared/instagram_hover.svg" alt="">
           </a></li>
         </ul>        
       </div>

@@ -80,29 +80,42 @@
         &.status {
           position: relative;
           margin-bottom: 5px;
+
           svg {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            left: -20px;
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              left: -20px;
           }
+
           &.opened {
-            color: color(green, dark-100);
-            svg {
-              path {
-                stroke: color(green, dark-100);
+              color: color(green,dark-100);
+
+              svg {
+                  path {
+                      stroke: color(green,dark-100);
+                  }
+
+                  use {
+                      stroke: color(green,dark-100);
+                  }
               }
-            }
           }
+
           &.closed {
-            color: color(dark-grey, light-500);
-            svg {
-              path {
-                stroke: color(dark-grey, light-500);
+              color: color(dark-grey,light-500);
+
+              svg {
+                  path {
+                      stroke: color(dark-grey,light-500);
+                  }
+
+                  use {
+                      stroke: color(dark-grey,light-500);
+                  }
               }
-            }
           }
-        }
+      }
       }
     }
     &.favorite {
@@ -110,7 +123,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        content: url("../img/favorite-heart.svg");
+        content: url("../img/content/apotheke/favorite-heart.svg");
         z-index: 2;
       }
     }
@@ -145,9 +158,11 @@
           .apotheke__card-membership{
             position: relative;
             flex-shrink: 0;
-            top:unset;
+            top:2px;
             right:unset;
             margin-bottom: 6px;
+            height: 20px;
+            width: 75px;
           }
         }
         &-content {

@@ -2,7 +2,7 @@ footer {
   position: relative;
   min-height: 360px;
   padding: 65px 0 30px;
-  background: url("../img/footer-bg.svg") no-repeat top right 42%,
+  background: url("../img/shared/footer-bg.svg") no-repeat top right 42%,
     linear-gradient(345.82deg, #78ceff -0.46%, #3889d5 35.38%, #1261bd 70.47%);
   #bottom-corner {
     position: absolute;
@@ -132,8 +132,10 @@ footer {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+      margin-left: -4px;
+      margin-right: -4px;
       figure {
-        padding-top: 20px;
+        padding:20px 4px 0px;
         margin: unset;
         h6 {
           color: color(white, primary);
