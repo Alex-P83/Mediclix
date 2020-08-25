@@ -177,7 +177,7 @@
   <!-- Layout -->
   <div class="layout">
       <div class="container">
-          <div class="layout__wrapper">
+          <div class="layout__wrapper layout_with_sidebar">
               <div class="layout__header">
                   <div class="title">
                     <h3>Apotheken in deiner Nähe</h3>
@@ -253,7 +253,7 @@
                     <label for="favoritenapotheken" class="switch-label">
                       <span class="body1-bold">Favoritenapotheken</span>
                       <figure  class="switch">
-                        <input type="checkbox" id="favoritenapotheken">
+                        <input type="checkbox" id="favoritenapotheken" value="qwe">
                         <span class="slider"></span>                      
                       </figure>
                     </label>
@@ -346,9 +346,16 @@
                                   <use xlink:href="img/content/search/star.svg#star"></use>
                               </svg>
                             </div>
-                            <div class="rating__star ">
+                            <div class="rating__star active half_star">
                               <svg width="16" height="15">
-                                  <use xlink:href="img/content/search/star.svg#star"></use>
+                                <defs>
+                                    <linearGradient id="halfStartGradient" >
+                                        <stop offset="50%"  stop-color="#f2c94c"/>
+                                        <stop offset="50%" stop-color="#DDDEE0"/>
+                                    </linearGradient>
+                                </defs>  
+                                <use xlink:href="img/content/search/star.svg#star"></use>
+                                @*<use xlink:href="#icon_rating"></use>*@
                               </svg>
                             </div>                                                                                                
                           </div>

@@ -186,6 +186,13 @@
                       fill: #f2c94c;
                     }
                   }
+                  &.half_star{
+                    svg {
+                        & > use {
+                            fill: url(#halfStartGradient);
+                        }
+                    }
+                  }
                 }
               }
             }

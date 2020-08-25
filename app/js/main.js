@@ -76,7 +76,16 @@ let apotheke__slider__settings = {
         slidesToScroll: 1,
         centerMode: true
       }
-    }    
+    },
+    {
+      breakpoint: 330,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,        
+        centerMode: true,
+        centerPadding: '30px'
+      }
+    }        
   ]  
 }
 
@@ -151,3 +160,41 @@ $(window).resize(function(){
       layoutHeader.removeClass('active');  
     } 
 });
+
+
+// File upload 
+
+function handleFileSelect() {
+  //Check File API support
+  if (window.File && window.FileList && window.FileReader) {
+
+      var files = event.target.files; //FileList object
+      var output = document.querySelector('.prescription__files');
+
+      for (var i = 0; i < files.length; i++) {
+          var file = files[i];
+          //Only pics
+          if (!file.type.match('image')) continue;
+
+          var picReader = new FileReader();
+          picReader.addEventListener("load", function (event) {
+              var picFile = event.target;
+              var div = document.createElement("div");
+              div.setAttribute('class', 'prescription-item');
+              div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" + "title='" + picFile.name + "'/>";
+              output.insertBefore(div, null);
+          });
+          //Read the image
+          picReader.readAsDataURL(file);
+      }
+  } else {
+      console.log("Your browser does not support File API");
+  }
+}
+
+document.getElementById('files').addEventListener('change', handleFileSelect, false);
+
+// $('.prescription-item').on('click',function(){
+//   console.log('werwrwr');
+//   this.toggleClass('checked');
+// });

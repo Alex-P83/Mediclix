@@ -4,9 +4,8 @@
     max-width: 1046px;
   }
   &__wrapper {
-    display: grid;
-    grid-template-columns: 220px 1fr;
-    grid-column-gap: 92px;
+    // display: grid;
+    // grid-template-columns:1fr;
     .content {
       .card__cell {
         margin-bottom: 16px;
@@ -78,7 +77,7 @@
           width:100%;
           border: none;
           &:placeholder-shown {
-            & ~ a {
+            & ~ a.clear-btn {
               display: none;
             }
           }
@@ -158,6 +157,11 @@
       }
     }
   }
+  &_with_sidebar{
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    grid-column-gap: 92px;    
+  }  
   @include respond(lg-screen) {
     .container {
       max-width: 100%;
@@ -195,6 +199,9 @@
                 width: 100%;
                 input{
                     width: 100%;
+                    & ~ a.clear-btn{
+                      display: none;
+                    }
                 }
             }
         }
