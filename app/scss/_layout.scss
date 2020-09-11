@@ -3,9 +3,10 @@
   .container {
     max-width: 1046px;
   }
+  .container-sm {
+    max-width: 838px;
+  }   
   &__wrapper {
-    // display: grid;
-    // grid-template-columns:1fr;
     .content {
       .card__cell {
         margin-bottom: 16px;
@@ -21,6 +22,12 @@
         font-weight: 600;
       }
     }
+  }
+  &__shape{
+    background: #fff;
+    box-shadow: 1px 3px 11px rgba(61,63,72,.08);
+    border-radius: 5px;
+    padding: 36px 40px 80px;
   }
   &__header {
     grid-column: 1/-1;

@@ -2,8 +2,8 @@
 @import "mixins";
 @import "libs";
 @import "fonts";
-@import "typography";
 @import "function";
+@import "typography";
 @import "buttons";
 @import "forms";
 @import "header";
@@ -19,6 +19,13 @@
 @import "search";
 @import "tooltips";
 @import "shared";
+@import "radiobutton";
+@import "checkbox"; 
 @import "../scss/pages/upload-prescription";
+@import "../scss/pages/login";
+@import "../scss/pages/news";
+@import "../scss/pages/impressum";
+@import "../scss/pages/agb";
+@import "../scss/pages/support";
 @import "media";
 @import "shared";

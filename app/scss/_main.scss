@@ -1,13 +1,13 @@
 @media (min-width: 1258px) {
   .container {
     max-width: 1254px;
-  }
+  } 
 }
 
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 16px;
@@ -219,9 +219,7 @@ body {
       rgba(0, 32, 128, 0) 100%
     ),
     linear-gradient(-257.88deg, #78ceff 0%, #3889d5 47.45%, #1261bd 93.92%);
-  .wrapper-app{
-    overflow: hidden;
-  }
+  overflow: hidden;  
   .left{
     position: relative;
     width: 50%;

@@ -161,40 +161,38 @@ $(window).resize(function(){
     } 
 });
 
+// Upload file 
 
-// File upload 
-
-function handleFileSelect() {
-  //Check File API support
-  if (window.File && window.FileList && window.FileReader) {
-
-      var files = event.target.files; //FileList object
-      var output = document.querySelector('.prescription__files');
-
-      for (var i = 0; i < files.length; i++) {
-          var file = files[i];
-          //Only pics
-          if (!file.type.match('image')) continue;
-
-          var picReader = new FileReader();
-          picReader.addEventListener("load", function (event) {
-              var picFile = event.target;
-              var div = document.createElement("div");
-              div.setAttribute('class', 'prescription-item');
-              div.innerHTML = "<img class='thumbnail' src='" + picFile.result + "'" + "title='" + picFile.name + "'/>";
-              output.insertBefore(div, null);
-          });
-          //Read the image
-          picReader.readAsDataURL(file);
-      }
-  } else {
-      console.log("Your browser does not support File API");
+$('.prescription__files').on('click', '.prescription-item', function(){
+  $(this).toggleClass('checked');
+  if($('.prescription__files .prescription-item').hasClass('checked')){
+    $('.prescription__wrapper form .wrap-btn button').removeAttr('disabled');
+  } else{
+    $('.prescription__wrapper form .wrap-btn button').attr('disabled','disabled');
   }
-}
+});
 
-document.getElementById('files').addEventListener('change', handleFileSelect, false);
 
-// $('.prescription-item').on('click',function(){
-//   console.log('werwrwr');
-//   this.toggleClass('checked');
-// });
+//change tab login page
+$('.login-type').change(function(){
+  var val = $(this).val();
+  $('.page-block__tab').hide();
+  $('.page-block__tab[data-tab='+val+']').show();
+});
+
+//default tab open with attr checked
+var loginTab = $('.login-type:checked').val();
+$('.page-block__tab').hide();
+$('.page-block__tab[data-tab='+loginTab+']').show();
+
+
+//open password
+$('.password-eye').click(function(){
+  $(this).toggleClass('active');
+  var input = $(this).closest('.password-field').find('input');
+  if (input.attr("type") == "password") {
+      input.attr("type", "text");
+  } else {
+      input.attr("type", "password");
+  }
+});

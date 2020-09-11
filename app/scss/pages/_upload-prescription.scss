@@ -1,22 +1,113 @@
+.prev-btn{
+    height: 40px;
+    padding: 8px 32px;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 20px;
+    svg{
+        margin-right: 6px;
+        use{
+           fill:color(dark-grey,primary); 
+        }
+    }
+}
 .prescription{
+    &__wrapper{
+        margin-top: 48px;
+        form{
+            label{
+                font-size: 16px;
+                font-weight: 600;
+                color:color(green,primary);
+                text-decoration: underline;
+                cursor: pointer;
+                margin:20px 0 40px;
+                &:hover{
+                    text-decoration: none;
+                }
+            }
+            input{
+                display: none;
+            }
+            .wrap-btn{
+                display: none;
+                button{
+                    height: 48px;
+                    border-radius: 24px;
+                    font-size: 16px;
+                    font-weight: 600;
+                    padding: 12px 32px;
+                    
+                    svg{
+                        margin-right: 10px;
+                        transition: 0.3s;
+                        use{
+                          fill:color(white,primary);  
+                        }
+                        
+                    }
+                    &:disabled{
+                        svg{
+                            use{
+                                fill:color(dark-grey, light-500);
+                            }
+                        }
+                    }
+                    &:first-child{
+                        margin-right: 35px;
+                    }
+                }
+                @include respond(es-screen){
+                    button{
+                        padding: 12px 25px;
+                        &:first-child{
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+        }        
+    }
+    &__title{
+        h3{
+            margin-bottom: 15px;
+        }
+        p{
+            line-height: 1.5;
+        }
+    }
     &__files{
         display: flex;
         align-items: center;
+        margin-left: -12px;
+        margin-right: -12px;
+        flex-wrap: wrap;
     }
     &-item{
+        position: relative;
         width: 184px;
         height: 184px;
         border-radius: 8px;
         overflow: hidden;
         @include box_shadow (3);
         cursor: pointer;
-        border:2px solid transparent;
+        margin:12px;
         &.checked{
             position: relative;
-          border-color:color(green,light-200);
-          &:before{
-              position: absolute;
-          }
+            &:before{
+                position: absolute;
+                top:50%;
+                left:50%;
+                transform: translate(-50%, -50%);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                background:color(green,primary);
+                content:url('../../img/content/prescription/check.svg');
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
           &:after{
               position: absolute;
               top:0;
@@ -25,12 +116,46 @@
               bottom:0;
               background: rgba(color(green,primary), 0.1);
               content:'';
+              border-radius: 8px;
+              box-shadow:inset 0px 0px 0px 2px color(green,light-200);
+          }
+          .prescription-close{
+              display: none;
           } 
         }
         img{
             width: 100%;
             height: 100%;
             object-fit: cover;
+        }
+        .prescription-close{
+            opacity: 0;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            position: absolute;
+            top:5px;
+            right:5px;
+            background: rgba(color(dark-grey, primary), 0.3);
+            transition: 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &:after{
+               content:url('../../img/content/prescription/close.svg'); 
+            }
+            &:hover{
+               background: rgba(color(dark-grey, primary), 0.5); 
+            }
+        }
+        &:hover{
+            .prescription-close{
+                opacity: 1;
+            }
+        }
+        @include respond(es-screen){
+            width: 160px;
+            height: 160px;
         }
     }
 }

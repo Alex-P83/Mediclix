@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+
+  <title>Mediclix</title>
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon-precomposed" sizes="57x57" href="~/favicon/apple-touch-icon-57x57.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="~/favicon/apple-touch-icon-114x114.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="~/favicon/apple-touch-icon-72x72.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="~/favicon/apple-touch-icon-144x144.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="~/favicon/apple-touch-icon-120x120.png" />
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="~/favicon/apple-touch-icon-152x152.png" />
+  <link rel="icon" type="image/png" href="~/favicon/favicon-32x32.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="~/favicon/favicon-16x16.png" sizes="16x16" />
+
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+  <!-- Header  -->
+  <header>
+    <svg id="bottom-corner" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 84 80"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M0,0,32.37,51.8A60,60,0,0,0,83.25,80H0Z"/></svg>
+    <div id="mobile-menu">
+      <div class="wrapper">
+        <div class="header">
+          <div class="icon">
+            <svg width="17" height="19" viewBox="0 0 17 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 10C5.2 10 3 7.8 3 5C3 2.2 5.2 0 8 0C10.8 0 13 2.2 13 5C13 7.8 10.8 10 8 10ZM8 2C6.3 2 5 3.3 5 5C5 6.7 6.3 8 8 8C9.7 8 11 6.7 11 5C11 3.3 9.7 2 8 2ZM15 19H1C0.7 19 0.4 18.9 0.2 18.6C0 18.4 0 18 0 17.7C1 13.7 4.3 11 8 11C11.7 11 14.9 13.8 16 17.7C16.1 18 16 18.3 15.8 18.6C15.6 18.9 15.3 19 15 19ZM2.4 17H13.6C12.5 14.6 10.4 13 8 13C5.6 13 3.5 14.6 2.4 17Z" fill="#6AB339"/>
+            </svg>            
+          </div>
+          <span>Hello, Sign in</span>
+          <a href="#" class="close-menu">
+            <span></span>
+            <span></span>
+          </a>          
+        </div>
+        <ul>
+          <li><a href="#">Login / Registrieren</a></li>
+          <li><a href="#">Warenkorb</a></li>
+          <li><a href="#">Suchen</a></li>
+        </ul>
+        <a href="#" class="fur-apotheken">Für Apotheken</a>        
+      </div>
+    </div>
+    <div class="container">
+      <div class="header__wrapper">
+        <a href="" class="logo">
+          <img src="img/shared/logo.svg" alt="logo" class="desktop-logo">
+          <img src="img/shared/logo-mini.svg" alt="logo" class="mobile-logo">
+        </a>
+        <div class="header__controls">
+          <ul>
+            <li><a href="#">Für Apotheken</a></li>
+            <li>
+              <label for="">
+                <a href="#">
+                  <span class="entrance">Login / Registrieren</span>
+                  <span class="user">
+                    <svg width="17" height="19" fill="none">
+                      <use xlink:href="img/shared/icons.svg#user" />
+                    </svg>
+                    Max Mustermann</span>
+                </a>
+                <div class="dropdown-content">
+                  <div class="inner-content">
+                    <a href="">
+                      <span class="icon">
+                        <svg width="14" height="20" viewBox="0 0 14 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M13.0667 6H11.6667V4.8C11.6667 2.2 9.61333 0 7 0C4.38667 0 2.33333 2.1 2.33333 4.8V6H0.933333C0.373333 6 0 6.4 0 7V19C0 19.6 0.373333 20 0.933333 20H13.0667C13.6267 20 14 19.6 14 19V7C14 6.4 13.6267 6 13.0667 6ZM4.2 4.8C4.2 3.3 5.41333 2 7 2C8.58667 2 9.8 3.2 9.8 4.8V6H4.2V4.8ZM12.1333 18H1.86667V8H12.1333V18Z" fill="#232735"/>
+                        </svg>
+                      </span>
+                      <span>Einkäufe</span>
+                    </a>
+                    <a href="">
+                      <span class="icon">
+                        <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19 0H1C0.4 0 0 0.4 0 1V14C0 14.6 0.4 15 1 15H19C19.6 15 20 14.6 20 14V1C20 0.4 19.6 0 19 0ZM17.2 2L10.1 7.5L3 2H17.2ZM2 13V3.8L9.4 9.6C9.6 9.7 9.8 9.8 10 9.8C10.2 9.8 10.4 9.7 10.6 9.6L18 3.9V13h4Z" fill="#232735"/>
+                        </svg>
+                      </span>
+                      <span>Kontaktdaten</span>
+                    </a>
+                    <a href="">
+                      <span class="icon">
+                        <svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M19 0H5C4.4 0 4 0.4 4 1V7H1C0.4 7 0 7.4 0 8V16C0 17.7 1.3 19 3 19H5H17C18.7 19 20 17.7 20 16V1C20 0.4 19.6 0 19 0ZM2 16V9H4V17H3C2.4 17 2 16.6 2 16ZM18 16C18 16.6 17.6 17 17 17H6V8V2H18V16ZM15.5 6.7H8.5V4.7H15.5V6.7ZM15.5 10.7H8.5V8.7H15.5V10.7Z" fill="#232735"/>
+                        </svg>
+                      </span>
+                      <span>Nachrichten</span>
+                    </a>
+                    <a href="">
+                      <span class="icon">
+                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M14.3 13.4L13.7 14C13.5 14.2 13.2 14.3 13 14.3C12.8 14.3 12.5 14.2 12.3 14C11.9 13.6 11.9 13 12.3 12.6L14.6 10.3H5V8.3H14.6L12.3 6C11.9 5.6 11.9 5 12.3 4.6C12.7 4.2 13.3 4.2 13.7 4.6L14.3 5.2L18.4 9.3L14.3 13.4ZM2 2H10V0H1C0.4 0 0 0.4 0 1V17C0 17.6 0.4 18 1 18H10V16h4V2Z" fill="#232735"/>
+                        </svg>
+                      </span>
+                      <span>Abmelden</span>
+                    </a>
+                  </div>
+                </div>                 
+              </label>
+            </li>
+          </ul>
+          <div class="cart-wrapper">
+            <div class="cart with-products">
+              <span class="icon">
+                <svg width="21" height="19">
+                  <use xlink:href="img/shared/icons.svg#cart" />
+                </svg>               
+              </span>
+              <span class="cart__counter">0</span>
+              <div class="dropdown-content">
+                <div class="inner-content">
+                  <a href="#">
+                    <span class="inner-cart">
+                      <svg width="21" height="19">
+                        <use xlink:href="/img/shared/icons.svg#cart" />
+                      </svg>
+                      <span class="inner-cart-counter">2</span>
+                    </span>
+                    <span class="">
+                      <span class="apotheke-name">Berlinapotheke hackescher markt</span>
+                      <span class="price">32,05 €</span>
+                    </span>
+                  </a>
+                  <a href="#">
+                    <span class="inner-cart">
+                      <svg width="21" height="19">
+                        <use xlink:href="/img/shared/icons.svg#cart" />
+                      </svg>
+                      <span class="inner-cart-counter">10</span>
+                    </span>
+                    <span class="">
+                      <span class="apotheke-name">Gethsemane apotheke</span>
+                      <span class="price">1 650,64 €</span>
+                    </span>                  
+                  </a>
+                  <a href="#">
+                    <span class="inner-cart">
+                      <svg width="21" height="19">
+                        <use xlink:href="/img/shared/icons.svg#cart" />
+                      </svg>
+                      <span class="inner-cart-counter">8</span>
+                    </span>
+                    <span class="">
+                      <span class="apotheke-name">Tor-apotheke</span>
+                      <span class="price">168,63 €</span>
+                    </span>                   
+                  </a>
+                  <span class="choice-cart">Wählen Sie einen Warenkorb an um zu der Detailansicht zu gelangen.</span>                
+                </div>
+              </div>                
+            </div>     
+          </div>
+          <a href="#" class="menu-btn">
+            <svg width="22" height="16" fill="none">
+              <use xlink:href="img/shared/icons.svg#menu-icon" />
+            </svg>
+          </a>
+        </div>         
+      </div>   
+    </div>
+  </header>
+  <!-- Breadcrumbs -->
+  <div class="breadcrumbs">
+    <div class="container">
+      <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item active">Datenschutzerklärun</li>
+        </ol>
+    </div>
+  </div>   
+  <!-- Layout -->
+  <div class="layout">
+      <div class="container">
+          <div class="layout__wrapper  layout__shape">
+              <h2 class="page-title">Datenschutzerklärung</h2>
+              <div class="content">
+                <p>Für die Health Innvoa GmbH ist ein verantwortungsbewusster Umgang mit personenbezogenen Daten von höchster Bedeutung. 
+                Sie müssen zu Jederzeit wissen, wann wir welche Daten erheben und wie wir sie verwenden. 
+                Wir haben technische und organisatorische Maßnahmen getroffen, die sicherstellen, dass die Vorschriften über den 
+                Datenschutz sowohl von uns als auch von unseren externen Dienstleistern beachtet werden. 
+                Maßgebliche Gesetze sind dabei die Datenschutz-Grundverordnung (DSGVO), das Bundesdatenschutzgesetz (BDSG) und das Telemediengesetz (TMG).</p>
+                <p>Wir behalten uns vor, diese Datenschutzerklärung gelegentlich anzupassen, 
+                damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. 
+                Für Ihren erneuten Besuch gilt dann die aktualisierte Datenschutzerklärung.<br />
+                Name und Anschrift des Verantwortlichen<br />
+                Der Verantwortliche im Sinne der Datenschutz-Grundverordnung und anderer nationaler Datenschutzgesetze der Mitgliedstaaten sowie sonstiger 
+                datenschutzrechtlicher Bestimmungen ist die:</p>
+                <p>Health Innova GmbH<br />
+                Geschäftsführer: Herr Yannick Michels<br />
+                Kermeterstraße 71<br />
+                52396 Heimbach<br />
+                E-Mail:<a href="maito:info@health-innova.de">info@health-innova.de</a></p>  
+                <h2>I. Allgemeines zur Datenverarbeitung</h2>
+                <h3>1. Umfang der Verarbeitung personenbezogener Daten</h3>
+                <p>Wir erheben und verwenden personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen 
+                App sowie unserer Inhalte und Leistungen erforderlich ist. 
+                Die Erhebung und Verwendung personenbezogener Daten unserer Nutzer erfolgt nur, wenn die Verarbeitung durch gesetzliche 
+                Vorschriften gestattet ist oder nach Einwilligung des Nutzers.</p>
+                <h3>2. Rechtsgrundlage für die Verarbeitung personenbezogener Daten</h3>
+                <p>Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung der betroffenen Person einholen, dient Art. 6 Abs. 1 lit. a DSGVO als Rechtsgrundlage.</p>
+                <p>Bei der Verarbeitung von personenbezogenen Daten, die zur Erfüllung eines Vertrages, dessen Vertragspartei die betroffene Person ist,
+                erforderlich ist, dient Art. 6 Abs. 1 lit. b DSGVO als Rechtsgrundlage. 
+                Dies gilt auch für Verarbeitungsvorgänge, die zur Durchführung vorvertraglicher Maßnahmen erforderlich sind.</p>
+                <p>Soweit eine Verarbeitung personenbezogener Daten zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist, der unser Unternehmen unterliegt, 
+                dient Art. 6 Abs. 1 lit. c DSGVO als Rechtsgrundlage.</p>
+                <p>Für den Fall, dass lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen 
+                Person eine Verarbeitung personenbezogener Daten erforderlich machen, dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage.</p>
+                <p>Ist die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens oder eines Dritten erforderlich und überwiegen die 
+                Interessen, Grundrechte und Grundfreiheiten des Betroffenen das erstgenannte Interesse nicht, so dient Art. 
+                6 Abs. 1 lit. f DSGVO als Rechtsgrundlage für die Verarbeitung.</p>
+                <p>Rechtsgrundlage für die Verarbeitung Ihrer Gesundheitsdaten ist Artikel 9 Abs. 2 lit. 
+                h DSGVO in Verbindung mit § 22 Abs. 1 Nr. 1 lit. b BDSG. 
+                Darüber hinaus sind wesentliche Rechtsgrundlagen für die Verarbeitung Ihrer Daten das Apothekengesetz, die Apothekenbetriebsordnung sowie das 
+                Sozialgesetzbuch (SGB) Fünftes Buch (V), insbesondere § 300 SGB V.</p>
+                <h3>3. Datenlöschung und Speicherdauer</h3>
+                <p>Die personenbezogenen Daten der betroffenen Person werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt. 
+                Eine Speicherung kann darüber hinaus erfolgen, wenn dies durch den europäischen oder nationalen Gesetzgeber in unionsrechtlichen 
+                Verordnungen, Gesetzen oder sonstigen Vorschriften, denen der Verantwortliche unterliegt, vorgesehen wurde. 
+                Bestehen zum Beispiel gesetzliche Aufbewahrungspflichten, werden die personenbezogenen Daten bis zum Ablauf der Aufbewahrungspflicht gespeichert 
+                und danach gelöscht. Ist zu diesem Zeitpunkt der Zweck der Speicherung noch nicht entfallen, werden sie bis zum Entfall des 
+                Zwecks gesperrt und danach gelöscht.</p>
+                <h3>4. Weitergabe von Daten</h3>
+                <p>Sollten wir im Rahmen unserer Verarbeitung Daten gegenüber anderen Personen und Unternehmen (Auftragsverarbeitern oder Dritten) offenbaren, 
+                übermitteln oder sonstigen Zugriff auf die Daten gewähren, erfolgt dies nur auf Grundlage einer gesetzlichen Erlaubnis, 
+                einer rechtlichen Verpflichtung oder auf Grundlage unserer berechtigten Interessen oder Ihrer Einwilligung. 
+                In folgenden Fällen erfolgt unsere Datenverarbeitung bei einem weisungsgebundenen Dienstleister, 
+                der gemäß den datenschutzrechtlichen Vorgaben verpflichtet ist und die Daten nicht zu einem anderen Zweck verwenden darf:</p>
+                <p>Website-Hosting,<br />
+                Design und Gestaltung der App</p>
+                <p>Falls wir Dritte mit der Verarbeitung von Daten auf Grundlage eines sog. „Auftragsverarbeitungsvertrages“ beauftragen, 
+                geschieht dies auf Grundlage des Art. 28 DSGVO.</p>
+                <p>Sollten wir im Rahmen der Inanspruchnahme von Diensten Dritter Daten in einem Drittland verarbeiten lassen, erfolgt dies nur, 
+                wenn es entweder zur Erfüllung unserer (vor)vertraglichen Pflichten, einer rechtlichen Verpflichtung oder auf Grundlage unserer berechtigten 
+                Interessen oder mit Ihrer Einwilligung geschieht. Vorbehaltlich gesetzlicher oder vertraglicher Erlaubnisse verarbeiten oder lassen wir die Daten in 
+                einem Drittland nur beim Vorliegen der besonderen Voraussetzungen der Art. 44 ff. 
+                DSGVO verarbeiten, wenn die Verarbeitung z.B. auf Grundlage besonderer Garantien (z.B. für die USA durch das „Privacy Shield“) oder unter 
+                Beachtung offiziell anerkannter spezieller vertraglicher Verpflichtungen erfolgt.</p>
+                <h2>II. Bereitstellung der App und Erstellung von Logfiles</h2>
+                <h3>1. Beschreibung und Umfang der Datenverarbeitung</h3>
+                <p>Bei jedem Aufruf unserer App erfasst unser System automatisiert Daten und Informationen vom Computersystem des aufrufenden Gerätes.</p>
+                <p>Folgende Daten werden hierbei erhoben:</p>
+                <p>Informationen über den Browsertyp und die verwendete Version<br />
+                Das Betriebssystem des Nutzers<br />
+                Den Internet-Service-Provider des Nutzers<br />
+                Datum und Uhrzeit des Zugriffs<br />
+                IP-Adresse des Nutzers<br />
+                Websites, von denen das System des Nutzers auf unsere Internetseite gelangt<br />
+                Websites, die vom System des Nutzers über unsere App aufgerufen werden<br />
+                Die Daten werden ebenfalls in den Logfiles unseres Systems gespeichert. 
+                Eine Speicherung dieser Daten zusammen mit anderen personenbezogenen Daten des Nutzers findet nicht statt.</p>
+                <h3>2. Rechtsgrundlage für die Datenverarbeitung</h3>
+                <p>Rechtsgrundlage für die vorübergehende Speicherung der Daten und der Logfiles ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+                <h3>3. Zweck der Datenverarbeitung</h3>
+                <p>Die vorübergehende Speicherung der IP-Adresse durch das System ist notwendig, um eine Auslieferung der App an das Gerät des Nutzers zu ermöglichen. 
+                Hierfür muss die IP-Adresse des Nutzers für die Dauer der Sitzung gespeichert bleiben. 
+                Die Speicherung in Logfiles erfolgt, um die Funktionsfähigkeit der App sicherzustellen.
+                Zudem dienen uns die Daten zur Optimierung der App und zur Sicherstellung der Sicherheit unserer informationstechnischen Systeme. 
+                Eine Auswertung der Daten zu Marketingzwecken findet in diesem Zusammenhang nicht statt. 
+                In diesen Zwecken liegt auch unser berechtigtes Interesse an der Datenverarbeitung nach Art. 6 Abs. 1 lit. f DSGVO.</p>
+                <h3>4. Dauer der Speicherung</h3>
+                <p>Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. 
+                Im Falle der Erfassung der Daten zur Bereitstellung der App ist dies der Fall, wenn die jeweilige Sitzung beendet ist. 
+                Im Falle der Speicherung der Daten in Logfiles ist dies nach spätestens sieben Tagen der Fall. 
+                Eine darüber hinausgehende Speicherung ist möglich. In diesem Fall werden die IP-Adressen der Nutzer gelöscht oder verfremdet, 
+                sodass eine Zuordnung des aufrufenden Clients nicht mehr möglich ist.</p>
+                <h3>5. Widerspruchsmöglichkeit</h3>
+                <p>Die Erfassung der Daten zur Bereitstellung der App und die Speicherung der Daten in Logfiles ist für den Betrieb der Internetseite zwingend erforderlich. 
+                Es besteht folglich seitens des Nutzers keine Widerspruchsmöglichkeit.</p>
+                <h2>III. Verwendung von Cookies</h2>
+                <h3>1. Beschreibung und Umfang der Datenverarbeitung</h3>
+                <p>Unsere App verwendet Cookies. Bei Cookies handelt es sich um Textdateien, die im Internetbrowser bzw. 
+                vom Internetbrowser auf dem Computersystem des Nutzers gespeichert werden. 
+                Ruft ein Nutzer eine Website auf, so kann ein Cookie auf dem Betriebssystem des Nutzers gespeichert werden. 
+                Dieser Cookie enthält eine charakteristische Zeichenfolge, die eine eindeutige Identifizierung des Browsers beim erneuten Aufrufen der Website ermöglicht. 
+                Wir setzen Cookies ein, um unsere App nutzerfreundlicher zu gestalten. 
+                Einige Elemente unserer App erfordern es, dass der aufrufende Browser auch nach einem Seitenwechsel identifiziert werden kann. 
+                Wir verwenden auf unserer App darüber hinaus Cookies, die eine Analyse des Surfverhaltens der Nutzer ermöglichen. 
+                Die auf diese Weise erhobenen Daten der Nutzer werden durch technische Vorkehrungen pseudonymisiert. 
+                Daher ist eine Zuordnung der Daten zum aufrufenden Nutzer nicht mehr möglich. 
+                Die Daten werden nicht gemeinsam mit sonstigen personenbezogenen Daten der Nutzer gespeichert. 
+                Beim Aufruf unserer App werden die Nutzer durch einen Infobanner über die Verwendung von Cookies zu Analysezwecken informiert 
+                und auf diese Datenschutzerklärung verwiesen. Es erfolgt in diesem Zusammenhang auch ein Hinweis darauf, wie die Speicherung von Cookies in den 
+                Browsereinstellungen unterbunden werden kann.</p>
+                <h3>2. Rechtsgrundlage für die Datenverarbeitung</h3>
+                <p>Die Rechtsgrundlage für die Verarbeitung personenbezogener Daten unter Verwendung von Cookies ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+                <h3>3. Zweck der Datenverarbeitung</h3>
+                <p>Der Zweck der Verwendung von Cookies ist, die Nutzung von Websites für die Nutzer zu vereinfachen. 
+                Einige Funktionen unserer Internetseite können ohne den Einsatz von Cookies nicht angeboten werden. 
+                Für diese Funktionen ist es erforderlich, dass der Browser auch nach einem Seitenwechsel wiedererkannt wird. 
+                Die durch technisch notwendige Cookies erhobenen Nutzerdaten werden nicht zur Erstellung von Nutzerprofilen verwendet. 
+                Die Verwendung der Analyse-Cookies erfolgt zu dem Zweck, die Qualität unserer App und ihre Inhalte zu verbessern. 
+                Durch die Analyse-Cookies erfahren wir, wie die App genutzt wird und können so unser Angebot stetig optimieren.</p>
+                <p>In den genannten Zwecken liegt auch unser berechtigtes Interesse in der Verarbeitung der personenbezogenen Daten nach Art. 6 Abs. 1 lit. f DSGVO.</p>
+                <h3>4. Dauer der Speicherung, Widerspruchs- und Beseitigungsmöglichkeit</h3>
+                <p>Cookies werden auf dem Rechner des Nutzers gespeichert und von diesem an unserer App übermittelt. 
+                Daher haben Sie als Nutzer auch die volle Kontrolle über die Verwendung von Cookies. 
+                Durch eine Änderung der Einstellungen in Ihrem Internetbrowser können Sie die Übertragung von Cookies deaktivieren oder einschränken. 
+                Bereits gespeicherte Cookies können jederzeit gelöscht werden. Dies kann auch automatisiert erfolgen. 
+                Werden Cookies für unsere App deaktiviert, können möglicherweise nicht mehr alle Funktionen der App vollumfänglich genutzt werden. 
+                Das Akzeptieren von Cookies ist nicht erforderlich, um unsere App zu nutzen. 
+                Wir weisen jedoch darauf hin, dass einzelne Funktionen unserer App eventuell nur eingeschränkt genutzt werden können; insbesondere die 
+                Funktionalität „Medikamentenreservierung“ kann nicht genutzt werden.</p>
+                <h2>IV. E-Mail-Konversation</h2>
+                <h3>1. Beschreibung und Umfang der Datenverarbeitung</h3>
+                <p>Falls Sie uns eine E-Mail senden, erheben und verarbeiten wir die personenbezogenen Daten, die Sie uns in der E-Mail überlassen. Dies können z.B. 
+                Ihr Vorname, Ihr Nachname, Ihre Anschrift, Ihre Telefonnummer, Ihre E-Mail-Adresse und der Inhalt Ihrer Nachricht oder Mitteilung sein, 
+                falls diese Daten zu Ihrer Person enthält. Dies geschieht, um mit Ihnen kommunizieren zu können, falls Sie uns kontaktiert haben, indem wir z.B. 
+                Ihre Fragen beantworten, Reservierungen bearbeiten oder Ihnen gewünschte Informationen zur Verfügung stellen.</p>
+                <p>Es erfolgt in diesem Zusammenhang keine Weitergabe der Daten an Dritte. 
+                Die Daten werden ausschließlich für die Verarbeitung der Konversation verwendet.</p>
+                <h3>2. Rechtsgrundlage für die Datenverarbeitung</h3>
+                <p>Rechtsgrundlage für die Verarbeitung der Daten, die im Zuge einer Übersendung einer E-Mail übermittelt werden, ist Art. 6 Abs. 1 lit. f DSGVO. 
+                Zielt der E-Mail-Kontakt auf den Abschluss eines Vertrages ab, so ist zusätzliche Rechtsgrundlage für die Verarbeitung Art. 6 Abs. 1 lit. b DSGVO.</p>
+                <h3>3. Zweck der Datenverarbeitung</h3>
+                <p>Die Verarbeitung der personenbezogenen Daten dient uns allein zur Bearbeitung der Kontaktaufnahme. 
+                Hierin liegt auch das erforderliche berechtigte Interesse an der Verarbeitung der Daten.</p>
+                <h3>4. Dauer der Speicherung</h3>
+                <p>Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. 
+                Dies ist dann der Fall, wenn die jeweilige Konversation mit dem Nutzer beendet ist. 
+                Beendet ist die Konversation dann, wenn sich aus den Umständen entnehmen lässt, dass der betroffene Sachverhalt abschließend geklärt ist.</p>
+                <p>Die während des Absendevorgangs zusätzlich erhobenen personenbezogenen Daten werden spätestens nach einer Frist von sieben Tagen gelöscht.</p>
+                <h3>5. Widerspruchsmöglichkeit</h3>
+                <p>Der Nutzer hat jederzeit die Möglichkeit, seine Einwilligung zur Verarbeitung der personenbezogenen Daten zu widerrufen. 
+                Nimmt der Nutzer per E-Mail Kontakt mit uns auf, so kann er der Speicherung seiner personenbezogenen Daten jederzeit widersprechen. 
+                In einem solchen Fall kann die Konversation nicht fortgeführt werden.</p>
+                <p>Alle personenbezogenen Daten, die im Zuge der Kontaktaufnahme gespeichert wurden, werden in diesem Fall gelöscht.</p>
+                <h2>V. Medikamentenreservierung</h2>
+                 <p>Sofern auf dieser App die Möglichkeit besteht, eine unverbindliche Medikamentenreservierung zu tätigen, beachten Sie bitte folgende Hinweise:</p>   
+                <h3>1. Beschreibung und Umfang der Datenverarbeitung</h3>
+                <p>Für Ihre unverbindliche Medikamentenreservierung erheben wir</p>
+                <p>a. im Fall einer rezeptfreien Medikamentenreservierung oder der Reservierung verschreibungspflichtiger 
+                Medikamente über das Formular bei privater Krankenversicherung Ihren Vornamen und Ihren Nachnamen, die Anrede, Ihre Adresse, 
+                Ihre Telefonnummer und E-Mail-Adresse sowie das Medikament oder die Medikamente, die Sie reservieren möchten, inklusive der Menge, 
+                Darreichungsform, des Packungsinhalts und des Anbieters und die Uhrzeit der Reservierung, den 
+                Termin der geplanten Abholung sowie eventuell von Ihnen angegebene persönliche Anmerkungen oder Wünsche.</p>
+                <p>b. im Fall einer Reservierung verschreibungspflichtiger Medikamente über das Formular bei gesetzlicher Krankenversicherung zusätzlich zu 
+                Ihren für die rezeptfreie Medikamentenreservierung erforderlichen Angaben die Kostenträgerkennung und Angaben zu der Gebührenpflichtigkeit 
+                sowie den Aut-idem-Hinweis.</p>
+                <p>c. im Fall des Rezept-Uploads alle auf dem abgebildeten Rezept enthaltenen und sichtbaren Angaben 
+                (insbes. Vorname, Nachname, Geburtsdatum, Kostenträgerkennung, Versichertennummer, Medikament, Gebührenpflichtigkeit, Aut-idem Hinweis) 
+                sowie alle auf der Medikamentenverpackung erkennbaren Angaben.</p>
+                <p>Bitte beachten Sie, dass es sich bei diesen Angaben um Daten zu Ihrer Gesundheit handelt, welche als besondere personenbezogene Daten im Sinne des Art. 
+                9 Abs.1 DSGVO einen erhöhten Schutz genießen. Dem tun wir Genüge durch die Wahl eines besonderen Verschlüsselungssystems. 
+                Um Sie über den Stand Ihrer Reservierung und/oder mögliche Besonderheiten des bestellten Produkts zu informieren, nehmen wir über eine der von 
+                Ihnen angegebenen Kontaktmöglichkeiten (E-Mail, Telefon, SMS) Verbindung mit Ihnen auf.</p>
+                <p>Die Erhebung, Verarbeitung und Nutzung Ihrer Daten erfolgt ausschließlich verschlüsselt mittels TLS, RSA, AES, SHA. 
+                Diese Verschlüsselungsmechanismen ermöglichen es, den kontinuierlichen Datenstrom im Internet zwischen dem Server und dem Browser eines 
+                Nutzers zu verschlüsseln, um „heimliches Abhören und Auslesen“ zu verhindern. 
+                Sie erkennen eine sichere-SSL-Verbindung unter anderem an einem Hinweis neben der URL-Zeile Ihres Browsers. 
+                Dies gilt nicht, falls Sie uns aus eigener Initiative per E-Mail kontaktieren. Hier sind Sie dafür verantwortlich, geeignete Maßnahmen zu treffen, 
+                um Ihre Daten sicher zu übermitteln und gegen Zugriffe unberechtigter Dritter zu schützen.</p>
+                <h3>2. Rechtsgrundlage</h3>
+                <p>Für die Verarbeitung der Daten, die im Rahmen Ihrer Medikamentenreservierung erhoben werden, wird im Rahmen des Reservierungsvorgangs 
+                Ihre Einwilligung eingeholt und auf diese Datenschutzerklärung verwiesen. Rechtsgrundlage zur Verarbeitung der im Zuge der
+                Arzneimittelreservierung angegebenen Daten ist somit Art. 9 Abs. 2 lit. a DSGVO.</p>
+                <h3>3. Zweck und Dauer der Speicherung</h3>
+                <p>Zweck der Verarbeitung ist ausschließlich die Bearbeitung Ihrer Medikamentenreservierung. 
+                Die Daten werden nach spätestens 30 Tagen gelöscht.</p>
+                <h3>4. Widerspruchsmöglichkeit</h3>
+                <p>Der Nutzer hat jederzeit die Möglichkeit, seine Einwilligung zur Verarbeitung der personenbezogenen Daten zu widerrufen.</p>
+                <h2>VI. Registrierung</h2>
+                <p>Sofern diese App eine Registrierungsmöglichkeit anbietet, beachten Sie bitte folgende Hinweise:</p>
+                <h3>1. Beschreibung und Umfang der Datenverarbeitung</h3>
+                <p>Auf unserer App bieten wir Nutzern die Möglichkeit, sich unter Angabe personenbezogener Daten zu registrieren. 
+                Die Daten werden dabei in eine Eingabemaske eingegeben und an uns übermittelt und gespeichert. 
+                Eine Weitergabe der Daten an Dritte findet nicht statt</p>
+                <p>Im Rahmen des Registrierungsprozesses wird eine Einwilligung des Nutzers zur Verarbeitung dieser Daten eingeholt.</p>
+                <h3>2. Rechtsgrundlage für die Datenverarbeitung</h3>
+                <p>Rechtsgrundlage für die Verarbeitung der Daten ist bei Vorliegen einer Einwilligung des Nutzers Art. 6 Abs. 1 lit. a DSGVO. 
+                Dient die Registrierung der Erfüllung eines Vertrages, dessen Vertragspartei der Nutzer ist, oder der Durchführung vorvertraglicher Maßnahmen, 
+                so ist zusätzliche Rechtsgrundlage für die Verarbeitung der Daten Art. 6 Abs. 1 lit. b DSGVO.</p>
+                <h3>3. Zweck der Datenverarbeitung</h3>
+                <p>Eine Registrierung des Nutzers ist für das Bereithalten bestimmter Inhalte und Leistungen auf unserer App erforderlich, z.B. 
+                wenn der Nutzer sich ein eigenes Profil anlegen möchte um bei künftigen Reservierungen nicht erneut sämtliche relevanten Daten angeben zu müssen.</p>
+                <h3>4. Dauer der Speicherung</h3>
+                <p>Die Daten werden gelöscht, sobald sie für die Erreichung des Zweckes ihrer Erhebung nicht mehr erforderlich sind. 
+                Dies ist für die während des Registrierungsvorgangs erhobenen Daten der Fall, wenn die Registrierung auf unserer App aufgehoben oder abgeändert wird. 
+                Dies ist für die während des Registrierungsvorgangs zur Erfüllung eines Vertrags oder zur Durchführung vorvertraglicher Maßnahmen dann der Fall, 
+                wenn die Daten für die Durchführung des Vertrages nicht mehr erforderlich sind. 
+                Auch nach Abschluss des Vertrags kann eine Erforderlichkeit, personenbezogene Daten des Vertragspartners zu speichern, bestehen, 
+                um vertraglichen oder gesetzlichen Verpflichtungen nachzukommen.</p>
+                <h3>5. Widerspruchs- und Beseitigungsmöglichkeit</h3>
+                <p>Als Nutzer haben sie jederzeit die Möglichkeit, die Registrierung aufzulösen. 
+                Die über Sie gespeicherten Daten können Sie jederzeit abändern lassen. Sind die Daten zur Erfüllung eines Vertrages oder zur Durchführung 
+                vorvertraglicher Maßnahmen erforderlich, ist eine vorzeitige Löschung der Daten nur möglich, soweit nicht (vor)vertragliche oder gesetzliche 
+                Verpflichtungen einer Löschung entgegenstehen.</p>
+                <h2>VII. Verwendung von Google Analytics</h2>
+                <p>Wir benutzen Google Analytics, einen Webanalysedienst der Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.</p>
+                <p>Google ist unter dem Privacy-Shield-Abkommen zertifiziert und bietet hierdurch eine Garantie, das europäische Datenschutzrecht 
+                einzuhalten (siehe https://www.privacyshield.gov/participant?id=a2zt000000001L5AAI&status=Active ).</p>
+                <p>Google Analytics verwendet sog. „Cookies“, Textdateien, die auf Ihrem Computer oder Endgerät gespeichert werden und die eine Analyse der 
+                Benutzung der App durch sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser App werden in der 
+                Regel an einen Server von Google in den USA übertragen und dort gespeichert. 
+                Aufgrund der Aktivierung der IP-Anonymisierung auf dieser App, wird Ihre IP-Adresse von Google jedoch innerhalb von 
+                Mitgliedstaaten der Europäischen Union oder in anderen Vertragsstaaten des Abkommens über den Europäischen Wirtschaftsraum zuvor gekürzt. 
+                Nur in Ausnahmefällen wird die volle IP-Adresse an einen Server von Google in den USA übertragen und dort gekürzt. 
+                In unserem Auftrag wird Google diese Informationen benutzen, um Ihre Nutzung der Webseite auszuwerten, um Reports über die 
+                Webseitenaktivitäten zusammenzustellen und um weitere mit der Webseitennutzung und der Internetnutzung verbundene Dienstleistungen 
+                uns gegenüber zu erbringen. Die im Rahmen von Google Analytics von Ihrem Browser übermittelte IP-Adresse wird nicht mit anderen 
+                Daten von Google zusammengeführt. Sie können die Speicherung der Cookies durch eine entsprechende Einstellung Ihrer Browser-Software verhindern; 
+                wir weisen jedoch darauf hin, dass Sie in diesem Fall gegebenenfalls nicht sämtliche Funktionen dieser App vollumfänglich werden nutzen können. 
+                Sie können darüber hinaus die Erfassung der durch das Cookie erzeugten und auf Ihre Nutzung der Webseite bezogenen Daten (inkl. Ihrer IP-Adresse)
+                an Google sowie die Verarbeitung dieser Daten durch Google verhindern, indem Sie das unter dem folgenden Link (http://tools.google.com/dlpage/gaoptout?hl=de) 
+                verfügbare Browser-Plugin herunterladen und installierst.</p>
+                <p>Wir weisen darauf hin, dass auf dieser Webseite Google Analytics um den Code „gat._anonymizeIp();“ erweitert wurde, 
+                um eine anonymisierte Erfassung von IP-Adressen (sog. IP-Masking) zu gewährleisten.</p>
+                <p>Zudem können Sie eine Erfassung von Google Analytics durch einen Klick auf den folgenden Link verhindern. 
+                Es wird sodann ein Opt-Out-Cookies gesetzt, der die weitere Erfassung Ihrer Daten beim Besuch dieser Webseite verhindert. 
+                Dieses Vorgehen empfiehlt sich insbesondere bei einem Zugriff auf unsere Seite über mobile Endgeräte.</p>
+                <p>Google Analytics deaktivieren</p>
+                <p>Nähere Informationen zu Nutzungsbedingungen und Datenschutz finden Sie unter www.google.com/analytics/terms/de.html bzw. 
+                unter www.google.com/intl/de/analytics/privacyoverview.html.</p>
+                <p>Wir stützen den Einsatz des vorgenannten Analyse-Tools auf Art.6 Abs.1 lit.f DSGVO: die Verarbeitung erfolgt zur Analyse des 
+                Nutzungsverhaltens und ist daher zur Wahrung unserer berechtigten Interessen erforderlich.</p>
+                <h2>VIII. Google Maps</h2>
+                <p>Diese Seite nutzt über eine Schnittstelle den Kartendienst Google Maps. 
+                Anbieter ist die Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland.</p>
+                <p>Zur Nutzung der Funktionen von Google Maps ist es notwendig, Ihre IP-Adresse zu speichern. Diese Informationen werden in der 
+                Regel an einen Server von Google in den USA übertragen und dort gespeichert. 
+                Der Anbieter dieser Seite hat keinen Einfluss auf diese Datenübertragung. 
+                Google LLC verfügt über eine Zertifizierung nach dem „EU-US-Privacy-Shield”. 
+                Der „Privacy-Shield” ist ein Übereinkommen zwischen der Europäischen Union (EU) und den USA, das die Einhaltung europäischer 
+                Datenschutzstandards in den USA gewährleistet.</p>
+                <p>Die Nutzung von Google Maps erfolgt im Interesse einer ansprechenden Darstellung unserer Online-Angebote und einer leichten 
+                Auffindbarkeit der von uns auf der App angegebenen Orte. Dies stellt ein berechtigtes Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar.</p>
+                <p>Mehr Informationen zum Umgang mit Nutzerdaten finden Sie in der Datenschutzerklärung von Google: 
+                    <a href="https://www.google.de/intl/de/policies/privacy/" target="_blank">https://www.google.de/intl/de/policies/privacy/</a>.
+                </p>
+                <h2>IX. Rechte der betroffenen Person</h2>
+                <p>Werden personenbezogene Daten von Ihnen verarbeitet, sind Sie Betroffener im Sinne der DSGVO und es stehen Ihnen folgende Rechte 
+                gegenüber dem Verantwortlichen zu:</p>
+                <h3>1. Auskunftsrecht</h3>
+                <p>Sie können von dem Verantwortlichen eine Bestätigung darüber verlangen, ob personenbezogene Daten, die Sie betreffen, von uns verarbeitet werden.<br/>
+                Liegt eine solche Verarbeitung vor, können Sie von dem Verantwortlichen über folgende Informationen Auskunft verlangen:</p>
+                <p>(1) die Zwecke, zu denen die personenbezogenen Daten verarbeitet werden;</p>
+                <p>(2) die Kategorien von personenbezogenen Daten, welche verarbeitet werden;</p>
+                <p>(3) die Empfänger bzw. die Kategorien von Empfängern, gegenüber denen die Sie betreffenden personenbezogenen Daten offengelegt 
+                wurden oder noch offengelegt werden;</p>
+                <p>(4) die geplante Dauer der Speicherung der Sie betreffenden personenbezogenen Daten oder, falls konkrete Angaben hierzu nicht möglich sind, 
+                Kriterien für die Festlegung der Speicherdauer;</p>
+                <p>(5) das Bestehen eines Rechts auf Berichtigung oder Löschung der Sie betreffenden personenbezogenen Daten, eines Rechts auf 
+                Einschränkung der Verarbeitung durch den Verantwortlichen oder eines Widerspruchsrechts gegen diese Verarbeitung;</p>
+                <p>(6) das Bestehen eines Beschwerderechts bei einer Aufsichtsbehörde;</p>
+                <p>(7) alle verfügbaren Informationen über die Herkunft der Daten, wenn die personenbezogenen Daten nicht bei der betroffenen Person erhoben werden;</p>
+                <p>(8) das Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling gemäß Art. 
+                22 Abs. 1 und 4 DSGVO und – zumindest in diesen Fällen – aussagekräftige Informationen über die involvierte Logik sowie die 
+                Tragweite und die angestrebten Auswirkungen einer derartigen Verarbeitung für die betroffene Person.</p>
+                <p>Ihnen steht das Recht zu, Auskunft darüber zu verlangen, ob die Sie betreffenden personenbezogenen Daten in ein Drittland oder an eine internationale 
+                Organisation übermittelt werden. In diesem Zusammenhang können Sie verlangen, über die geeigneten Garantien gemäß Art. 46 DSGVO im 
+                Zusammenhang mit der Übermittlung unterrichtet zu werden.</p>
+                <h3>2. Recht auf Berichtigung</h3>
+                <p>Sie haben ein Recht auf Berichtigung und/oder Vervollständigung gegenüber dem Verantwortlichen, sofern die verarbeiteten personenbezogenen 
+                Daten, die Sie betreffen, unrichtig oder unvollständig sind. Der Verantwortliche hat die Berichtigung unverzüglich vorzunehmen.</p>
+                <h2>3. Recht auf Einschränkung der Verarbeitung</h2>
+                <p>Unter den folgenden Voraussetzungen können Sie die Einschränkung der Verarbeitung der Sie betreffenden personenbezogenen Daten verlangen:</p>
+                <p>(1) wenn Sie die Richtigkeit der Sie betreffenden personenbezogenen für eine Dauer bestreiten, die es dem Verantwortlichen ermöglicht, die Richtigkeit der personenbezogenen 
+                Daten zu überprüfen;</p>
+                <p>(2) die Verarbeitung unrechtmäßig ist und Sie die Löschung der personenbezogenen Daten ablehnen und stattdessen die Einschränkung der Nutzung der 
+                personenbezogenen Daten verlangen;</p>
+                <p>(3) der Verantwortliche die personenbezogenen Daten für die Zwecke der Verarbeitung nicht länger benötigt, 
+                Sie diese jedoch zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen benötigen, oder</p>
+                <p>(4) wenn Sie Widerspruch gegen die Verarbeitung gemäß Art. 21 Abs. 1 DSGVO eingelegt haben und noch nicht feststeht, 
+                ob die berechtigten Gründe des Verantwortlichen gegenüber Ihren Gründen überwiegen.</p>
+                <p>Wurde die Verarbeitung der Sie betreffenden personenbezogenen Daten eingeschränkt, dürfen diese Daten – von ihrer 
+                Speicherung abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen oder zum 
+                Schutz der Rechte einer anderen natürlichen oder juristischen Person oder aus Gründen eines wichtigen öffentlichen 
+                Interesses der Europäischen Union oder eines Mitgliedstaats verarbeitet werden.</p>
+                <p>Wurde die Einschränkung der Verarbeitung nach den o.g. Voraussetzungen eingeschränkt, werden Sie von dem Verantwortlichen unterrichtet, 
+                bevor die Einschränkung aufgehoben wird.</p>
+                <h3>4. Recht auf Löschung</h3>
+                <p>a) Sie können von dem Verantwortlichen verlangen, dass die Sie betreffenden personenbezogenen Daten unverzüglich gelöscht werden. 
+                Der Verantwortliche ist verpflichtet, diese Daten unverzüglich zu löschen, sofern einer der folgenden Gründe zutrifft:</p>
+                <p>(1) Die Sie betreffenden personenbezogenen Daten sind für die Zwecke, 
+                für die sie erhoben oder auf sonstige Weise verarbeitet wurden, nicht mehr notwendig.</p>
+                <p>(2) Sie widerrufen Ihre Einwilligung, auf die sich die Verarbeitung gemäß Art. 6 Abs. 1 lit. a oder Art. 9 Abs. 
+                2 lit. a DSGVO stützte, und es fehlt an einer anderweitigen Rechtsgrundlage für die Verarbeitung.</p>
+                <p>(3) Sie legen gemäß Art. 21 Abs. 1 DSGVO Widerspruch gegen die Verarbeitung ein und es liegen keine vorrangigen berechtigten 
+                Gründe für die Verarbeitung vor, oder Sie legen gemäß Art. 21 Abs. 2 DSGVO Widerspruch gegen die Verarbeitung ein.</p>
+                <p>(4) Die Sie betreffenden personenbezogenen Daten wurden unrechtmäßig verarbeitet.</p>
+                <p>(5) Die Löschung der Sie betreffenden personenbezogenen Daten ist zur Erfüllung einer rechtlichen Verpflichtung nach dem Unionsrecht oder dem 
+                Recht der Mitgliedstaaten erforderlich, dem der Verantwortliche unterliegt.</p>
+                <p>(6) Die Sie betreffenden personenbezogenen Daten wurden in Bezug auf angebotene Dienste der Informationsgesellschaft gemäß 
+                Art. 8 Abs. 1 DSGVO erhoben.</p>
+                <p>Hat der Verantwortliche die Sie betreffenden personenbezogenen Daten öffentlich gemacht und ist er gemäß Art. 17 Abs. 1 DSGVO zu deren 
+                Löschung verpflichtet, so trifft er unter Berücksichtigung der verfügbaren Technologie und der Implementierungskosten angemessene Maßnahmen, 
+                auch technischer Art, um für die Datenverarbeitung Verantwortliche, die die personenbezogenen Daten verarbeiten, darüber zu informieren, 
+                dass Sie als betroffene Person von ihnen die Löschung aller Links zu diesen personenbezogenen Daten oder von Kopien oder 
+                Replikationen dieser personenbezogenen Daten verlangt haben.</p>
+                <p>b) Das Recht auf Löschung besteht nicht, soweit die Verarbeitung erforderlich ist</p>
+                <p>(1) zur Ausübung des Rechts auf freie Meinungsäußerung und Information;</p>
+                <p>(2) zur Erfüllung einer rechtlichen Verpflichtung, die die Verarbeitung nach dem Recht der Union oder der Mitgliedstaaten, 
+                dem der Verantwortliche unterliegt, erfordert, oder zur Wahrnehmung einer Aufgabe, die im öffentlichen Interesse liegt oder in 
+                Ausübung öffentlicher Gewalt erfolgt, die dem Verantwortlichen übertragen wurde;</p>
+                <p>(3) aus Gründen des öffentlichen Interesses im Bereich der öffentlichen Gesundheit gemäß Art. 9 Abs. 2 lit. h und i sowie Art. 9 Abs. 3 DSGVO;</p>
+                <p>(4) für im öffentlichen Interesse liegende Archivzwecke, wissenschaftliche oder historische Forschungszwecke oder für statistische Zwecke gemäß Art. 
+                89 Abs. 1 DSGVO, soweit das hier unter Abschnitt IX.4.a) genannte Recht voraussichtlich die Verwirklichung der 
+                Ziele dieser Verarbeitung unmöglich macht oder ernsthaft beeinträchtigt, oder</p>
+                <p>(5) zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.</p>
+                <h3>5. Recht auf Unterrichtung</h3>
+                <p>Haben Sie das Recht auf Berichtigung, Löschung oder Einschränkung der Verarbeitung gegenüber dem Verantwortlichen geltend gemacht, 
+                ist dieser verpflichtet, allen Empfängern, denen die Sie betreffenden personenbezogenen Daten offengelegt wurden, 
+                diese Berichtigung oder Löschung der Daten oder Einschränkung der Verarbeitung mitzuteilen, es sei denn, dies erweist sich als unmöglich oder 
+                ist mit einem unverhältnismäßigen Aufwand verbunden.</p>
+                <p>Ihnen steht gegenüber dem Verantwortlichen das Recht zu, über diese Empfänger unterrichtet zu werden.</p>
+                <h3>6. Recht auf Datenübertragbarkeit</h3>
+                <p>Sie haben das Recht, die Sie betreffenden personenbezogenen Daten, die Sie dem Verantwortlichen bereitgestellt haben, 
+                in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten. Außerdem haben Sie das Recht, diese 
+                Daten einem anderen Verantwortlichen ohne Behinderung durch den Verantwortlichen, dem die personenbezogenen Daten bereitgestellt wurden, 
+                zu übermitteln, sofern</p>
+                <p>(1) die Verarbeitung auf einer Einwilligung gemäß Art. 6 Abs. 1 lit. a DSGVO oder Art. 9 Abs. 2 lit. a DSGVO oder auf einem Vertrag gemäß Art. 
+                6 Abs. 1 lit. b DSGVO beruht und</p>
+                <p>(2) die Verarbeitung mithilfe automatisierter Verfahren erfolgt.</p>
+                <p>In Ausübung dieses Rechts haben Sie ferner das Recht zu erwirken, dass die Sie betreffenden personenbezogenen 
+                Daten direkt von einem Verantwortlichen einem anderen Verantwortlichen übermittelt werden, soweit dies technisch machbar ist. 
+                Freiheiten und Rechte anderer Personen dürfen hierdurch nicht beeinträchtigt werden.</p>
+                <p>Das Recht auf Datenübertragbarkeit gilt nicht für eine Verarbeitung personenbezogener Daten, die für die Wahrnehmung einer Aufgabe 
+                erforderlich ist, die im öffentlichen Interesse liegt oder in Ausübung öffentlicher Gewalt erfolgt, die dem Verantwortlichen übertragen wurde.</p>
+                <h3>7. Widerspruchsrecht</h3>
+                <p>Sie haben das Recht, aus Gründen, die sich aus ihrer besonderen Situation ergeben, jederzeit gegen die Verarbeitung der 
+                Sie betreffenden personenbezogenen Daten, die aufgrund von Art. 6 Abs. 1 lit. e oder f DSGVO erfolgt, Widerspruch einzulegen; 
+                dies gilt auch für ein auf diese Bestimmungen gestütztes Profiling.</p>
+                <p>Der Verantwortliche verarbeitet die Sie betreffenden personenbezogenen Daten nicht mehr, es sei denn, er kann zwingende schutzwürdige
+                Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen, oder die Verarbeitung dient der Geltendmachung, 
+                Ausübung oder Verteidigung von Rechtsansprüchen.</p>
+                <p>Werden die Sie betreffenden personenbezogenen Daten verarbeitet, um Direktwerbung zu betreiben, haben Sie das Recht, 
+                jederzeit Widerspruch gegen die Verarbeitung der Sie betreffenden personenbezogenen Daten zum Zwecke derartiger Werbung einzulegen; 
+                dies gilt auch für das Profiling, soweit es mit solcher Direktwerbung in Verbindung steht.</p>
+                <p>Widersprechen Sie der Verarbeitung für Zwecke der Direktwerbung, so werden die Sie betreffenden personenbezogenen Daten nicht mehr 
+                für diese Zwecke verarbeitet.</p>
+                <p>Sie haben die Möglichkeit, im Zusammenhang mit der Nutzung von Diensten der Informationsgesellschaft – ungeachtet der Richtlinie 2002/58/EG – 
+                Ihr Widerspruchsrecht mittels automatisierter Verfahren auszuüben, bei denen technische Spezifikationen verwendet werden.</p>
+                <h3>8. Recht auf Widerruf der datenschutzrechtlichen Einwilligungserklärung</h3>
+                <p>Sie haben das Recht, Ihre datenschutzrechtliche Einwilligungserklärung jederzeit zu widerrufen. 
+                Durch den Widerruf der Einwilligung wird die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung nicht berührt.</p>
+                <h3>9. Automatisierte Entscheidung im Einzelfall einschließlich Profiling</h3>
+                <p>Sie haben das Recht, nicht einer ausschließlich auf einer automatisierten Verarbeitung – einschließlich 
+                Profiling – beruhenden Entscheidung unterworfen zu werden, die Ihnen gegenüber rechtliche Wirkung entfaltet oder 
+                Sie in ähnlicher Weise erheblich beeinträchtigt. Dies gilt nicht, wenn die Entscheidung</p>
+                <p>(1) für den Abschluss oder die Erfüllung eines Vertrags zwischen Ihnen und dem Verantwortlichen erforderlich ist,</p>
+                <p>(2) aufgrund von Rechtsvorschriften der Europäischen Union oder der EU-Mitgliedstaaten, denen der 
+                Verantwortliche unterliegt, zulässig ist und diese Rechtsvorschriften angemessene Maßnahmen zur Wahrung 
+                Ihrer Rechte und Freiheiten sowie Ihrer berechtigten Interessen enthalten oder</p>
+                <p>(3) mit Ihrer ausdrücklichen Einwilligung erfolgt.</p>
+                <p>Allerdings dürfen diese Entscheidungen nicht auf besonderen Kategorien personenbezogener Daten nach Art. 9 Abs. 
+                1 DSGVO beruhen, sofern nicht Art. 9 Abs. 2 lit. a oder g DSGVO gilt und angemessene Maßnahmen zum Schutz der Rechte und Freiheiten sowie 
+                Ihrer berechtigten Interessen getroffen wurden.</p>
+                <p>Hinsichtlich der in (1) und (3) genannten Fälle trifft der Verantwortliche angemessene Maßnahmen, um die 
+                Rechte und Freiheiten sowie Ihre berechtigten Interessen zu wahren, wozu mindestens das Recht auf Erwirkung des 
+                Eingreifens einer Person seitens des Verantwortlichen, auf Darlegung des eigenen Standpunkts und auf Anfechtung der Entscheidung gehört.</p>
+                <h3>10. Recht auf Beschwerde bei einer Aufsichtsbehörde</h3>
+                <p>Unbeschadet eines anderweitigen verwaltungsrechtlichen oder gerichtlichen Rechtsbehelfs steht Ihnen das Recht auf 
+                Beschwerde bei der zuständigen Landesdatenschutzaufsichtsbehörde zu, wenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden 
+                personenbezogenen Daten gegen die Datenschutz-Grundverordnung verstößt. Welche Landesdatenschutzaufsichtsbehörde für uns zuständig ist, 
+                können Sie unter folgendem Link einsehen:</p>
+                <p><a href="https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html" target="_blank">https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html</a>.</p>
+                <p>Die Aufsichtsbehörde, bei der die Beschwerde eingereicht wurde, unterrichtet den Beschwerdeführer über den Stand und die 
+                Ergebnisse der Beschwerde einschließlich der Möglichkeit eines gerichtlichen Rechtsbehelfs nach Art. 78 DSGVO.</p>
+              </div> 
+          </div>
+      </div>
+  </div>
+  <!-- Footer  -->
+  <footer class="white">
+    <svg id="bottom-corner" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 360"><defs><style>.cls-1{fill:#fff;}</style></defs><path class="cls-1" d="M0,0H160V360L93.92,62.65A80,80,0,0,0,15.83,0Z"/></svg>
+    <div class="container">
+      <div class="footer__top">
+        <div class="logo">
+          <a href="#">
+            <img src="img/shared/logo.svg" alt="">
+          </a>
+        </div>
+        <div class="footer__wrap-lists">
+          <figure>
+            <h6 class="subheader">Customer</h6>
+            <ul>
+              <li><a href="#">Payment / shipping info</a></li>
+              <li><a href="#">Bonusaktion</a></li>
+              <li><a href="#">Subscription</a></li>
+              <li><a href="#">Support</a></li>
+            </ul>        
+          </figure>
+          <figure>
+            <h6 class="subheader">Pharmacy</h6>
+            <ul>
+              <li><a href="#">Für Apotheken</a></li>
+              <li><a href="#">Pakete und Preise</a></li>
+              <li><a href="#">Business Support</a></li>
+            </ul>        
+          </figure>      
+          <figure>
+            <h6 class="subheader">Mediclix</h6>
+            <ul>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Kontakt</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">App page</a></li>          
+            </ul>        
+          </figure>
+          <figure>
+            <h6 class="subheader">Rechtliches</h6>
+            <ul>
+              <li><a href="#">AGB</a></li>
+              <li><a href="#">Datenschutz</a></li>
+              <li><a href="#">Impressum</a></li>        
+            </ul>        
+          </figure>          
+        </div>
+        <ul class="social">
+          <li><a href="#" class="facebook">
+            <img src="img/shared/facebook.svg" alt="">
+            <img src="img/shared/facebook_hover.svg" alt="">
+          </a></li>
+          <li><a href="#" class="instagram">
+            <img src="img/shared/instagram.svg" alt="">
+            <img src="img/shared/instagram_hover.svg" alt="">
+          </a></li>
+        </ul>        
+      </div>
+      <div class="footer__bottom">
+        <div class="copy">
+          <p>Copyright © 2020 Mediclix.de</p>
+        </div>
+        <div class="designed">
+          <p>Design by <a href="#"> Viventum.eu</a></p>
+        </div>
+      </div>        
+    </div>
+  </footer>
+  <!-- Overlay  -->
+  <div class="overlay"></div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
